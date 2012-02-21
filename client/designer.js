@@ -19,8 +19,7 @@ Ext.Loader.setConfig({
 
 Ext.application({
     views: [
-        'AuthenticationView',
-        'MainView'
+        'MyTabPanel'
     ],
 
     name: 'MyApp',
