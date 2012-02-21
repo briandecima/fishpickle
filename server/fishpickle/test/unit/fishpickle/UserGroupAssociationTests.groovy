@@ -1,0 +1,17 @@
+package fishpickle
+
+
+
+import grails.test.mixin.*
+import org.junit.*
+
+/**
+ * See the API for {@link grails.test.mixin.domain.DomainClassUnitTestMixin} for usage instructions
+ */
+@TestFor(UserGroupAssociation)
+class UserGroupAssociationTests {
+
+    void testSomething() {
+       fail "Implement me"
+    }
+}
