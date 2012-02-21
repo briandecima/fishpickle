@@ -1,0 +1,45 @@
+{
+    "name": "fishpickle",
+    "settings": {
+        "urlPrefix": "http://localhost:8080/",
+        "directAPI": "",
+        "spacesToIndent": 4,
+        "codeGenFormat": "Class",
+        "exportPath": "C:/apache/apache-tomcat-7.0.4/webapps/fishpickle",
+        "extPath": "http://extjs.cachefly.net/touch/sencha-touch-designer-edition/builds/",
+        "senchaIoKey": "",
+        "senchaIoPath": "http://extjs.cachefly.net/designer/IO/",
+        "lineEnding": "CRLF",
+        "instantiateStore": true,
+        "genTimestamps": false,
+        "saveOnDeploy": false,
+        "appName": "MyApp",
+        "mapsAPI": "http://maps.google.com/maps/api/js?sensor=true",
+        "cssPath": ""
+    },
+    "xdsVersion": "2.0.0",
+    "framework": "touch20",
+    "topInstanceFileMap": {
+        "c78fe2a4-aac1-465b-9e65-7f1c60a6e2d9": {
+            "paths": [
+                "app/view/AuthenticationView.js",
+                "app/view/ui/AuthenticationView.js"
+            ],
+            "className": "AuthenticationView"
+        },
+        "c2411942-dc87-46e0-8df6-1e8ba2c283dc": {
+            "paths": [
+                "app/view/MainView.js",
+                "app/view/ui/MainView.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "MainView"
+        }
+    },
+    "expandedState": {
+        "data": true,
+        "model": true,
+        "component": true,
+        "controller": true
+    }
+}
