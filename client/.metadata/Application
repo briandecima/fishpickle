@@ -1,5 +1,5 @@
 {
-    "id": "ExtBox1-ext-gen2125",
+    "id": "ExtBox1-ext-gen2254",
     "type": "application",
     "reference": {
         "name": "items",
@@ -8,7 +8,8 @@
     "codeClass": null,
     "userConfig": {
         "views": [
-            "MyTabPanel"
+            "AuthenticationView",
+            "MainView"
         ],
         "designer|launch": "",
         "name": "MyApp"
