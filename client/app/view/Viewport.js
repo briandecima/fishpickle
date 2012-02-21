@@ -14,12 +14,11 @@
  */
 
 Ext.define('MyApp.view.Viewport', {
-    extend: 'MyApp.view.MainView',
+    extend: 'MyApp.view.MyTabPanel',
     config: {
         fullscreen: true
     },
     requires: [
-        'MyApp.view.AuthenticationView',
-        'MyApp.view.MainView'
+        'MyApp.view.MyTabPanel'
     ]
 });

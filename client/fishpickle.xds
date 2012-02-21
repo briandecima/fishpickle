@@ -20,20 +20,13 @@
     "xdsVersion": "2.0.0",
     "framework": "touch20",
     "topInstanceFileMap": {
-        "c78fe2a4-aac1-465b-9e65-7f1c60a6e2d9": {
+        "2a29a2cc-2e50-4988-b97c-0527b7f539eb": {
             "paths": [
-                "app/view/AuthenticationView.js",
-                "app/view/ui/AuthenticationView.js"
-            ],
-            "className": "AuthenticationView"
-        },
-        "c2411942-dc87-46e0-8df6-1e8ba2c283dc": {
-            "paths": [
-                "app/view/MainView.js",
-                "app/view/ui/MainView.js",
+                "app/view/MyTabPanel.js",
+                "app/view/ui/MyTabPanel.js",
                 "app/view/Viewport.js"
             ],
-            "className": "MainView"
+            "className": "MyTabPanel"
         }
     },
     "expandedState": {
