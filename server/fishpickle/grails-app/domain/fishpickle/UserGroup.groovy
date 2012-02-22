@@ -1,5 +1,7 @@
 package fishpickle
 
+import java.util.List;
+
 class UserGroup {
 
      static constraints = {
@@ -12,4 +14,8 @@ class UserGroup {
 	String isPrivate=false;
 
 	static hasMany = [userGroupAssociations:UserGroupAssociation]
+	
+	List users() {
+		userGroupAssociations.collect{it.user};
+	}
 }

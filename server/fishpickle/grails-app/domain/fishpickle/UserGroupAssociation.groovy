@@ -5,14 +5,14 @@ class UserGroupAssociation {
 	static constraints = {
 	}
 
-	boolean isAdmin=false
+	String isAdmin=false
 	User user
 	UserGroup group
 
-	static UserGroupAssociation link(user, group) {
+	static UserGroupAssociation link(user, group, isAdmin) {
 		def m = UserGroupAssociation.findByUserAndGroup(user, group)
 		if (!m) {
-			m = new UserGroupAssociation()
+			m = new UserGroupAssociation(isAdmin:isAdmin)
 			user?.addToUserGroupAssociations(m)
 			group?.addToUserGroupAssociations(m)
 			m.save()

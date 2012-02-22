@@ -14,4 +14,8 @@ class User {
 	String email
 	
 	static hasMany = [userGroupAssociations:UserGroupAssociation]
+	
+	List groups() {
+		userGroupAssociations.collect{it.group};
+    }
 }
