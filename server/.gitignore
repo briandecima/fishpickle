@@ -3,3 +3,4 @@
 .settings/
 target-eclipse/
 target/
+stacktrace.log

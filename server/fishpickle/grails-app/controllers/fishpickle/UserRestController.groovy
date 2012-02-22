@@ -8,8 +8,8 @@ class UserRestController {
 	
 	def show = {
 		if (params.children == "groups") {
-			render  UserGroup.list() as JSON
-			
+			User user = User.findById(params.id)
+			render user.userGroupAssociations.collect{it.group} as JSON;
 		}else if(params.id){
 			render User.findById(params.id) as JSON
 		}

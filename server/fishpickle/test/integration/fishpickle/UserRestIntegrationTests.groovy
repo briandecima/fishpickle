@@ -44,6 +44,6 @@ class UserRestIntegrationTests {
 		def resp = client.get(contentType : ContentType.JSON,  headers : [Accept : 'text/json'] )
 
 		assertNotNull resp
-		assertEquals(['Admin', 'All Users'], resp.name)
+		assertEquals(['All Users', 'Admin'], resp.name)
 	}
 }
