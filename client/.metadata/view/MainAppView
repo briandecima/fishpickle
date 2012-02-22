@@ -9,7 +9,8 @@
     "userConfig": {
         "designer|initialView": true,
         "id": "MainAppView",
-        "layout": "fit",
+        "defaultType": null,
+        "layout": "card",
         "designer|userClassName": "MainAppView",
         "designer|userAlias": "mainappview"
     },
@@ -19,7 +20,7 @@
     "expanded": true,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen4900",
+            "id": "ExtBox1-ext-gen15693",
             "type": "linkedinstance",
             "reference": {
                 "name": "items",
@@ -27,7 +28,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "itemId": "LoginView"
+                "id": "LoginView"
             },
             "customConfigs": [],
             "iconCls": "icon-linkedinstance",

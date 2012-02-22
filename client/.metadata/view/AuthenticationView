@@ -7,14 +7,14 @@
     },
     "codeClass": null,
     "userConfig": {
-        "layout": "fit",
+        "layout": null,
         "designer|userClassName": "AuthenticationView",
         "designer|userAlias": "loginview"
     },
     "customConfigs": [],
     "designerId": "5c9c2d01-c8a8-40a2-ad47-82409c9b2366",
-    "$viewOrder": 1,
-    "expanded": true,
+    "$viewOrder": 4,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen2861",
@@ -26,6 +26,7 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "top",
+                "title": "fishpickle",
                 "designer|userClassName": "MyTitleBar"
             },
             "customConfigs": [],

@@ -12,7 +12,7 @@
     },
     "customConfigs": [],
     "designerId": "6455e548-8780-4215-8023-2ae70bc2d295",
-    "$viewOrder": 2,
+    "$viewOrder": 1,
     "expanded": false,
     "cn": [
         {
@@ -39,6 +39,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "layout": "fit",
                 "designer|userClassName": "MyContainer8",
                 "title": "Home",
                 "iconCls": "home"
@@ -47,7 +48,7 @@
             "expanded": true,
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen17462",
+                    "id": "ExtBox1-ext-gen38391",
                     "type": "linkedinstance",
                     "reference": {
                         "name": "items",
@@ -55,7 +56,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "itemId": "GroupList"
+                        "id": "HomeGroup"
                     },
                     "customConfigs": [],
                     "iconCls": "icon-linkedinstance",
@@ -76,6 +77,7 @@
                 "cls": [
                     "search"
                 ],
+                "layout": "fit",
                 "designer|userClassName": "MyContainer5",
                 "title": "Search",
                 "iconCls": "search"
@@ -110,6 +112,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "layout": "fit",
                 "designer|userClassName": "MyContainer6",
                 "title": "Create",
                 "iconCls": "add"
@@ -144,6 +147,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "layout": "fit",
                 "designer|userClassName": "MyContainer7",
                 "title": "Settings",
                 "iconCls": "settings"

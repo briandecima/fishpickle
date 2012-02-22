@@ -7,7 +7,7 @@
     },
     "codeClass": null,
     "userConfig": {
-        "id": "GroupListView",
+        "id": null,
         "ui": "dark",
         "layout": "fit",
         "designer|userClassName": "HomeView",
@@ -15,7 +15,7 @@
     },
     "customConfigs": [],
     "designerId": "4eadc38b-80dc-418f-87fd-685c50c294b2",
-    "$viewOrder": 3,
+    "$viewOrder": 5,
     "expanded": false,
     "cn": [
         {
@@ -49,7 +49,7 @@
                 "id": "MyGroupsList",
                 "ui": "round",
                 "emptyText": "You do not have any groups.",
-                "itemTpl": "<p><div>List Item {name}</div></p>",
+                "itemTpl": "<div>{name}</div>",
                 "store": "MyJsonStore",
                 "onItemDisclosure": true,
                 "designer|userClassName": "MyList"

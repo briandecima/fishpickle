@@ -18,9 +18,6 @@ Ext.define('fishpickle.view.ui.CreateGroupView', {
 
     config: {
         id: 'CreateGroupView',
-        layout: {
-            type: 'fit'
-        },
         items: [
             {
                 xtype: 'titlebar',

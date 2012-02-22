@@ -17,7 +17,6 @@ Ext.define('fishpickle.view.ui.HomeView', {
     extend: 'Ext.Panel',
 
     config: {
-        id: 'GroupListView',
         ui: 'dark',
         layout: {
             type: 'fit'
@@ -35,7 +34,7 @@ Ext.define('fishpickle.view.ui.HomeView', {
                 ui: 'round',
                 emptyText: 'You do not have any groups.',
                 itemTpl: [
-                    '<p><div>List Item {name}</div></p>'
+                    '<div>{name}</div>'
                 ],
                 store: 'MyJsonStore',
                 onItemDisclosure: true

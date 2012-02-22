@@ -17,7 +17,6 @@ Ext.define('fishpickle.view.CreateGroupView', {
     alias: 'widget.creategroupview',
 
     initialize: function() {
-
         var me = this;
         me.callParent(arguments);
     }

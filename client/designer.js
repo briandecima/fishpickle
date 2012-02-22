@@ -30,18 +30,17 @@ Ext.application({
 
     views: [
         'MainAppView',
-        'AuthenticationView',
         'MainView',
-        'HomeView',
         'SearchView',
-        'CreateGroupView'
+        'CreateGroupView',
+        'AuthenticationView',
+        'HomeView'
     ],
 
     name: 'fishpickle',
 
     controllers: [
-        'AuthenticationController',
-        'UserGroupController'
+        'AuthenticationController'
     ],
 
     launch: function() {

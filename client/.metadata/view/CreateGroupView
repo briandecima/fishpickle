@@ -8,13 +8,13 @@
     "codeClass": null,
     "userConfig": {
         "id": "CreateGroupView",
-        "layout": "fit",
+        "layout": null,
         "designer|userClassName": "CreateGroupView",
         "designer|userAlias": "creategroupview"
     },
     "customConfigs": [],
     "designerId": "2d1ae554-25d4-4153-9341-e06ccf6d2313",
-    "$viewOrder": 5,
+    "$viewOrder": 3,
     "expanded": false,
     "cn": [
         {

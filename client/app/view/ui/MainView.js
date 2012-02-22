@@ -28,12 +28,15 @@ Ext.define('fishpickle.view.ui.MainView', {
         items: [
             {
                 xtype: 'container',
+                layout: {
+                    type: 'fit'
+                },
                 title: 'Home',
                 iconCls: 'home',
                 items: [
                     {
                         xtype: 'homeview',
-                        itemId: 'GroupList'
+                        id: 'HomeGroup'
                     }
                 ]
             },
@@ -42,6 +45,9 @@ Ext.define('fishpickle.view.ui.MainView', {
                 cls: [
                     'search'
                 ],
+                layout: {
+                    type: 'fit'
+                },
                 title: 'Search',
                 iconCls: 'search',
                 items: [
@@ -53,6 +59,9 @@ Ext.define('fishpickle.view.ui.MainView', {
             },
             {
                 xtype: 'container',
+                layout: {
+                    type: 'fit'
+                },
                 title: 'Create',
                 iconCls: 'add',
                 items: [
@@ -64,6 +73,9 @@ Ext.define('fishpickle.view.ui.MainView', {
             },
             {
                 xtype: 'container',
+                layout: {
+                    type: 'fit'
+                },
                 title: 'Settings',
                 iconCls: 'settings'
             }

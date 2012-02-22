@@ -19,9 +19,6 @@ Ext.define('fishpickle.view.Viewport', {
         fullscreen: true
     },
     requires: [
-        'fishpickle.view.MainAppView',
-        'fishpickle.view.AuthenticationView',
-        'fishpickle.view.SearchView',
-        'fishpickle.view.CreateGroupView'
+        'fishpickle.view.MainAppView'
     ]
 });

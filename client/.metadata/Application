@@ -17,11 +17,11 @@
         ],
         "views": [
             "MainAppView",
-            "AuthenticationView",
             "MainView",
-            "HomeView",
             "SearchView",
-            "CreateGroupView"
+            "CreateGroupView",
+            "AuthenticationView",
+            "HomeView"
         ],
         "designer|launch": "",
         "name": "fishpickle"

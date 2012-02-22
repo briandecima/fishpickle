@@ -26,12 +26,6 @@
             ],
             "className": "AuthenticationController"
         },
-        "acdb6973-96ce-42dc-adfe-2e3ce7f6a040": {
-            "paths": [
-                "app/controller/UserGroupController.js"
-            ],
-            "className": "UserGroupController"
-        },
         "5d022052-aab8-4784-9f88-ae1cc6c36c54": {
             "paths": [
                 "app/view/MainAppView.js",
@@ -84,8 +78,8 @@
         }
     },
     "expandedState": {
-        "data": true,
-        "model": true,
+        "data": false,
+        "model": false,
         "component": true,
         "controller": true
     }

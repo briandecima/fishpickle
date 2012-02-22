@@ -13,7 +13,7 @@
     },
     "customConfigs": [],
     "designerId": "60201bd1-774d-4f51-a8ff-24cfe8385d73",
-    "$viewOrder": 4,
+    "$viewOrder": 2,
     "expanded": false,
     "cn": [
         {
@@ -32,7 +32,7 @@
                 "container|pack": null
             },
             "customConfigs": [],
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen11802",
@@ -67,7 +67,7 @@
             "codeClass": null,
             "userConfig": {
                 "id": "SearchResultsList",
-                "itemTpl": "<div>List Item {string}</div>",
+                "itemTpl": "<div>{name}</div>",
                 "store": "MyJsonStore",
                 "designer|userClassName": "MyList1"
             },

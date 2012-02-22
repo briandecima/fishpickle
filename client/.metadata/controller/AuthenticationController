@@ -25,7 +25,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onLoginButtonTap",
-                "implHandler": "        //TODO: verify user name and password against server\n        this.getMain().setActiveItem(1);",
+                "implHandler": "\r\n        //TODO: verify user name and password against server\n        this.getMain().setActiveItem(1);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#LoginButton",
