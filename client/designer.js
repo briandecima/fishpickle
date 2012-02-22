@@ -19,12 +19,22 @@ Ext.Loader.setConfig({
 
 Ext.application({
     views: [
-        'MyTabPanel'
+        'MainAppView',
+        'AuthenticationView',
+        'MainView',
+        'HomeView',
+        'SearchView',
+        'CreateGroupView'
     ],
 
-    name: 'MyApp',
+    name: 'fishpickle',
+
+    controllers: [
+        'AuthenticationController',
+        'UserGroupController'
+    ],
 
     launch: function() {
-        Ext.create('MyApp.view.Viewport');
+        Ext.create('fishpickle.view.Viewport');
     }
 });

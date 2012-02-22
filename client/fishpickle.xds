@@ -20,13 +20,60 @@
     "xdsVersion": "2.0.0",
     "framework": "touch20",
     "topInstanceFileMap": {
-        "2a29a2cc-2e50-4988-b97c-0527b7f539eb": {
+        "59d209db-27d4-4bf0-a6d7-34590ece6417": {
             "paths": [
-                "app/view/MyTabPanel.js",
-                "app/view/ui/MyTabPanel.js",
+                "app/controller/AuthenticationController.js"
+            ],
+            "className": "AuthenticationController"
+        },
+        "acdb6973-96ce-42dc-adfe-2e3ce7f6a040": {
+            "paths": [
+                "app/controller/UserGroupController.js"
+            ],
+            "className": "UserGroupController"
+        },
+        "5d022052-aab8-4784-9f88-ae1cc6c36c54": {
+            "paths": [
+                "app/view/MainAppView.js",
+                "app/view/ui/MainAppView.js",
                 "app/view/Viewport.js"
             ],
-            "className": "MyTabPanel"
+            "className": "MainAppView"
+        },
+        "5c9c2d01-c8a8-40a2-ad47-82409c9b2366": {
+            "paths": [
+                "app/view/AuthenticationView.js",
+                "app/view/ui/AuthenticationView.js"
+            ],
+            "className": "AuthenticationView"
+        },
+        "6455e548-8780-4215-8023-2ae70bc2d295": {
+            "paths": [
+                "app/view/MainView.js",
+                "app/view/ui/MainView.js"
+            ],
+            "className": "MainView"
+        },
+        "4eadc38b-80dc-418f-87fd-685c50c294b2": {
+            "paths": [
+                "app/view/HomeView.js",
+                "app/view/ui/HomeView.js"
+            ],
+            "className": "HomeView"
+        },
+        "60201bd1-774d-4f51-a8ff-24cfe8385d73": {
+            "paths": [
+                "app/view/SearchView.js",
+                "app/view/ui/SearchView.js"
+            ],
+            "className": "SearchView"
+        },
+        "2d1ae554-25d4-4153-9341-e06ccf6d2313": {
+            "paths": [
+                "app/view/CreateGroupView.js",
+                "app/view/ui/CreateGroupView.js"
+            ],
+            "className": "CreateGroupView"
         }
     },
     "expandedState": {
