@@ -1,12 +1,13 @@
 {
     "id": "ExtBox1-ext-gen11579",
-    "type": "container",
+    "type": "panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
+        "layout": "fit",
         "designer|userClassName": "SearchView",
         "designer|userAlias": "searchview"
     },
@@ -67,7 +68,7 @@
             "userConfig": {
                 "id": "SearchResultsList",
                 "itemTpl": "<div>List Item {string}</div>",
-                "store": "userGroupStore",
+                "store": "MyJsonStore",
                 "designer|userClassName": "MyList1"
             },
             "customConfigs": [],

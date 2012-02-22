@@ -14,9 +14,12 @@
  */
 
 Ext.define('fishpickle.view.ui.SearchView', {
-    extend: 'Ext.Container',
+    extend: 'Ext.Panel',
 
     config: {
+        layout: {
+            type: 'fit'
+        },
         items: [
             {
                 xtype: 'toolbar',
@@ -42,7 +45,7 @@ Ext.define('fishpickle.view.ui.SearchView', {
                 itemTpl: [
                     '<div>List Item {string}</div>'
                 ],
-                store: 'userGroupStore'
+                store: 'MyJsonStore'
             }
         ]
     }

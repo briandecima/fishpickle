@@ -15,7 +15,7 @@
     "expanded": true,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen9014",
+            "id": "ExtBox1-ext-gen7229",
             "type": "datafield",
             "reference": {
                 "name": "fields",
@@ -23,9 +23,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "name",
+                "name": "id",
                 "type": "string",
-                "designer|userClassName": "MyField4"
+                "designer|userClassName": "MyField7"
             },
             "customConfigs": [],
             "expanded": true
@@ -58,6 +58,37 @@
                 "name": "isPrivate",
                 "type": "boolean",
                 "designer|userClassName": "MyField6"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen9014",
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name",
+                "type": "string",
+                "designer|userClassName": "MyField4"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen9355",
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "userGroupAssociation",
+                "designer|userClassName": "MyField10"
             },
             "customConfigs": [],
             "expanded": true

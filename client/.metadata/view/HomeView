@@ -8,6 +8,8 @@
     "codeClass": null,
     "userConfig": {
         "id": "GroupListView",
+        "ui": "dark",
+        "layout": "fit",
         "designer|userClassName": "HomeView",
         "designer|userAlias": "homeview"
     },
@@ -42,9 +44,14 @@
             },
             "codeClass": null,
             "userConfig": {
+                "docked": null,
+                "height": null,
                 "id": "MyGroupsList",
-                "itemTpl": "<div>List Item {string}</div>",
-                "store": "userGroupStore",
+                "ui": "round",
+                "emptyText": "You do not have any groups.",
+                "itemTpl": "<p><div>List Item {name}</div></p>",
+                "store": "MyJsonStore",
+                "onItemDisclosure": true,
                 "designer|userClassName": "MyList"
             },
             "customConfigs": [],

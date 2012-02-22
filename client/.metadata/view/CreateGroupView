@@ -1,6 +1,6 @@
 {
     "id": "ExtBox1-ext-gen41322",
-    "type": "container",
+    "type": "panel",
     "reference": {
         "name": "items",
         "type": "array"
@@ -8,6 +8,7 @@
     "codeClass": null,
     "userConfig": {
         "id": "CreateGroupView",
+        "layout": "fit",
         "designer|userClassName": "CreateGroupView",
         "designer|userAlias": "creategroupview"
     },

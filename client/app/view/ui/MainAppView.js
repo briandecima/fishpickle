@@ -23,7 +23,7 @@ Ext.define('fishpickle.view.ui.MainAppView', {
     config: {
         id: 'MainAppView',
         layout: {
-            type: 'card'
+            type: 'fit'
         },
         items: [
             {

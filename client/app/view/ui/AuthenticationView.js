@@ -14,9 +14,12 @@
  */
 
 Ext.define('fishpickle.view.ui.AuthenticationView', {
-    extend: 'Ext.Container',
+    extend: 'Ext.Panel',
 
     config: {
+        layout: {
+            type: 'fit'
+        },
         items: [
             {
                 xtype: 'titlebar',
@@ -24,6 +27,7 @@ Ext.define('fishpickle.view.ui.AuthenticationView', {
             },
             {
                 xtype: 'textfield',
+                docked: 'top',
                 label: 'Name',
                 labelAlign: 'top'
             },

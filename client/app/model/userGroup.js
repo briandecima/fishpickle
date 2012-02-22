@@ -18,7 +18,7 @@ Ext.define('fishpickle.model.userGroup', {
     config: {
         fields: [
             {
-                name: 'name',
+                name: 'id',
                 type: 'string'
             },
             {
@@ -28,6 +28,13 @@ Ext.define('fishpickle.model.userGroup', {
             {
                 name: 'isPrivate',
                 type: 'boolean'
+            },
+            {
+                name: 'name',
+                type: 'string'
+            },
+            {
+                name: 'userGroupAssociation'
             }
         ]
     }

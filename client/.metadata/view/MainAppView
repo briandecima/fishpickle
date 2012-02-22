@@ -9,7 +9,7 @@
     "userConfig": {
         "designer|initialView": true,
         "id": "MainAppView",
-        "layout": "card",
+        "layout": "fit",
         "designer|userClassName": "MainAppView",
         "designer|userAlias": "mainappview"
     },

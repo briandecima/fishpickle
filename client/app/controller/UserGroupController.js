@@ -16,6 +16,15 @@ Ext.define('fishpickle.controller.UserGroupController', {
     extend: 'Ext.app.Controller',
 
     config: {
+        control: {
+            "#GroupListView": {
+                activate: 'onPanelActivate'
+            }
+        }
+    },
+
+    onPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
 
     }
+
 });

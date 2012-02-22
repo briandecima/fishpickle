@@ -14,10 +14,13 @@
  */
 
 Ext.define('fishpickle.view.ui.CreateGroupView', {
-    extend: 'Ext.Container',
+    extend: 'Ext.Panel',
 
     config: {
         id: 'CreateGroupView',
+        layout: {
+            type: 'fit'
+        },
         items: [
             {
                 xtype: 'titlebar',

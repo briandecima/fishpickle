@@ -9,10 +9,11 @@
     "userConfig": {
         "models": [
             "user",
-            "userGroup"
+            "userGroup",
+            "userGroupAssociations"
         ],
         "stores": [
-            "userGroupStore"
+            "MyJsonStore"
         ],
         "views": [
             "MainAppView",
