@@ -2,7 +2,9 @@ package fishpickle
 
 
 
+import grails.converters.JSON
 import grails.test.mixin.*
+
 import org.junit.*
 
 /**
@@ -12,6 +14,6 @@ import org.junit.*
 class UserTests {
 
     void testSomething() {
-       fail "Implement me"
+       
     }
 }
