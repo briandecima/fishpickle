@@ -8,11 +8,15 @@
     "codeClass": null,
     "userConfig": {
         "views": [
+            "MainAppView",
             "AuthenticationView",
-            "MainView"
+            "MainView",
+            "HomeView",
+            "SearchView",
+            "CreateGroupView"
         ],
         "designer|launch": "",
-        "name": "MyApp"
+        "name": "fishpickle"
     },
     "customConfigs": [],
     "designerId": "application",

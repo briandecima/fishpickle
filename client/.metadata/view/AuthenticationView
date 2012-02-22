@@ -1,17 +1,18 @@
 {
-    "id": "ExtBox1-ext-gen2659",
-    "type": "formpanel",
+    "id": "ExtBox1-ext-gen4776",
+    "type": "container",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "AuthenticationView"
+        "designer|userClassName": "AuthenticationView",
+        "designer|userAlias": "loginview"
     },
     "customConfigs": [],
-    "designerId": "c78fe2a4-aac1-465b-9e65-7f1c60a6e2d9",
-    "$viewOrder": 0,
+    "designerId": "5c9c2d01-c8a8-40a2-ad47-82409c9b2366",
+    "$viewOrder": 1,
     "expanded": true,
     "cn": [
         {
@@ -39,6 +40,7 @@
             "codeClass": null,
             "userConfig": {
                 "label": "Name",
+                "labelAlign": "top",
                 "designer|userClassName": "MyTextField"
             },
             "customConfigs": [],
@@ -54,6 +56,7 @@
             "codeClass": null,
             "userConfig": {
                 "label": "Password",
+                "labelAlign": "top",
                 "designer|userClassName": "MyPasswordField"
             },
             "customConfigs": [],
@@ -68,6 +71,11 @@
             },
             "codeClass": null,
             "userConfig": {
+                "centered": true,
+                "id": "LoginButton",
+                "itemId": "LoginButton",
+                "ui": "action",
+                "width": null,
                 "text": "Login",
                 "designer|userClassName": "MyButton"
             },
