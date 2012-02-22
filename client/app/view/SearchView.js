@@ -17,7 +17,6 @@ Ext.define('fishpickle.view.SearchView', {
     alias: 'widget.searchview',
 
     initialize: function() {
-
         var me = this;
         me.callParent(arguments);
     }

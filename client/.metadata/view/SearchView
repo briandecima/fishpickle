@@ -67,6 +67,7 @@
             "userConfig": {
                 "id": "SearchResultsList",
                 "itemTpl": "<div>List Item {string}</div>",
+                "store": "userGroupStore",
                 "designer|userClassName": "MyList1"
             },
             "customConfigs": [],

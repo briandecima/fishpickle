@@ -1,11 +1,11 @@
 {
     "name": "fishpickle",
     "settings": {
-        "urlPrefix": "http://localhost:8080/",
+        "urlPrefix": "http://localhost",
         "directAPI": "",
         "spacesToIndent": 4,
         "codeGenFormat": "Class",
-        "exportPath": "C:/apache/apache-tomcat-7.0.4/webapps/fishpickle",
+        "exportPath": "/Users/bdecima/Sites/fishpickle",
         "extPath": "http://extjs.cachefly.net/touch/sencha-touch-designer-edition/builds/",
         "senchaIoKey": "",
         "senchaIoPath": "http://extjs.cachefly.net/designer/IO/",
@@ -74,6 +74,19 @@
                 "app/view/ui/CreateGroupView.js"
             ],
             "className": "CreateGroupView"
+        },
+        "d6ff1e58-4da2-430c-a9cc-4c952211e20d": {
+            "paths": [
+                "app/controller/MainController.js"
+            ],
+            "className": "MainController"
+        },
+        "5d2450a4-669a-4826-8275-58fe25229027": {
+            "paths": [
+                "app/store/userGroupStore.js",
+                "app/store/base/userGroupStore.js"
+            ],
+            "className": "userGroupStore"
         }
     },
     "expandedState": {

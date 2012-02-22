@@ -18,6 +18,15 @@ Ext.Loader.setConfig({
 });
 
 Ext.application({
+    models: [
+        'user',
+        'userGroup'
+    ],
+
+    stores: [
+        'userGroupStore'
+    ],
+
     views: [
         'MainAppView',
         'AuthenticationView',
@@ -31,7 +40,8 @@ Ext.application({
 
     controllers: [
         'AuthenticationController',
-        'UserGroupController'
+        'UserGroupController',
+        'MainController'
     ],
 
     launch: function() {

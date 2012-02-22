@@ -44,6 +44,7 @@
             "userConfig": {
                 "id": "MyGroupsList",
                 "itemTpl": "<div>List Item {string}</div>",
+                "store": "userGroupStore",
                 "designer|userClassName": "MyList"
             },
             "customConfigs": [],

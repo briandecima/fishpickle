@@ -1,0 +1,54 @@
+{
+    "id": "ExtBox1-ext-gen5682",
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|init": "",
+        "designer|userClassName": "MainController"
+    },
+    "customConfigs": [],
+    "designerId": "d6ff1e58-4da2-430c-a9cc-4c952211e20d",
+    "$viewOrder": 2,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen5876",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "main",
+                "selector": "mainappview",
+                "xtype": "mainview",
+                "designer|userClassName": "main"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen6532",
+            "type": "applicationaction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onLoadUserGroupList",
+                "designer|params": null,
+                "implHandler": "alert('Test');",
+                "name": "loadUserGroupList",
+                "designer|userClassName": "onLoadUserGroupList"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}
