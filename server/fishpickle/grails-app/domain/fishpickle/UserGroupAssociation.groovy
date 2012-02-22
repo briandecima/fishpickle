@@ -5,7 +5,7 @@ class UserGroupAssociation {
 	static constraints = {
 	}
 
-	String isAdmin=false
+	boolean isAdmin=false
 	User user
 	UserGroup group
 

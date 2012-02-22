@@ -3,6 +3,7 @@ dataSource {
 	driverClassName = "com.mysql.jdbc.Driver"
 	username = "grails"
 	password = "server"
+	dialect = fishpickle.MySQLDialect
 }
 hibernate {
 	cache.use_second_level_cache = true

@@ -11,7 +11,7 @@ class UserGroup {
 	
 	String name
 	String description
-	String isPrivate=false;
+	boolean isPrivate=false;
 
 	static hasMany = [userGroupAssociations:UserGroupAssociation]
 	
