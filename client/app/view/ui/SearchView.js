@@ -42,6 +42,7 @@ Ext.define('fishpickle.view.ui.SearchView', {
             {
                 xtype: 'list',
                 id: 'SearchResultsList',
+                emptyText: 'No groups found.',
                 itemTpl: [
                     '<div>{name}</div>'
                 ],

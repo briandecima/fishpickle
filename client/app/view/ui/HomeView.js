@@ -32,7 +32,7 @@ Ext.define('fishpickle.view.ui.HomeView', {
                 xtype: 'list',
                 id: 'MyGroupsList',
                 ui: 'round',
-                emptyText: 'You do not have any groups.',
+                emptyText: 'You are not a member of any groups.',
                 itemTpl: [
                     '<div>{name}</div>'
                 ],

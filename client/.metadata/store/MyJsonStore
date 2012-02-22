@@ -19,7 +19,7 @@
     "cn": [
         {
             "id": "ExtBox1-ext-gen5810",
-            "type": "ajaxproxy",
+            "type": "restproxy",
             "reference": {
                 "name": "proxy",
                 "type": "object"
@@ -27,7 +27,7 @@
             "codeClass": null,
             "userConfig": {
                 "url": "http://10.0.11.14:8080/fishpickle-0.1/rest/user/2/groups",
-                "designer|userClassName": "MyAjaxProxy"
+                "designer|userClassName": "MyRestProxy"
             },
             "customConfigs": [],
             "expanded": true,
