@@ -17,7 +17,7 @@ class UserGroupAssociationRestController {
 	}
 	
 	/**
-	 * create a new or update an existing group depending if an id is passed with the object
+	 * associate an existing user with an existing group
 	 */
 	def save = {
 		def associationJson = JSON.parse(params.userGroupAssociation)
