@@ -1,5 +1,5 @@
 {
-    "id": "ExtBox1-ext-gen16724",
+    "id": "ExtBox1-ext-gen15400",
     "type": "controller",
     "reference": {
         "name": "items",
@@ -8,15 +8,15 @@
     "codeClass": null,
     "userConfig": {
         "designer|init": "",
-        "designer|userClassName": "SettignsController"
+        "designer|userClassName": "UserController"
     },
     "customConfigs": [],
-    "designerId": "f1a67342-ad83-4570-ae97-867338bfc5e1",
-    "$viewOrder": 1,
-    "expanded": true,
+    "designerId": "920067bc-4b57-4a48-89ed-9c99a8649432",
+    "$viewOrder": 2,
+    "expanded": false,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen16936",
+            "id": "ExtBox1-ext-gen15522",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -33,7 +33,7 @@
             "expanded": true
         },
         {
-            "id": "ExtBox1-ext-gen17928",
+            "id": "ExtBox1-ext-gen16040",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -42,7 +42,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onButtonTap",
-                "implHandler": "\nalert('Please save my settings!');",
+                "implHandler": "\nconsole.log('Saving the user settings');\n",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#saveSettingsButton",

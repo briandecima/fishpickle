@@ -83,23 +83,48 @@
             ],
             "className": "SettingsView"
         },
-        "f1a67342-ad83-4570-ae97-867338bfc5e1": {
-            "paths": [
-                "app/controller/SettignsController.js"
-            ],
-            "className": "SettignsController"
-        },
         "03147ff8-c626-43df-8c18-a8259890efac": {
             "paths": [
                 "app/controller/GroupController.js"
             ],
             "className": "GroupController"
+        },
+        "920067bc-4b57-4a48-89ed-9c99a8649432": {
+            "paths": [
+                "app/controller/UserController.js"
+            ],
+            "className": "UserController"
+        },
+        "14463418-5ebf-45d1-8799-e382a5807017": {
+            "paths": [
+                "app/model/user.js"
+            ],
+            "className": "user"
+        },
+        "e32bd1a4-bc48-48a4-9a04-4d2d698522d0": {
+            "paths": [
+                "app/model/userGroup.js"
+            ],
+            "className": "userGroup"
+        },
+        "6c78aee0-6b43-41df-9d4b-ae65ffb3d392": {
+            "paths": [
+                "app/model/userGroupAssociations.js"
+            ],
+            "className": "userGroupAssociations"
+        },
+        "d7aa6ec2-d685-4eea-8185-2aeebd7dc893": {
+            "paths": [
+                "app/store/AllGroupsStore.js",
+                "app/store/base/AllGroupsStore.js"
+            ],
+            "className": "AllGroupsStore"
         }
     },
     "expandedState": {
-        "data": true,
-        "model": true,
+        "data": false,
+        "model": false,
         "component": true,
-        "controller": true
+        "controller": false
     }
 }

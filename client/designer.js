@@ -25,7 +25,8 @@ Ext.application({
     ],
 
     stores: [
-        'MyGroupsStore'
+        'MyGroupsStore',
+        'AllGroupsStore'
     ],
 
     views: [
@@ -42,8 +43,8 @@ Ext.application({
 
     controllers: [
         'AuthenticationController',
-        'SettignsController',
-        'GroupController'
+        'GroupController',
+        'UserController'
     ],
 
     launch: function() {

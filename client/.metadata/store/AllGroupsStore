@@ -1,5 +1,5 @@
 {
-    "id": "ExtBox1-ext-gen5804",
+    "id": "ExtBox1-ext-gen9374",
     "type": "jsonstore",
     "reference": {
         "name": "items",
@@ -7,18 +7,17 @@
     },
     "codeClass": null,
     "userConfig": {
-        "autoLoad": true,
         "model": "userGroup",
-        "storeId": "MyGroupsStore",
-        "designer|userClassName": "MyGroupsStore"
+        "storeId": "AllGroupsStore",
+        "designer|userClassName": "AllGroupsStore"
     },
     "customConfigs": [],
-    "designerId": "39aac695-845e-494c-a328-4472cfb90f4c",
-    "$viewOrder": 0,
+    "designerId": "d7aa6ec2-d685-4eea-8185-2aeebd7dc893",
+    "$viewOrder": 1,
     "expanded": false,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen5810",
+            "id": "ExtBox1-ext-gen9380",
             "type": "restproxy",
             "reference": {
                 "name": "proxy",
@@ -26,14 +25,14 @@
             },
             "codeClass": null,
             "userConfig": {
-                "url": "http://10.0.11.14:8080/fishpickle-0.1/rest/user/2/groups",
-                "designer|userClassName": "MyRestProxy"
+                "url": "http://10.0.11.14:8080/fishpickle-0.1/rest/group",
+                "designer|userClassName": "MyRestProxy1"
             },
             "customConfigs": [],
             "expanded": true,
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen5817",
+                    "id": "ExtBox1-ext-gen9387",
                     "type": "jsonreader",
                     "reference": {
                         "name": "reader",
@@ -41,7 +40,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyJsonReader"
+                        "designer|userClassName": "MyJsonReader1"
                     },
                     "customConfigs": [],
                     "expanded": true

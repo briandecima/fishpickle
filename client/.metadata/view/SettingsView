@@ -1,6 +1,6 @@
 {
     "id": "ExtBox1-ext-gen6075",
-    "type": "panel",
+    "type": "formpanel",
     "reference": {
         "name": "items",
         "type": "array"
