@@ -18,6 +18,10 @@ class UrlMappings {
 		"/rest/group/$id?/$children?"(controller:"userGroupRest", parseRequest:true){
 			action = [GET: "show", PUT: "update", DELETE: "delete", POST: "save"]
 		}
+		
+		"/rest/userGroupAssociation/$id?"(controller:"userGroupAssociationRest", parseRequest:true){
+			action = [GET: "show", PUT: "update", DELETE: "delete", POST: "save"]
+		}
 
 		"/"(view:"/index")
 		"500"(view:'/error')

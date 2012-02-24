@@ -11,6 +11,7 @@ class BootStrap {
 			
 				User u1 = MockData.createUser("user1", "John", "xxx")
 				User u2 = MockData.createUser("user2", "Bill", "yyy")
+				User u3 = MockData.createUser("user3", "Jason", "yyy")
 				UserGroup g1 = MockData.createGroup("Admin")
 				UserGroup g2 = MockData.createGroup("All Users")
 				
