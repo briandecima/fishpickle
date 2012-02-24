@@ -1,0 +1,130 @@
+{
+    "id": "ExtBox1-ext-gen6075",
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": null,
+        "layout": "fit",
+        "designer|userClassName": "SettingsView",
+        "designer|userAlias": "settingsview"
+    },
+    "customConfigs": [],
+    "designerId": "90186d1a-11d8-4677-bf97-7464b91728dd",
+    "$viewOrder": 6,
+    "expanded": false,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen10934",
+            "type": "titlebar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "Settings",
+                "designer|userClassName": "MyTitleBar3",
+                "container|align": null
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen11449",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "right",
+                        "id": "saveSettingsButton",
+                        "itemId": "saveSettingsButton",
+                        "iconAlign": "right",
+                        "text": "Save",
+                        "designer|userClassName": "MyButton2",
+                        "align": "right"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen8663",
+            "type": "textfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "id": "displayName",
+                "label": "Display Name",
+                "labelAlign": "top",
+                "designer|userClassName": "MyTextField2"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen8992",
+            "type": "emailfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "label": "Email",
+                "labelAlign": "top",
+                "placeHolder": "email@example.com",
+                "designer|userClassName": "MyEmailField"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen9645",
+            "type": "passwordfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "label": "New Password",
+                "labelAlign": "top",
+                "designer|userClassName": "MyPasswordField1"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen9968",
+            "type": "passwordfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "label": "Confirm Password",
+                "labelAlign": "top",
+                "designer|userClassName": "MyPasswordField2"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

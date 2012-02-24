@@ -36,7 +36,7 @@ Ext.define('fishpickle.view.ui.HomeView', {
                 itemTpl: [
                     '<div>{name}</div>'
                 ],
-                store: 'MyJsonStore',
+                store: 'MyGroupsStore',
                 onItemDisclosure: true
             }
         ]

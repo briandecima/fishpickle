@@ -50,7 +50,7 @@
                 "ui": "round",
                 "emptyText": "You are not a member of any groups.",
                 "itemTpl": "<div>{name}</div>",
-                "store": "MyJsonStore",
+                "store": "MyGroupsStore",
                 "onItemDisclosure": true,
                 "designer|userClassName": "MyList"
             },

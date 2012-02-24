@@ -46,7 +46,7 @@ Ext.define('fishpickle.view.ui.SearchView', {
                 itemTpl: [
                     '<div>{name}</div>'
                 ],
-                store: 'MyJsonStore'
+                store: 'MyGroupsStore'
             }
         ]
     }

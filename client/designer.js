@@ -25,7 +25,7 @@ Ext.application({
     ],
 
     stores: [
-        'MyJsonStore'
+        'MyGroupsStore'
     ],
 
     views: [
@@ -34,13 +34,16 @@ Ext.application({
         'SearchView',
         'CreateGroupView',
         'AuthenticationView',
-        'HomeView'
+        'HomeView',
+        'SettingsView'
     ],
 
     name: 'fishpickle',
 
     controllers: [
-        'AuthenticationController'
+        'AuthenticationController',
+        'SettignsController',
+        'GroupController'
     ],
 
     launch: function() {

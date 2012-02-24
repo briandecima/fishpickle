@@ -71,15 +71,34 @@
         },
         "39aac695-845e-494c-a328-4472cfb90f4c": {
             "paths": [
-                "app/store/MyJsonStore.js",
-                "app/store/base/MyJsonStore.js"
+                "app/store/MyGroupsStore.js",
+                "app/store/base/MyGroupsStore.js"
             ],
-            "className": "MyJsonStore"
+            "className": "MyGroupsStore"
+        },
+        "90186d1a-11d8-4677-bf97-7464b91728dd": {
+            "paths": [
+                "app/view/SettingsView.js",
+                "app/view/ui/SettingsView.js"
+            ],
+            "className": "SettingsView"
+        },
+        "f1a67342-ad83-4570-ae97-867338bfc5e1": {
+            "paths": [
+                "app/controller/SettignsController.js"
+            ],
+            "className": "SettignsController"
+        },
+        "03147ff8-c626-43df-8c18-a8259890efac": {
+            "paths": [
+                "app/controller/GroupController.js"
+            ],
+            "className": "GroupController"
         }
     },
     "expandedState": {
         "data": true,
-        "model": false,
+        "model": true,
         "component": true,
         "controller": true
     }
