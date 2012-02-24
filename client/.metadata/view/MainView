@@ -45,7 +45,7 @@
                 "iconCls": "home"
             },
             "customConfigs": [],
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen38391",
@@ -83,7 +83,7 @@
                 "iconCls": "search"
             },
             "customConfigs": [],
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen18793",
@@ -118,7 +118,7 @@
                 "iconCls": "add"
             },
             "customConfigs": [],
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen19959",
@@ -153,7 +153,23 @@
                 "iconCls": "settings"
             },
             "customConfigs": [],
-            "expanded": true
+            "expanded": false,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen6730",
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {},
+                    "customConfigs": [],
+                    "iconCls": "icon-linkedinstance",
+                    "expanded": true,
+                    "masterInstanceId": "ExtBox1-ext-gen6075"
+                }
+            ]
         }
     ]
 }

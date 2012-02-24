@@ -9,8 +9,8 @@
     "userConfig": {
         "autoLoad": true,
         "model": "userGroup",
-        "storeId": "MyJsonStore",
-        "designer|userClassName": "MyJsonStore"
+        "storeId": "MyGroupsStore",
+        "designer|userClassName": "MyGroupsStore"
     },
     "customConfigs": [],
     "designerId": "39aac695-845e-494c-a328-4472cfb90f4c",

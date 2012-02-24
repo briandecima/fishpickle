@@ -18,7 +18,8 @@ Ext.define('fishpickle.view.ui.MainView', {
     requires: [
         'fishpickle.view.HomeView',
         'fishpickle.view.SearchView',
-        'fishpickle.view.CreateGroupView'
+        'fishpickle.view.CreateGroupView',
+        'fishpickle.view.SettingsView'
     ],
 
     config: {
@@ -77,7 +78,12 @@ Ext.define('fishpickle.view.ui.MainView', {
                     type: 'fit'
                 },
                 title: 'Settings',
-                iconCls: 'settings'
+                iconCls: 'settings',
+                items: [
+                    {
+                        xtype: 'settingsview'
+                    }
+                ]
             }
         ]
     }

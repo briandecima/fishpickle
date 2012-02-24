@@ -13,7 +13,7 @@
             "userGroupAssociations"
         ],
         "stores": [
-            "MyJsonStore"
+            "MyGroupsStore"
         ],
         "views": [
             "MainAppView",
@@ -21,7 +21,8 @@
             "SearchView",
             "CreateGroupView",
             "AuthenticationView",
-            "HomeView"
+            "HomeView",
+            "SettingsView"
         ],
         "designer|launch": "",
         "name": "fishpickle"
