@@ -8,6 +8,14 @@ class UserGroupAssociationRestController {
 
     def index() { }
 	
+	/**
+	* if id is not null, return this association
+	* url: /rest/userGroupAssociation/{id}
+	*
+	* if id is null, return a list of all associations
+	* url: /rest/userGroupAssociation
+	* @return
+	*/
 	def show = {
 		if(params.id){
 			renderUtil.renderObject(this, UserGroupAssociation.findById(params.id))
@@ -18,6 +26,8 @@ class UserGroupAssociationRestController {
 	
 	/**
 	 * associate an existing user with an existing group
+	 * url: /rest/userGroupAssociation
+	 * 
 	 */
 	def save = {
 		def associationJson = JSON.parse(params.userGroupAssociation)

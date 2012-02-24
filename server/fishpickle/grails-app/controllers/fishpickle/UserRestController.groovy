@@ -6,6 +6,17 @@ class UserRestController {
 
 	def renderUtil
 	
+	/**
+	 * if children == groups:  Return all groups for the user with the given {id}
+	 * url: /rest/user/{id}/groups
+	 * 
+	 * if children  == null and id is not null, return this user
+	 * url: /rest/user/{id}
+	 * 
+	 * if children and id are both null, return a list of all users
+	 * url: /rest/user
+	 * @return
+	 */
 	def index() {
 	}
 
@@ -58,6 +69,8 @@ class UserRestController {
 
 	/**
 	 * update existing user
+	 * 
+	 * Not called externally because PUT doesn't work (grails / tomcat issue where the data is null)
 	 */
 	def update = {
 		def jsonUser = JSON.parse(params.user)

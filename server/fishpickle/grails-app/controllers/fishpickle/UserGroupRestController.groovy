@@ -8,6 +8,17 @@ class UserGroupRestController {
 	
     def index() { }
 	
+	/**
+	* if children == users:  Return all users for the group with the given {id}
+	* url: /rest/group/{id}/users
+	*
+	* if children  == null and id is not null, return this group
+	* url: /rest/group/{id}
+	*
+	* if children and id are both null, return a list of all groups
+	* url: /rest/group
+	* @return
+	*/
 	def show = {
 		if (params.children == "users") {
 			renderUtil.renderObject(this, UserGroup.findById(params.id).users())
@@ -20,6 +31,7 @@ class UserGroupRestController {
 	
 	/**
 	 * create a new or update an existing group depending if an id is passed with the object
+	 * url: /rest/group
 	 */
 	def save = {
 		def groupUser = JSON.parse(params.group)
@@ -34,6 +46,8 @@ class UserGroupRestController {
 	
 	/**
 	 * update an existing group
+	 * 
+	 * Not called externally because PUT doesn't work (grails / tomcat issue where the data is null)
 	 */
 	def update = {
 		def jsonGroup = JSON.parse(params.group)
