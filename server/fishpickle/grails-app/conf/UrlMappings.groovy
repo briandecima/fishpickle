@@ -11,6 +11,10 @@ class UrlMappings {
 			action = [GET: "show", PUT: "update", DELETE: "delete", POST: "save"]
 		}
 		
+		"/rest/login/$loginName"(controller:"loginRest", parseRequest:true){
+			action = [GET: "show", PUT: "update", DELETE: "delete", POST: "save"]
+		}
+		
 		"/rest/group/$id?/$children?"(controller:"userGroupRest", parseRequest:true){
 			action = [GET: "show", PUT: "update", DELETE: "delete", POST: "save"]
 		}
