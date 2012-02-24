@@ -2,8 +2,6 @@ package fishpickle
 
 import grails.converters.JSON
 
-import org.codehaus.groovy.grails.web.json.JSONObject
-
 class UserGroupRestController {
 
 	def renderUtil
@@ -12,11 +10,11 @@ class UserGroupRestController {
 	
 	def show = {
 		if (params.children == "users") {
-			render UserGroup.findById(params.id).users() as JSON
+			renderUtil.renderObject(this, UserGroup.findById(params.id).users())
 		}else if(params.id){
-			render User.findById(params.id) as JSON
+			renderUtil.renderObject(this, User.findById(params.id))
 		} else{
-			render User.list() as JSON
+			renderUtil.renderObject(this, User.list())
 		}
 	}
 	
