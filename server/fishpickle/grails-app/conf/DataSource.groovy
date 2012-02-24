@@ -3,7 +3,7 @@ dataSource {
 	driverClassName = "com.mysql.jdbc.Driver"
 	username = "grails"
 	password = "server"
-	dialect = fishpickle.MySQLDialect
+	dialect = fishpickle.database.MySQLDialect
 }
 hibernate {
 	cache.use_second_level_cache = true
@@ -21,13 +21,13 @@ environments {
 	}
 	test {
 		dataSource {
-			dbCreate = "create-drop"
+			dbCreate = "update"
 			url = "jdbc:mysql://localhost:3306/fishpickle?autoreconnect=true"
 		}
 	}
 	production {
 		dataSource {
-			dbCreate = "create-drop"
+			dbCreate = "update"
 			url = "jdbc:mysql://localhost:3306/fishpickle?autoreconnect=true"
 		}
 	}

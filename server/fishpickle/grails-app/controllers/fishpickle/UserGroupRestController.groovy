@@ -4,8 +4,10 @@ import grails.converters.JSON
 
 import org.codehaus.groovy.grails.web.json.JSONObject
 
-class UserGroupRestController extends BaseJSONController {
+class UserGroupRestController {
 
+	def renderUtil
+	
     def index() { }
 	
 	def show = {
@@ -24,11 +26,11 @@ class UserGroupRestController extends BaseJSONController {
 	def save = {
 		def groupUser = JSON.parse(params.group)
 		
-		 if (isIdValid( groupUser.id)) {
+		 if (renderUtil.isIdValid( groupUser.id)) {
 			update();
 		} else {
 			UserGroup group = new UserGroup(groupUser)
-			saveAndRender(group)
+			renderUtil.saveAndRender(this, group)
 		}
 	}
 	
@@ -41,6 +43,6 @@ class UserGroupRestController extends BaseJSONController {
 		UserGroup dbGroup = User.findById(jsonGroup.id)
 		dbGroup.properties = group.properties
 		
-		saveAndRender(dbGroup)
+		renderUtil.saveAndRender(this, dbGroup)
 	}
 }

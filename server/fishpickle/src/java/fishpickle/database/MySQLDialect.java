@@ -1,4 +1,4 @@
-package fishpickle;
+package fishpickle.database;
 
 import java.sql.Types;
 
@@ -11,3 +11,4 @@ public class MySQLDialect extends MySQL5InnoDBDialect{
 	}
 
 }
+

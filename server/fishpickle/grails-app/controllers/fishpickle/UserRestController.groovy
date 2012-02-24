@@ -2,20 +2,20 @@ package fishpickle
 
 import grails.converters.JSON
 
-import org.codehaus.groovy.grails.web.json.JSONObject
+class UserRestController {
 
-class UserRestController extends BaseJSONController{
-
+	def renderUtil
+	
 	def index() {
 	}
 
 	def show = {
 		if (params.children == "groups") {
-			render User.findById(params.id).groups() as JSON
+			renderUtil.renderObject(this, User.findById(params.id).groups())
 		}else if(params.id){
-			render User.findById(params.id) as JSON
+			renderUtil.renderObject(this, User.findById(params.id))
 		} else{
-			render User.list() as JSON
+			renderUtil.renderObject(this, User.list())
 		}
 	}
 
@@ -32,7 +32,7 @@ class UserRestController extends BaseJSONController{
 			
 			//Create new Group
 			def group = new UserGroup(JSON.parse(params.group))
-			if (!group.save()) renderError(group.errors)
+			if (!group.save()) renderUtil.renderError(this, group.errors)
 			
 			//Find the user
 			User user = User.findById(params.id)
@@ -40,15 +40,15 @@ class UserRestController extends BaseJSONController{
 			//Associate the user to this group.  Since it is a new group, this user will be the administrator
 			UserGroupAssociation.link(user, group, true)
 			
-			renderObject(group)
+			renderUtil.renderObject(this, group)
 		} else {
 			def jsonUser = JSON.parse(params.user)
 
-			if (isIdValid( jsonUser.id)) {
+			if (renderUtil.isIdValid( jsonUser.id)) {
 				update();
 			} else {
 				User user = new User(jsonUser)
-				saveAndRender(user)
+				renderUtil.saveAndRender(this, user)
 			}
 			
 		}
@@ -65,6 +65,6 @@ class UserRestController extends BaseJSONController{
 		User dbUser = User.findById(jsonUser.id)
 		dbUser.properties = user.properties
 		
-		saveAndRender(dbUser)
+		renderUtil.saveAndRender(this, dbUser)
 	}
 }
