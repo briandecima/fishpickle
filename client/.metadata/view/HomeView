@@ -8,7 +8,7 @@
     "codeClass": null,
     "userConfig": {
         "id": null,
-        "ui": "dark",
+        "ui": null,
         "layout": "fit",
         "designer|userClassName": "HomeView",
         "designer|userAlias": "homeview"

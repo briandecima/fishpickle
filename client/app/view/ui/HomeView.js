@@ -17,7 +17,6 @@ Ext.define('fishpickle.view.ui.HomeView', {
     extend: 'Ext.Panel',
 
     config: {
-        ui: 'dark',
         layout: {
             type: 'fit'
         },

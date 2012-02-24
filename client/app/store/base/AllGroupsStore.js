@@ -20,6 +20,7 @@ Ext.define('fishpickle.store.base.AllGroupsStore', {
     ],
 
     config: {
+        autoLoad: true,
         model: 'fishpickle.model.userGroup',
         storeId: 'AllGroupsStore',
         proxy: {

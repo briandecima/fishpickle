@@ -67,9 +67,11 @@
             "codeClass": null,
             "userConfig": {
                 "id": "SearchResultsList",
+                "ui": "round",
                 "emptyText": "No groups found.",
                 "itemTpl": "<div>{name}</div>",
                 "store": "AllGroupsStore",
+                "onItemDisclosure": true,
                 "designer|userClassName": "MyList1"
             },
             "customConfigs": [],

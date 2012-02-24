@@ -42,11 +42,13 @@ Ext.define('fishpickle.view.ui.SearchView', {
             {
                 xtype: 'list',
                 id: 'SearchResultsList',
+                ui: 'round',
                 emptyText: 'No groups found.',
                 itemTpl: [
                     '<div>{name}</div>'
                 ],
-                store: 'AllGroupsStore'
+                store: 'AllGroupsStore',
+                onItemDisclosure: true
             }
         ]
     }

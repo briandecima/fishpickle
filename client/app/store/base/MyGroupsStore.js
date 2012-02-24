@@ -25,7 +25,7 @@ Ext.define('fishpickle.store.base.MyGroupsStore', {
         storeId: 'MyGroupsStore',
         proxy: {
             type: 'rest',
-            url: 'http://10.0.11.14:8080/fishpickle-0.1/rest/user/2/groups',
+            url: 'http://10.0.11.14:8080/fishpickle-0.1/rest/group/2',
             reader: {
                 type: 'json'
             }
