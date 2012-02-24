@@ -9,14 +9,15 @@ class UserGroupRestController {
     def index() { }
 	
 	/**
-	* if children == users:  Return all users for the group with the given {id}
-	* url: /rest/group/{id}/users
-	*
-	* if children  == null and id is not null, return this group
-	* url: /rest/group/{id}
-	*
-	* if children and id are both null, return a list of all groups
-	* url: /rest/group
+	* if children == users:  Return all users for the group with the given {id}<br>
+	* url: <b>/rest/group/{id}/users</b><br>
+	*<br>
+	* if children  == null and id is not null, return this group<br>
+	* url: <b>/rest/group/{id}</b><br>
+	*<br>
+	* if children and id are both null, return a list of all groups<br>
+	* url: <b>/rest/group</b><br>
+	* <br>
 	* @return
 	*/
 	def show = {
@@ -30,8 +31,8 @@ class UserGroupRestController {
 	}
 	
 	/**
-	 * create a new or update an existing group depending if an id is passed with the object
-	 * url: /rest/group
+	 * create a new or update an existing group depending if an id is passed with the object<br>
+	 * url: <b>/rest/group</b><br>
 	 */
 	def save = {
 		def groupUser = JSON.parse(params.group)
@@ -45,9 +46,9 @@ class UserGroupRestController {
 	}
 	
 	/**
-	 * update an existing group
-	 * 
-	 * Not called externally because PUT doesn't work (grails / tomcat issue where the data is null)
+	 * update an existing group<br>
+	 * <br>
+	 * Not called externally because PUT doesn't work (grails / tomcat issue where the data is null), this is done with a POST instead<br>
 	 */
 	def update = {
 		def jsonGroup = JSON.parse(params.group)

@@ -6,20 +6,21 @@ class UserRestController {
 
 	def renderUtil
 	
-	/**
-	 * if children == groups:  Return all groups for the user with the given {id}
-	 * url: /rest/user/{id}/groups
-	 * 
-	 * if children  == null and id is not null, return this user
-	 * url: /rest/user/{id}
-	 * 
-	 * if children and id are both null, return a list of all users
-	 * url: /rest/user
-	 * @return
-	 */
+	
 	def index() {
 	}
 
+	/**
+		* if children == groups:  Return all groups for the user with the given {id}<br>
+		* url: <b>/rest/user/{id}/groups</b><br>
+		* <br>
+		* if children  == null and id is not null, return this user<br>
+		* url: <b>/rest/user/{id}</b><br>
+		* <br>
+		* if children and id are both null, return a list of all users<br>
+		* url: <b>/rest/user</b><br>
+		* @return
+	*/
 	def show = {
 		if (params.children == "groups") {
 			renderUtil.renderObject(this, User.findById(params.id).groups())
@@ -31,11 +32,11 @@ class UserRestController {
 	}
 
 	/**
-	 * if children param == groups:  Create a new group and add it to the user whose id is in the url
-	 * url:  /rest/user/{id}/groups -- add a new group to the user with the given {id}
-	 * 
-	 * if children == null, this is either a new user or an update to a user depending if a id is passed with the post
-	 * url:  /rest/user
+	 * if children param == groups:  Create a new group and add it to the user whose id is in the url<br>
+	 * url:  <b>/rest/user/{id}/groups</b><br>
+	 * <br>
+	 * if children == null, this is either a new user or an update to a user depending if a id is passed with the post<br>
+	 * url:  <b>/rest/user</b><br>
 	 */
 	def save = {
 		// 
@@ -68,9 +69,9 @@ class UserRestController {
 	}
 
 	/**
-	 * update existing user
-	 * 
-	 * Not called externally because PUT doesn't work (grails / tomcat issue where the data is null)
+	 * update existing user<br>
+	 * <br>
+	 * Not called externally because PUT doesn't work (grails / tomcat issue where the data is null), this is done with a POST instead<br>
 	 */
 	def update = {
 		def jsonUser = JSON.parse(params.user)

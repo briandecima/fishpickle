@@ -9,11 +9,12 @@ class UserGroupAssociationRestController {
     def index() { }
 	
 	/**
-	* if id is not null, return this association
-	* url: /rest/userGroupAssociation/{id}
-	*
-	* if id is null, return a list of all associations
-	* url: /rest/userGroupAssociation
+	* if id is not null, return this association<br>
+	* url: <b>/rest/userGroupAssociation/{id}</b><br>
+	*<br>
+	* if id is null, return a list of all associations<br>
+	* url: <b>/rest/userGroupAssociation</b><br>
+	* <br>
 	* @return
 	*/
 	def show = {
@@ -25,8 +26,8 @@ class UserGroupAssociationRestController {
 	}
 	
 	/**
-	 * associate an existing user with an existing group
-	 * url: /rest/userGroupAssociation
+	 * associate an existing user with an existing group<br>
+	 * url: <b>/rest/userGroupAssociation</b><br>
 	 * 
 	 */
 	def save = {
