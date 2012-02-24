@@ -32,6 +32,7 @@ Ext.define('fishpickle.controller.AuthenticationController', {
 
     onLoginButtonTap: function(button, e, options) {
 
+
         //TODO: verify user name and password against server
         this.getMain().setActiveItem(1);
     }

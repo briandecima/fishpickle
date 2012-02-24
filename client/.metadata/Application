@@ -13,7 +13,8 @@
             "userGroupAssociations"
         ],
         "stores": [
-            "MyGroupsStore"
+            "MyGroupsStore",
+            "AllGroupsStore"
         ],
         "views": [
             "MainAppView",

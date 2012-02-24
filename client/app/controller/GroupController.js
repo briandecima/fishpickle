@@ -31,7 +31,9 @@ Ext.define('fishpickle.controller.GroupController', {
     },
 
     onButtonTap: function(button, e, options) {
-        alert('Please save my group!');
+
+
+        console.log('Saving the new group');
     }
 
 });

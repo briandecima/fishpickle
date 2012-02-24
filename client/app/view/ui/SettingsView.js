@@ -14,7 +14,7 @@
  */
 
 Ext.define('fishpickle.view.ui.SettingsView', {
-    extend: 'Ext.Panel',
+    extend: 'Ext.form.Panel',
 
     config: {
         layout: {
