@@ -24,9 +24,9 @@ class UserGroupRestController {
 		if (params.children == "users") {
 			renderUtil.renderObject(this, UserGroup.findById(params.id).users())
 		}else if(params.id){
-			renderUtil.renderObject(this, User.findById(params.id))
+			renderUtil.renderObject(this, UserGroup.findById(params.id))
 		} else{
-			renderUtil.renderObject(this, User.list())
+			renderUtil.renderObject(this, UserGroup.list())
 		}
 	}
 	

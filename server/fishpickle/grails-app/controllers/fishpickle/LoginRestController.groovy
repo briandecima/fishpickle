@@ -6,6 +6,10 @@ class LoginRestController {
 	
     def index() { }
 	
+	/**
+	 * returns the user given the loginName<br>
+	 * url: <b>/rest/login/{loginName}</b><br>
+	 */
 	def show = {
 		if(params.loginName){
 			renderUtil.renderObject(this, User.findByLogin(params.loginName))
