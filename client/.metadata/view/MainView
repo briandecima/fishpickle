@@ -13,7 +13,7 @@
     "customConfigs": [],
     "designerId": "6455e548-8780-4215-8023-2ae70bc2d295",
     "$viewOrder": 1,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen11651",
@@ -39,13 +39,14 @@
             },
             "codeClass": null,
             "userConfig": {
+                "id": "home",
                 "layout": "fit",
                 "designer|userClassName": "MyContainer8",
                 "title": "Home",
                 "iconCls": "home"
             },
             "customConfigs": [],
-            "expanded": false,
+            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen38391",
@@ -83,7 +84,7 @@
                 "iconCls": "search"
             },
             "customConfigs": [],
-            "expanded": false,
+            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen18793",

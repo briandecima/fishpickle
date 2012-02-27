@@ -29,8 +29,7 @@
         "5d022052-aab8-4784-9f88-ae1cc6c36c54": {
             "paths": [
                 "app/view/MainAppView.js",
-                "app/view/ui/MainAppView.js",
-                "app/view/Viewport.js"
+                "app/view/ui/MainAppView.js"
             ],
             "className": "MainAppView"
         },
@@ -95,6 +94,19 @@
             ],
             "className": "UserController"
         },
+        "d7aa6ec2-d685-4eea-8185-2aeebd7dc893": {
+            "paths": [
+                "app/store/AllGroupsStore.js",
+                "app/store/base/AllGroupsStore.js"
+            ],
+            "className": "AllGroupsStore"
+        },
+        "56caab43-4bf3-4d95-b5a7-787c20860f9b": {
+            "paths": [
+                "app/controller/MyGroupsController.js"
+            ],
+            "className": "MyGroupsController"
+        },
         "14463418-5ebf-45d1-8799-e382a5807017": {
             "paths": [
                 "app/model/user.js"
@@ -112,19 +124,12 @@
                 "app/model/userGroupAssociations.js"
             ],
             "className": "userGroupAssociations"
-        },
-        "d7aa6ec2-d685-4eea-8185-2aeebd7dc893": {
-            "paths": [
-                "app/store/AllGroupsStore.js",
-                "app/store/base/AllGroupsStore.js"
-            ],
-            "className": "AllGroupsStore"
         }
     },
     "expandedState": {
         "data": true,
         "model": false,
         "component": true,
-        "controller": false
+        "controller": true
     }
 }

@@ -1,0 +1,57 @@
+{
+    "id": "ExtBox1-ext-gen6313",
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|init": "",
+        "designer|userClassName": "MyGroupsController"
+    },
+    "customConfigs": [],
+    "designerId": "56caab43-4bf3-4d95-b5a7-787c20860f9b",
+    "$viewOrder": 3,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen6464",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onPanelActiveItemChange",
+                "implHandler": "\r\n        console.log(\"load new my groups -- MainAppView\");\n        Ext.getStore(\"MyGroupsStore\").getProxy().setUrl(\"http://10.0.11.14:8080/fishpickle-0.1/rest/user/1/groups\");\n        Ext.getStore(\"MyGroupsStore\").load();",
+                "name": "activeitemchange",
+                "designer|targetType": "Ext.Panel",
+                "designer|controlQuery": "#MainAppView",
+                "designer|userClassName": "onPanelActiveItemChange"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen9925",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onContainerActivate",
+                "implHandler": "//TODO make the id in the url dynamic\nExt.getStore(\"MyGroupsStore\").getProxy().setUrl(\"http://10.0.11.14:8080/fishpickle-0.1/rest/user/1/groups\");\nExt.getStore(\"MyGroupsStore\").load();",
+                "name": "activate",
+                "designer|targetType": "Ext.Container",
+                "designer|controlQuery": "#home",
+                "designer|userClassName": "onContainerActivate"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

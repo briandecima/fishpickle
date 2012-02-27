@@ -7,7 +7,6 @@
     },
     "codeClass": null,
     "userConfig": {
-        "autoLoad": true,
         "model": "userGroup",
         "storeId": "MyGroupsStore",
         "designer|userClassName": "MyGroupsStore"
@@ -15,7 +14,7 @@
     "customConfigs": [],
     "designerId": "39aac695-845e-494c-a328-4472cfb90f4c",
     "$viewOrder": 0,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen5810",
@@ -26,7 +25,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "url": "http://10.0.11.14:8080/fishpickle-0.1/rest/group/2",
+                "url": "http://10.0.11.14:8080/fishpickle-0.1/rest/group",
                 "designer|userClassName": "MyRestProxy"
             },
             "customConfigs": [],

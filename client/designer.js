@@ -44,10 +44,11 @@ Ext.application({
     controllers: [
         'AuthenticationController',
         'GroupController',
-        'UserController'
+        'UserController',
+        'MyGroupsController'
     ],
 
     launch: function() {
-        Ext.create('fishpickle.view.Viewport');
+        Ext.create('fishpickle.view.MainAppView', {fullscreen: true});
     }
 });

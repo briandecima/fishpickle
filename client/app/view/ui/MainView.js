@@ -29,6 +29,7 @@ Ext.define('fishpickle.view.ui.MainView', {
         items: [
             {
                 xtype: 'container',
+                id: 'home',
                 layout: {
                     type: 'fit'
                 },
