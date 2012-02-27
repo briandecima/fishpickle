@@ -1,7 +1,7 @@
 {
     "name": "fishpickle",
     "settings": {
-        "urlPrefix": "http://localhost",
+        "urlPrefix": "http://localhost/~mbianchini/fishpickle",
         "directAPI": "",
         "spacesToIndent": 4,
         "codeGenFormat": "Class",
@@ -124,12 +124,25 @@
                 "app/model/userGroupAssociations.js"
             ],
             "className": "userGroupAssociations"
+        },
+        "9c52a2dc-c42e-45c5-9516-e896c345e50b": {
+            "paths": [
+                "app/store/ConfigStore.js",
+                "app/store/base/ConfigStore.js"
+            ],
+            "className": "ConfigStore"
+        },
+        "022f140f-5c17-456e-ba75-0dd28e61e4a2": {
+            "paths": [
+                "app/model/Configuration.js"
+            ],
+            "className": "Configuration"
         }
     },
     "expandedState": {
         "data": true,
-        "model": false,
-        "component": true,
+        "model": true,
+        "component": false,
         "controller": true
     }
 }

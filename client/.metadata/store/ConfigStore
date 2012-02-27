@@ -1,0 +1,70 @@
+{
+    "id": "ExtBox1-ext-gen8012",
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "model": "Configuration",
+        "storeId": "ConfigStore",
+        "designer|userClassName": "ConfigStore"
+    },
+    "customConfigs": [],
+    "designerId": "9c52a2dc-c42e-45c5-9516-e896c345e50b",
+    "$viewOrder": 2,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen8018",
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/config.json",
+                "designer|userClassName": "MyAjaxProxy"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen8025",
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data",
+                        "designer|userClassName": "MyJsonReader2"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen17487",
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onJsonstoreLoad",
+                "implHandler": "var configRecord = Ext.getStore(\"ConfigStore\").findRecord(\"name\", \"contextURL\");\nif (configRecord) {\n    //console.log(\"From load\" + configRecord.data.value);\n    fishpickle.baseURL = configRecord.data.value;\n}",
+                "name": "load",
+                "designer|userClassName": "onJsonstoreLoad"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

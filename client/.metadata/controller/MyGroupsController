@@ -25,7 +25,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onPanelActiveItemChange",
-                "implHandler": "\r\n        console.log(\"load new my groups -- MainAppView\");\n        Ext.getStore(\"MyGroupsStore\").getProxy().setUrl(\"http://10.0.11.14:8080/fishpickle-0.1/rest/user/1/groups\");\n        Ext.getStore(\"MyGroupsStore\").load();",
+                "implHandler": "//TODO make the id in the url dynamic\nif (fishpickle.baseURL) {\n    //console.log(\"Panel Active Item Change \" + fishpickle.baseURL);\n    Ext.getStore(\"MyGroupsStore\").getProxy().setUrl(fishpickle.baseURL + \"rest/user/1/groups\");\n    Ext.getStore(\"MyGroupsStore\").load();  \n}",
                 "name": "activeitemchange",
                 "designer|targetType": "Ext.Panel",
                 "designer|controlQuery": "#MainAppView",
@@ -44,7 +44,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onContainerActivate",
-                "implHandler": "//TODO make the id in the url dynamic\nExt.getStore(\"MyGroupsStore\").getProxy().setUrl(\"http://10.0.11.14:8080/fishpickle-0.1/rest/user/1/groups\");\nExt.getStore(\"MyGroupsStore\").load();",
+                "implHandler": "//TODO make the id in the url dynamic\nif (fishpickle.baseURL) {\n    //console.log(\"Container Activate \" + fishpickle.baseURL);\n    Ext.getStore(\"MyGroupsStore\").getProxy().setUrl(fishpickle.baseURL + \"rest/user/1/groups\");\n    Ext.getStore(\"MyGroupsStore\").load();  \n}",
                 "name": "activate",
                 "designer|targetType": "Ext.Container",
                 "designer|controlQuery": "#home",

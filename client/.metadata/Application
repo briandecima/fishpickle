@@ -10,11 +10,13 @@
         "models": [
             "user",
             "userGroup",
-            "userGroupAssociations"
+            "userGroupAssociations",
+            "Configuration"
         ],
         "stores": [
             "MyGroupsStore",
-            "AllGroupsStore"
+            "AllGroupsStore",
+            "ConfigStore"
         ],
         "views": [
             "MainAppView",
@@ -25,7 +27,7 @@
             "HomeView",
             "SettingsView"
         ],
-        "designer|launch": "",
+        "designer|launch": "this.baseURL = undefined;",
         "name": "fishpickle"
     },
     "customConfigs": [],

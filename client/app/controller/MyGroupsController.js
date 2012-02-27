@@ -27,16 +27,21 @@ Ext.define('fishpickle.controller.MyGroupsController', {
     },
 
     onPanelActiveItemChange: function(container, value, oldValue, options) {
-
-        console.log("load new my groups -- MainAppView");
-        Ext.getStore("MyGroupsStore").getProxy().setUrl("http://10.0.11.14:8080/fishpickle-0.1/rest/user/1/groups");
-        Ext.getStore("MyGroupsStore").load();
+        //TODO make the id in the url dynamic
+        if (fishpickle.baseURL) {
+            //console.log("Panel Active Item Change " + fishpickle.baseURL);
+            Ext.getStore("MyGroupsStore").getProxy().setUrl(fishpickle.baseURL + "rest/user/1/groups");
+            Ext.getStore("MyGroupsStore").load();  
+        }
     },
 
     onContainerActivate: function(container, newActiveItem, oldActiveItem, options) {
         //TODO make the id in the url dynamic
-        Ext.getStore("MyGroupsStore").getProxy().setUrl("http://10.0.11.14:8080/fishpickle-0.1/rest/user/1/groups");
-        Ext.getStore("MyGroupsStore").load();
+        if (fishpickle.baseURL) {
+            //console.log("Container Activate " + fishpickle.baseURL);
+            Ext.getStore("MyGroupsStore").getProxy().setUrl(fishpickle.baseURL + "rest/user/1/groups");
+            Ext.getStore("MyGroupsStore").load();  
+        }
     }
 
 });

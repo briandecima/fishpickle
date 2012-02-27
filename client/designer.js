@@ -21,12 +21,14 @@ Ext.application({
     models: [
         'user',
         'userGroup',
-        'userGroupAssociations'
+        'userGroupAssociations',
+        'Configuration'
     ],
 
     stores: [
         'MyGroupsStore',
-        'AllGroupsStore'
+        'AllGroupsStore',
+        'ConfigStore'
     ],
 
     views: [
@@ -49,6 +51,7 @@ Ext.application({
     ],
 
     launch: function() {
+        this.baseURL = undefined;
         Ext.create('fishpickle.view.MainAppView', {fullscreen: true});
     }
 });
