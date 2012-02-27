@@ -20,12 +20,11 @@ Ext.define('fishpickle.store.base.AllGroupsStore', {
     ],
 
     config: {
-        autoLoad: true,
         model: 'fishpickle.model.userGroup',
         storeId: 'AllGroupsStore',
         proxy: {
             type: 'rest',
-            url: 'http://10.0.11.14:8080/fishpickle-0.1/rest/group',
+            url: 'rest/group',
             reader: {
                 type: 'json'
             }

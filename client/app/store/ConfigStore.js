@@ -16,7 +16,6 @@ Ext.define('fishpickle.store.ConfigStore', {
     extend: 'fishpickle.store.base.ConfigStore',
 
     constructor: function(cfg) {
-
         var me = this;
         cfg = cfg || {};
         me.callParent([Ext.apply({}, cfg)]);
@@ -25,8 +24,10 @@ Ext.define('fishpickle.store.ConfigStore', {
     onJsonstoreLoad: function(store, records, successful, operation, eOpts) {
         var configRecord = Ext.getStore("ConfigStore").findRecord("name", "contextURL");
         if (configRecord) {
-            //console.log("From load" + configRecord.data.value);
             fishpickle.baseURL = configRecord.data.value;
+
+            Ext.getStore("AllGroupsStore").getProxy().setUrl(fishpickle.baseURL + "rest/group");
+            Ext.getStore("AllGroupsStore").load();
         }
     }
 
