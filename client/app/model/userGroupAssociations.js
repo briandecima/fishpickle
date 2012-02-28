@@ -16,9 +16,11 @@
 Ext.define('fishpickle.model.userGroupAssociations', {
     extend: 'Ext.data.Model',
     config: {
+        idProperty: 'uid',
         fields: [
             {
-                name: 'id'
+                name: 'id',
+                type: 'int'
             },
             {
                 name: 'field'

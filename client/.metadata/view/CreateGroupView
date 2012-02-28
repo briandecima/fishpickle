@@ -1,6 +1,6 @@
 {
     "id": "ExtBox1-ext-gen41322",
-    "type": "panel",
+    "type": "formpanel",
     "reference": {
         "name": "items",
         "type": "array"
@@ -8,14 +8,15 @@
     "codeClass": null,
     "userConfig": {
         "id": "CreateGroupView",
+        "itemId": "",
         "layout": null,
         "designer|userClassName": "CreateGroupView",
-        "designer|userAlias": "creategroupview"
+        "designer|userAlias": "createGroupFormPanel"
     },
     "customConfigs": [],
     "designerId": "2d1ae554-25d4-4153-9341-e06ccf6d2313",
     "$viewOrder": 3,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen41537",
@@ -67,6 +68,7 @@
                 "id": "GroupNameField",
                 "label": "Name",
                 "labelAlign": "top",
+                "name": "name",
                 "designer|userClassName": "MyTextField1"
             },
             "customConfigs": [],
@@ -84,6 +86,7 @@
                 "id": "GroupDescField",
                 "label": "Description",
                 "labelAlign": "top",
+                "name": "description",
                 "designer|userClassName": "MyTextArea"
             },
             "customConfigs": [],

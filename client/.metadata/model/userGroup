@@ -7,12 +7,13 @@
     },
     "codeClass": null,
     "userConfig": {
+        "idProperty": "uid",
         "designer|userClassName": "userGroup"
     },
     "customConfigs": [],
     "designerId": "e32bd1a4-bc48-48a4-9a04-4d2d698522d0",
     "$viewOrder": 1,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen7229",
@@ -24,7 +25,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "id",
-                "type": "string",
+                "type": "int",
                 "designer|userClassName": "MyField7"
             },
             "customConfigs": [],
@@ -92,6 +93,41 @@
             },
             "customConfigs": [],
             "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen23102",
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "/rest/group",
+                "format": "json",
+                "designer|userClassName": "MyRestProxy2"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen25136",
+                    "type": "jsonwriter",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "nameProperty": null,
+                        "encode": true,
+                        "root": "group",
+                        "designer|userClassName": "MyJsonWriter"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
         }
     ]
 }

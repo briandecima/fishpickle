@@ -17,13 +17,16 @@ Ext.define('fishpickle.controller.GroupController', {
 
     config: {
         refs: {
-            main: {
-                selector: 'mainappview',
-                xtype: 'mainview'
+            createGroup: {
+                selector: 'createGroupFormPanel',
+                xtype: 'creategroupview'
             }
         },
 
         control: {
+            "#createGroupView": {
+                activate: 'onFormpanelActivate'
+            },
             "#saveGroupButton": {
                 tap: 'onButtonTap'
             }
@@ -31,9 +34,18 @@ Ext.define('fishpickle.controller.GroupController', {
     },
 
     onButtonTap: function(button, e, options) {
+        var group = this.getCreateGroup().getRecord();
+        group.set(this.getCreateGroup().getValues());
+        group.getProxy().setUrl(fishpickle.baseURL + 'rest/user/1/groups');
+        group.save();
+    },
 
-
-        console.log('Saving the new group');
+    onFormpanelActivate: function(container, newActiveItem, oldActiveItem, options) {
+        if (fishpickle.baseURL) {
+            console.log("in activate create group view");
+            var group = Ext.create('fishpickle.model.userGroup', { id: '', name: 'Marc', description: '', isPrivate: false });
+            this.getCreateGroup().setRecord(group);
+        }
     }
 
 });

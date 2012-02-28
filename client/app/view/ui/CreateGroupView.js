@@ -14,10 +14,11 @@
  */
 
 Ext.define('fishpickle.view.ui.CreateGroupView', {
-    extend: 'Ext.Panel',
+    extend: 'Ext.form.Panel',
 
     config: {
         id: 'CreateGroupView',
+        itemId: '',
         items: [
             {
                 xtype: 'titlebar',
@@ -39,13 +40,15 @@ Ext.define('fishpickle.view.ui.CreateGroupView', {
                 xtype: 'textfield',
                 id: 'GroupNameField',
                 label: 'Name',
-                labelAlign: 'top'
+                labelAlign: 'top',
+                name: 'name'
             },
             {
                 xtype: 'textareafield',
                 id: 'GroupDescField',
                 label: 'Description',
-                labelAlign: 'top'
+                labelAlign: 'top',
+                name: 'description'
             }
         ]
     }

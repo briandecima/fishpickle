@@ -16,7 +16,6 @@ Ext.define('fishpickle.store.AllGroupsStore', {
     extend: 'fishpickle.store.base.AllGroupsStore',
 
     constructor: function(cfg) {
-
         var me = this;
         cfg = cfg || {};
         me.callParent([Ext.apply({}, cfg)]);
