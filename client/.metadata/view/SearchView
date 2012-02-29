@@ -14,7 +14,7 @@
     "customConfigs": [],
     "designerId": "60201bd1-774d-4f51-a8ff-24cfe8385d73",
     "$viewOrder": 2,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen19415",
@@ -26,7 +26,7 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "top",
-                "id": "SearchToolbar",
+                "id": "searchToolbar",
                 "designer|userClassName": "MyToolbar",
                 "container|align": "stretchmax",
                 "container|pack": null
@@ -66,7 +66,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "SearchResultsList",
+                "id": "searchResultsList",
                 "ui": "round",
                 "emptyText": "No groups found.",
                 "itemTpl": "<div>{name}</div>",

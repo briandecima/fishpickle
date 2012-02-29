@@ -16,11 +16,11 @@
 Ext.define('fishpickle.store.base.MyGroupsStore', {
     extend: 'Ext.data.Store',
     requires: [
-        'fishpickle.model.userGroup'
+        'fishpickle.model.UserGroup'
     ],
 
     config: {
-        model: 'fishpickle.model.userGroup',
+        model: 'fishpickle.model.UserGroup',
         storeId: 'MyGroupsStore',
         proxy: {
             type: 'rest',

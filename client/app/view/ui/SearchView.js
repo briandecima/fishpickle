@@ -24,7 +24,7 @@ Ext.define('fishpickle.view.ui.SearchView', {
             {
                 xtype: 'toolbar',
                 docked: 'top',
-                id: 'SearchToolbar',
+                id: 'searchToolbar',
                 layout: {
                     align: 'stretchmax',
                     type: 'hbox'
@@ -41,7 +41,7 @@ Ext.define('fishpickle.view.ui.SearchView', {
             },
             {
                 xtype: 'list',
-                id: 'SearchResultsList',
+                id: 'searchResultsList',
                 ui: 'round',
                 emptyText: 'No groups found.',
                 itemTpl: [

@@ -14,7 +14,7 @@
 
 Ext.define('fishpickle.view.MainView', {
     extend: 'fishpickle.view.ui.MainView',
-    alias: 'widget.primaryview',
+    alias: 'widget.mainview',
 
     initialize: function() {
         var me = this;

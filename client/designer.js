@@ -19,9 +19,9 @@ Ext.Loader.setConfig({
 
 Ext.application({
     models: [
-        'user',
-        'userGroup',
-        'userGroupAssociations',
+        'User',
+        'UserGroup',
+        'UserGroupAssociations',
         'Configuration'
     ],
 
@@ -35,9 +35,9 @@ Ext.application({
         'MainAppView',
         'MainView',
         'SearchView',
-        'CreateGroupView',
+        'GroupDetailsView',
         'AuthenticationView',
-        'HomeView',
+        'MyGroupsView',
         'SettingsView'
     ],
 
@@ -45,7 +45,7 @@ Ext.application({
 
     controllers: [
         'AuthenticationController',
-        'GroupController',
+        'GroupDetailsController',
         'UserController',
         'MyGroupsController'
     ],

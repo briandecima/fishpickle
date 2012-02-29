@@ -11,7 +11,7 @@
             "MyGroupsStore"
         ],
         "designer|init": "",
-        "designer|userClassName": "GroupController"
+        "designer|userClassName": "GroupDetailsController"
     },
     "customConfigs": [],
     "designerId": "03147ff8-c626-43df-8c18-a8259890efac",
@@ -27,10 +27,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "ref": "createGroupFormPanel",
-                "selector": "createGroupFormPanel",
+                "ref": "groupDetailsView",
+                "selector": "groupdetailsview",
                 "xtype": null,
-                "designer|userClassName": "createGroupFormPanel"
+                "designer|userClassName": "groupDetailsView"
             },
             "customConfigs": [],
             "expanded": true
@@ -45,10 +45,10 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onFormpanelActivate",
-                "implHandler": "\nif (fishpickle.baseURL) {\n    //console.log(\"in activate create group view\");\n    var group = Ext.create('fishpickle.model.userGroup', { id: '', name: '', description: '', isPrivate: false });\n    this.getCreateGroupFormPanel().setRecord(group);\n}",
+                "implHandler": "\nif (fishpickle.baseURL) {\n    //console.log(\"in activate create group view\");\n    var group = Ext.create('fishpickle.model.UserGroup', { id: '', name: 'Enter', description: '', isPrivate: false });\n    this.getGroupDetailsView().setRecord(group);\n}",
                 "name": "activate",
                 "designer|targetType": "Ext.form.Panel",
-                "designer|controlQuery": "#createGroupView",
+                "designer|controlQuery": "#groupDetailsContainer",
                 "designer|userClassName": "onFormpanelActivate"
             },
             "customConfigs": [],
@@ -64,7 +64,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onButtonTap",
-                "implHandler": "\nvar group = this.getCreateGroupFormPanel().getRecord();\ngroup.set(this.getCreateGroupFormPanel().getValues());\ngroup.getProxy().setUrl(fishpickle.baseURL + 'rest/user/1/groups');\n\ngroup.save({\n    callback: function(records, operation, success) {\n        this.getPrimaryView().setActiveItem(0);\n    }\n},\nthis\n);",
+                "implHandler": "\nvar group = this.getGroupDetailsView().getRecord();\ngroup.set(this.getGroupDetailsView().getValues());\ngroup.getProxy().setUrl(fishpickle.baseURL + 'rest/user/1/groups');\n\ngroup.save({\n    callback: function(records, operation, success) {\n        this.getMainView().setActiveItem(0);\n    }\n},\nthis\n);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#saveGroupButton",
@@ -82,9 +82,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "ref": "primaryView",
-                "selector": "primaryview",
-                "designer|userClassName": "primaryView"
+                "ref": "mainView",
+                "selector": "mainview",
+                "designer|userClassName": "mainView"
             },
             "customConfigs": [],
             "expanded": true

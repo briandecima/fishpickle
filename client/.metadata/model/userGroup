@@ -8,7 +8,7 @@
     "codeClass": null,
     "userConfig": {
         "idProperty": "uid",
-        "designer|userClassName": "userGroup"
+        "designer|userClassName": "UserGroup"
     },
     "customConfigs": [],
     "designerId": "e32bd1a4-bc48-48a4-9a04-4d2d698522d0",

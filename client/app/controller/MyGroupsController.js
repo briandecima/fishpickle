@@ -20,7 +20,7 @@ Ext.define('fishpickle.controller.MyGroupsController', {
             "#MainAppView": {
                 activeitemchange: 'onPanelActiveItemChange'
             },
-            "#home": {
+            "#myGroupsContainer": {
                 activate: 'onContainerActivate'
             }
         }

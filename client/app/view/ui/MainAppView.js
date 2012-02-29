@@ -27,12 +27,12 @@ Ext.define('fishpickle.view.ui.MainAppView', {
         },
         items: [
             {
-                xtype: 'loginview',
+                xtype: 'authenticationview',
                 id: 'LoginView'
             },
             {
-                xtype: 'primaryview',
-                itemId: 'MainView'
+                xtype: 'mainview',
+                id: 'mainItem'
             }
         ]
     }

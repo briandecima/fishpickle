@@ -9,7 +9,7 @@
     "userConfig": {
         "layout": null,
         "designer|userClassName": "AuthenticationView",
-        "designer|userAlias": "loginview"
+        "designer|userAlias": "authenticationview"
     },
     "customConfigs": [],
     "designerId": "5c9c2d01-c8a8-40a2-ad47-82409c9b2366",

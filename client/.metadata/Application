@@ -8,9 +8,9 @@
     "codeClass": null,
     "userConfig": {
         "models": [
-            "user",
-            "userGroup",
-            "userGroupAssociations",
+            "User",
+            "UserGroup",
+            "UserGroupAssociations",
             "Configuration"
         ],
         "stores": [
@@ -22,9 +22,9 @@
             "MainAppView",
             "MainView",
             "SearchView",
-            "CreateGroupView",
+            "GroupDetailsView",
             "AuthenticationView",
-            "HomeView",
+            "MyGroupsView",
             "SettingsView"
         ],
         "designer|launch": "this.baseURL = undefined;",

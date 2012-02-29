@@ -16,9 +16,9 @@
 Ext.define('fishpickle.view.ui.MainView', {
     extend: 'Ext.tab.Panel',
     requires: [
-        'fishpickle.view.HomeView',
+        'fishpickle.view.MyGroupsView',
         'fishpickle.view.SearchView',
-        'fishpickle.view.CreateGroupView',
+        'fishpickle.view.GroupDetailsView',
         'fishpickle.view.SettingsView'
     ],
 
@@ -29,7 +29,7 @@ Ext.define('fishpickle.view.ui.MainView', {
         items: [
             {
                 xtype: 'container',
-                id: 'home',
+                id: 'myGroupsContainer',
                 layout: {
                     type: 'fit'
                 },
@@ -37,8 +37,8 @@ Ext.define('fishpickle.view.ui.MainView', {
                 iconCls: 'home',
                 items: [
                     {
-                        xtype: 'homeview',
-                        id: 'HomeGroup'
+                        xtype: 'mygroupsview',
+                        id: 'myGroupsItem'
                     }
                 ]
             },
@@ -47,6 +47,7 @@ Ext.define('fishpickle.view.ui.MainView', {
                 cls: [
                     'search'
                 ],
+                id: 'searchGroupsContainer',
                 layout: {
                     type: 'fit'
                 },
@@ -55,27 +56,29 @@ Ext.define('fishpickle.view.ui.MainView', {
                 items: [
                     {
                         xtype: 'searchview',
-                        itemId: 'SearchGroup'
+                        id: 'searchGroupsItem',
+                        itemId: ''
                     }
                 ]
             },
             {
                 xtype: 'container',
-                id: 'createGroupView',
+                id: 'groupDetailsContainer',
                 layout: {
                     type: 'fit'
                 },
-                title: 'Create',
+                title: 'Group Details',
                 iconCls: 'add',
                 items: [
                     {
-                        xtype: 'createGroupFormPanel',
-                        itemId: 'CreateGroup'
+                        xtype: 'groupdetailsview',
+                        id: 'groupDetailsItem'
                     }
                 ]
             },
             {
                 xtype: 'container',
+                id: 'settingsContainer',
                 layout: {
                     type: 'fit'
                 },
@@ -83,7 +86,8 @@ Ext.define('fishpickle.view.ui.MainView', {
                 iconCls: 'settings',
                 items: [
                     {
-                        xtype: 'settingsview'
+                        xtype: 'settingsview',
+                        id: 'settingsItem'
                     }
                 ]
             }

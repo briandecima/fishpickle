@@ -7,11 +7,11 @@
     },
     "codeClass": null,
     "userConfig": {
-        "id": "CreateGroupView",
+        "id": null,
         "itemId": "",
         "layout": null,
-        "designer|userClassName": "CreateGroupView",
-        "designer|userAlias": "createGroupFormPanel"
+        "designer|userClassName": "GroupDetailsView",
+        "designer|userAlias": "groupdetailsview"
     },
     "customConfigs": [],
     "designerId": "2d1ae554-25d4-4153-9341-e06ccf6d2313",
@@ -28,7 +28,8 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "top",
-                "title": "Create Group",
+                "id": "groupDetails",
+                "title": "Group Details",
                 "designer|userClassName": "MyTitleBar2"
             },
             "customConfigs": [],
@@ -65,7 +66,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "GroupNameField",
+                "id": "groupNameField",
                 "label": "Name",
                 "labelAlign": "top",
                 "name": "name",
@@ -83,7 +84,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "GroupDescField",
+                "id": "groupDescriptionField",
                 "label": "Description",
                 "labelAlign": "top",
                 "name": "description",

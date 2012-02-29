@@ -17,10 +17,7 @@ Ext.define('fishpickle.controller.UserController', {
 
     config: {
         refs: {
-            main: {
-                selector: 'mainappview',
-                xtype: 'mainview'
-            }
+            mainAppView: 'mainappview'
         },
 
         control: {

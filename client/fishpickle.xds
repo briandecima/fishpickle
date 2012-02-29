@@ -49,10 +49,10 @@
         },
         "4eadc38b-80dc-418f-87fd-685c50c294b2": {
             "paths": [
-                "app/view/HomeView.js",
-                "app/view/ui/HomeView.js"
+                "app/view/MyGroupsView.js",
+                "app/view/ui/MyGroupsView.js"
             ],
-            "className": "HomeView"
+            "className": "MyGroupsView"
         },
         "60201bd1-774d-4f51-a8ff-24cfe8385d73": {
             "paths": [
@@ -63,10 +63,10 @@
         },
         "2d1ae554-25d4-4153-9341-e06ccf6d2313": {
             "paths": [
-                "app/view/CreateGroupView.js",
-                "app/view/ui/CreateGroupView.js"
+                "app/view/GroupDetailsView.js",
+                "app/view/ui/GroupDetailsView.js"
             ],
-            "className": "CreateGroupView"
+            "className": "GroupDetailsView"
         },
         "39aac695-845e-494c-a328-4472cfb90f4c": {
             "paths": [
@@ -84,9 +84,9 @@
         },
         "03147ff8-c626-43df-8c18-a8259890efac": {
             "paths": [
-                "app/controller/GroupController.js"
+                "app/controller/GroupDetailsController.js"
             ],
-            "className": "GroupController"
+            "className": "GroupDetailsController"
         },
         "920067bc-4b57-4a48-89ed-9c99a8649432": {
             "paths": [
@@ -109,21 +109,21 @@
         },
         "14463418-5ebf-45d1-8799-e382a5807017": {
             "paths": [
-                "app/model/user.js"
+                "app/model/User.js"
             ],
-            "className": "user"
+            "className": "User"
         },
         "e32bd1a4-bc48-48a4-9a04-4d2d698522d0": {
             "paths": [
-                "app/model/userGroup.js"
+                "app/model/UserGroup.js"
             ],
-            "className": "userGroup"
+            "className": "UserGroup"
         },
         "6c78aee0-6b43-41df-9d4b-ae65ffb3d392": {
             "paths": [
-                "app/model/userGroupAssociations.js"
+                "app/model/UserGroupAssociations.js"
             ],
-            "className": "userGroupAssociations"
+            "className": "UserGroupAssociations"
         },
         "9c52a2dc-c42e-45c5-9516-e896c345e50b": {
             "paths": [

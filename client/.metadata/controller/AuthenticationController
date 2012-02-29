@@ -25,7 +25,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onLoginButtonTap",
-                "implHandler": "\r\n        //TODO: verify user name and password against server\n        this.getMain().setActiveItem(1);",
+                "implHandler": "\n//TODO: verify user name and password against server\nthis.getMainAppView().setActiveItem(1);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#LoginButton",
@@ -43,10 +43,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "ref": "main",
+                "ref": "mainAppView",
                 "selector": "mainappview",
                 "xtype": null,
-                "designer|userClassName": "main"
+                "designer|userClassName": "mainAppView"
             },
             "customConfigs": [],
             "expanded": true

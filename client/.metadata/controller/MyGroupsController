@@ -44,10 +44,10 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onContainerActivate",
-                "implHandler": "\r\n        //TODO make the id in the url dynamic\n        if (fishpickle.baseURL) {\n            //console.log(\"Container Activate \" + fishpickle.baseURL);\n            Ext.getStore(\"MyGroupsStore\").getProxy().setUrl(fishpickle.baseURL + \"rest/user/1/groups\");\n            Ext.getStore(\"MyGroupsStore\").load();  \n        }",
+                "implHandler": "\n//TODO make the id in the url dynamic\nif (fishpickle.baseURL) {\n    //console.log(\"Container Activate \" + fishpickle.baseURL);\n    Ext.getStore(\"MyGroupsStore\").getProxy().setUrl(fishpickle.baseURL + \"rest/user/1/groups\");\n    Ext.getStore(\"MyGroupsStore\").load();  \n}",
                 "name": "activate",
                 "designer|targetType": "Ext.Container",
-                "designer|controlQuery": "#home",
+                "designer|controlQuery": "#myGroupsContainer",
                 "designer|userClassName": "onContainerActivate"
             },
             "customConfigs": [],
