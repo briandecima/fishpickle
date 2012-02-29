@@ -59,7 +59,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onJsonstoreLoad",
-                "implHandler": "var configRecord = Ext.getStore(\"ConfigStore\").findRecord(\"name\", \"contextURL\");\nif (configRecord) {\n    //console.log(\"From load\" + configRecord.data.value);\n    fishpickle.baseURL = configRecord.data.value;\n}",
+                "implHandler": "        var configRecord = Ext.getStore(\"ConfigStore\").findRecord(\"name\", \"contextURL\");\n        if (configRecord) {\n            fishpickle.baseURL = configRecord.data.value;\n\n            Ext.getStore(\"AllGroupsStore\").getProxy().setUrl(fishpickle.baseURL + \"rest/group\");\n            Ext.getStore(\"AllGroupsStore\").load();\n        }",
                 "name": "load",
                 "designer|userClassName": "onJsonstoreLoad"
             },

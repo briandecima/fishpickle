@@ -13,7 +13,7 @@
     "customConfigs": [],
     "designerId": "59d209db-27d4-4bf0-a6d7-34590ece6417",
     "$viewOrder": 0,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen9958",
@@ -25,7 +25,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onLoginButtonTap",
-                "implHandler": "\r\n\n        //TODO: verify user name and password against server\n        this.getMain().setActiveItem(1);",
+                "implHandler": "\nvar loginStore = Ext.getStore('userStore');\nvar loginFormData = this.getLoginView().getValues();\n\n\n\n//get the user by login name\nif (fishpickle.baseURL) {\n    loginStore.getProxy().setUrl(fishpickle.baseURL + 'rest/login/' + loginFormData.login);\n\n    loginStore.load({\n        callback: function(records, operation, success) {\n            if (success) {\n                var serverUser = records[0].data;\n                //verify the password; this should happen on the server\n                if (loginFormData.password == serverUser.password) {\n                    this.updateLocalSettings(loginFormData.login, loginFormData.password);\n                    this.getMain().setActiveItem(1);\n                } else {\n                    Ext.Msg.alert('Error', 'The password is invalid.  Please try again.');\n                }\n            } else {\n                Ext.Msg.alert('Error','The user name or password is invalid.  Please try again.');\n            }\n        },\n        scope: this\n    });\n\n} else {\n    console.log('no base url available');\n}\n\n",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#LoginButton",
@@ -47,6 +47,61 @@
                 "selector": "mainappview",
                 "xtype": "mainview",
                 "designer|userClassName": "main"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen6848",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onAuthenticationViewActivate",
+                "implHandler": "console.log('checking for login information: ' + newActiveItem.id + ' ' + newActiveItem.name);\n\nvar settingsModel = Ext.getModel('Settings');\nconsole.log('settings model : ' + settingsModel);",
+                "name": "activate",
+                "designer|targetType": "Ext.form.Panel",
+                "designer|controlQuery": "#loginview",
+                "designer|userClassName": "onAuthenticationViewActivate"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen18609",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "loginView",
+                "selector": "loginview",
+                "xtype": "loginview",
+                "designer|userClassName": "loginView"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen24808",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "updateLocalSettings",
+                "designer|params": [
+                    "name, password"
+                ],
+                "implHandler": "console.log('updating local settings');\n",
+                "designer|userClassName": "updateLocalSettings"
             },
             "customConfigs": [],
             "expanded": true

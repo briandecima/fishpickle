@@ -1,11 +1,11 @@
 {
     "name": "fishpickle",
     "settings": {
-        "urlPrefix": "http://localhost/~mbianchini/fishpickle",
+        "urlPrefix": "http://localhost:8080",
         "directAPI": "",
         "spacesToIndent": 4,
         "codeGenFormat": "Class",
-        "exportPath": "/Users/bdecima/Sites/fishpickle",
+        "exportPath": "C:/apache/apache-tomcat-7.0.4/webapps/fishpickle",
         "extPath": "http://extjs.cachefly.net/touch/sencha-touch-designer-edition/builds/",
         "senchaIoKey": "",
         "senchaIoPath": "http://extjs.cachefly.net/designer/IO/",
@@ -137,6 +137,13 @@
                 "app/model/Configuration.js"
             ],
             "className": "Configuration"
+        },
+        "d615f23b-b9e2-46f5-b430-8e440a45173c": {
+            "paths": [
+                "app/store/UserStore.js",
+                "app/store/base/UserStore.js"
+            ],
+            "className": "UserStore"
         }
     },
     "expandedState": {

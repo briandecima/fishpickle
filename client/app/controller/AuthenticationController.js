@@ -20,21 +20,69 @@ Ext.define('fishpickle.controller.AuthenticationController', {
             main: {
                 selector: 'mainappview',
                 xtype: 'mainview'
+            },
+            loginView: {
+                selector: 'loginview',
+                xtype: 'loginview'
             }
         },
 
         control: {
             "#LoginButton": {
                 tap: 'onLoginButtonTap'
+            },
+            "#loginview": {
+                activate: 'onAuthenticationViewActivate'
             }
         }
     },
 
     onLoginButtonTap: function(button, e, options) {
 
+        var loginStore = Ext.getStore('userStore');
+        var loginFormData = this.getLoginView().getValues();
 
-        //TODO: verify user name and password against server
-        this.getMain().setActiveItem(1);
+
+
+        //get the user by login name
+        if (fishpickle.baseURL) {
+            loginStore.getProxy().setUrl(fishpickle.baseURL + 'rest/login/' + loginFormData.login);
+
+            loginStore.load({
+                callback: function(records, operation, success) {
+                    if (success) {
+                        var serverUser = records[0].data;
+                        //verify the password; this should happen on the server
+                        if (loginFormData.password == serverUser.password) {
+                            this.updateLocalSettings(loginFormData.login, loginFormData.password);
+                            this.getMain().setActiveItem(1);
+                        } else {
+                            Ext.Msg.alert('Error', 'The password is invalid.  Please try again.');
+                        }
+                    } else {
+                        Ext.Msg.alert('Error','The user name or password is invalid.  Please try again.');
+                    }
+                },
+                scope: this
+            });
+
+        } else {
+            console.log('no base url available');
+        }
+
+
+    },
+
+    onAuthenticationViewActivate: function(container, newActiveItem, oldActiveItem, options) {
+        console.log('checking for login information: ' + newActiveItem.id + ' ' + newActiveItem.name);
+
+        var settingsModel = Ext.getModel('Settings');
+        console.log('settings model : ' + settingsModel);
+    },
+
+    updateLocalSettings: function(name, password) {
+        console.log('updating local settings');
+
     }
 
 });

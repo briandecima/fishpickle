@@ -13,7 +13,7 @@
     "customConfigs": [],
     "designerId": "03147ff8-c626-43df-8c18-a8259890efac",
     "$viewOrder": 1,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen9364",
@@ -42,7 +42,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onButtonTap",
-                "implHandler": "\r\n\n        console.log('Saving the new group');",
+                "implHandler": "\r\n\n\n        console.log('Saving the new group');",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#saveGroupButton",
