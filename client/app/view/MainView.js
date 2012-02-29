@@ -17,6 +17,7 @@ Ext.define('fishpickle.view.MainView', {
     alias: 'widget.mainview',
 
     initialize: function() {
+
         var me = this;
         me.callParent(arguments);
     }

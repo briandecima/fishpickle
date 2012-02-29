@@ -53,7 +53,7 @@ Ext.define('fishpickle.controller.GroupDetailsController', {
 
         if (fishpickle.baseURL) {
             //console.log("in activate create group view");
-            var group = Ext.create('fishpickle.model.UserGroup', { id: '', name: 'Enter', description: '', isPrivate: false });
+            var group = Ext.create('fishpickle.model.UserGroup', { id: '', name: '', description: '', isPrivate: false });
             this.getGroupDetailsView().setRecord(group);
         }
     }

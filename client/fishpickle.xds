@@ -137,6 +137,12 @@
                 "app/model/Configuration.js"
             ],
             "className": "Configuration"
+        },
+        "3f90649c-112e-417d-a51c-0dc69596d468": {
+            "paths": [
+                "app/controller/SearchController.js"
+            ],
+            "className": "SearchController"
         }
     },
     "expandedState": {

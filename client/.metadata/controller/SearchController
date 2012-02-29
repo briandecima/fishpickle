@@ -1,0 +1,38 @@
+{
+    "id": "ExtBox1-ext-gen48520",
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|init": "",
+        "designer|userClassName": "SearchController"
+    },
+    "customConfigs": [],
+    "designerId": "3f90649c-112e-417d-a51c-0dc69596d468",
+    "$viewOrder": 4,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen48648",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onContainerActivate",
+                "implHandler": "if (fishpickle.baseURL) {\n    //console.log(\"Container Activate \" + fishpickle.baseURL);\n    Ext.getStore(\"AllGroupsStore\").getProxy().setUrl(fishpickle.baseURL + \"rest/group\");\n    Ext.getStore(\"AllGroupsStore\").load();  \n}",
+                "name": "activate",
+                "designer|targetType": "Ext.Container",
+                "designer|controlQuery": "#searchGroupsContainer",
+                "designer|userClassName": "onContainerActivate"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

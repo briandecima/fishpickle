@@ -45,7 +45,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onFormpanelActivate",
-                "implHandler": "\nif (fishpickle.baseURL) {\n    //console.log(\"in activate create group view\");\n    var group = Ext.create('fishpickle.model.UserGroup', { id: '', name: 'Enter', description: '', isPrivate: false });\n    this.getGroupDetailsView().setRecord(group);\n}",
+                "implHandler": "\nif (fishpickle.baseURL) {\n    //console.log(\"in activate create group view\");\n    var group = Ext.create('fishpickle.model.UserGroup', { id: '', name: '', description: '', isPrivate: false });\n    this.getGroupDetailsView().setRecord(group);\n}",
                 "name": "activate",
                 "designer|targetType": "Ext.form.Panel",
                 "designer|controlQuery": "#groupDetailsContainer",

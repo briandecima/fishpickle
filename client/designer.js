@@ -47,7 +47,8 @@ Ext.application({
         'AuthenticationController',
         'GroupDetailsController',
         'UserController',
-        'MyGroupsController'
+        'MyGroupsController',
+        'SearchController'
     ],
 
     launch: function() {
