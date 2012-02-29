@@ -16,10 +16,11 @@
 Ext.define('fishpickle.model.userGroup', {
     extend: 'Ext.data.Model',
     config: {
+        idProperty: 'uid',
         fields: [
             {
                 name: 'id',
-                type: 'string'
+                type: 'int'
             },
             {
                 name: 'description',
@@ -36,6 +37,16 @@ Ext.define('fishpickle.model.userGroup', {
             {
                 name: 'userGroupAssociation'
             }
-        ]
+        ],
+        proxy: {
+            type: 'rest',
+            url: '/rest/group',
+            format: 'json',
+            writer: {
+                type: 'json',
+                encode: true,
+                root: 'group'
+            }
+        }
     }
 });

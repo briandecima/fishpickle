@@ -14,7 +14,7 @@
 
 Ext.define('fishpickle.view.CreateGroupView', {
     extend: 'fishpickle.view.ui.CreateGroupView',
-    alias: 'widget.creategroupview',
+    alias: 'widget.createGroupFormPanel',
 
     initialize: function() {
         var me = this;

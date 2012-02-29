@@ -16,7 +16,12 @@
 Ext.define('fishpickle.model.user', {
     extend: 'Ext.data.Model',
     config: {
+        idProperty: 'uid',
         fields: [
+            {
+                name: 'id',
+                type: 'int'
+            },
             {
                 name: 'displayName',
                 type: 'string'

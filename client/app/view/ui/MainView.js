@@ -61,6 +61,7 @@ Ext.define('fishpickle.view.ui.MainView', {
             },
             {
                 xtype: 'container',
+                id: 'createGroupView',
                 layout: {
                     type: 'fit'
                 },
@@ -68,7 +69,7 @@ Ext.define('fishpickle.view.ui.MainView', {
                 iconCls: 'add',
                 items: [
                     {
-                        xtype: 'creategroupview',
+                        xtype: 'createGroupFormPanel',
                         itemId: 'CreateGroup'
                     }
                 ]
