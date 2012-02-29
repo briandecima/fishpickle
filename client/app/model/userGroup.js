@@ -46,6 +46,11 @@ Ext.define('fishpickle.model.userGroup', {
                 type: 'json',
                 encode: true,
                 root: 'group'
+            },
+            reader: {
+                type: 'json',
+                rootProperty: 'data',
+                record: 'data'
             }
         }
     }

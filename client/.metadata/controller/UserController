@@ -42,7 +42,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onButtonTap",
-                "implHandler": "        console.log('Saving the user settings');",
+                "implHandler": "\r\n        console.log('Saving the user settings');",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#saveSettingsButton",
