@@ -143,6 +143,13 @@
                 "app/controller/SearchController.js"
             ],
             "className": "SearchController"
+        },
+        "ac68f34f-8e6d-4cb4-b886-1908bfc3292a": {
+            "paths": [
+                "app/store/CurrentUserStore.js",
+                "app/store/base/CurrentUserStore.js"
+            ],
+            "className": "CurrentUserStore"
         }
     },
     "expandedState": {

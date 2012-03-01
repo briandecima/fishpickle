@@ -16,7 +16,8 @@
         "stores": [
             "MyGroupsStore",
             "AllGroupsStore",
-            "ConfigStore"
+            "ConfigStore",
+            "CurrentUserStore"
         ],
         "views": [
             "MainAppView",

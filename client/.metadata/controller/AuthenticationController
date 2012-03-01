@@ -25,7 +25,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onLoginButtonTap",
-                "implHandler": "\n//TODO: verify user name and password against server\nthis.getMainAppView().setActiveItem(1);",
+                "implHandler": "\n//TODO: verify user name and password against server\nvar store = Ext.getStore(\"CurrentUserStore\");\nstore.load( {\n    callback:function() {\n        var user = store.findRecord(\"login\", \"marcb\");\n        console.log(\"User = \" + user);\n\n        if (!user) {\n            console.log(\"Adding User\");\n\n\n            //now add some Searches\n            store.add({login: 'marcb'});\n            store.add({login: 'reginar'});\n\n            //finally, save our Search data to localStorage\n            store.sync();\n        }\n        this.getMainAppView().setActiveItem(1);\n    }, \n    scope:this\n\n}\n\n);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#LoginButton",

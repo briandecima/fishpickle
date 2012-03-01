@@ -67,7 +67,7 @@ Ext.define('fishpickle.view.ui.MainView', {
                 layout: {
                     type: 'fit'
                 },
-                title: 'Group Details',
+                title: 'Create Group',
                 iconCls: 'add',
                 items: [
                     {

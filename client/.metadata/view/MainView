@@ -120,7 +120,7 @@
                 "defaultType": null,
                 "layout": "fit",
                 "designer|userClassName": "MyContainer6",
-                "title": "Group Details",
+                "title": "Create Group",
                 "iconCls": "add"
             },
             "customConfigs": [],

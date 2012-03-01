@@ -30,7 +30,30 @@ Ext.define('fishpickle.controller.AuthenticationController', {
     onLoginButtonTap: function(button, e, options) {
 
         //TODO: verify user name and password against server
-        this.getMainAppView().setActiveItem(1);
+        var store = Ext.getStore("CurrentUserStore");
+        store.load( {
+            callback:function() {
+                var user = store.findRecord("login", "marcb");
+                console.log("User = " + user);
+
+                if (!user) {
+                    console.log("Adding User");
+
+
+                    //now add some Searches
+                    store.add({login: 'marcb'});
+                    store.add({login: 'reginar'});
+
+                    //finally, save our Search data to localStorage
+                    store.sync();
+                }
+                this.getMainAppView().setActiveItem(1);
+            }, 
+            scope:this
+
+        }
+
+        );
     }
 
 });

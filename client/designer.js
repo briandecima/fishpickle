@@ -28,7 +28,8 @@ Ext.application({
     stores: [
         'MyGroupsStore',
         'AllGroupsStore',
-        'ConfigStore'
+        'ConfigStore',
+        'CurrentUserStore'
     ],
 
     views: [
