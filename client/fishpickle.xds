@@ -1,11 +1,11 @@
 {
     "name": "fishpickle",
     "settings": {
-        "urlPrefix": "http://localhost/~mbianchini/fishpickle",
+        "urlPrefix": "http://localhost:8080",
         "directAPI": "",
         "spacesToIndent": 4,
         "codeGenFormat": "Class",
-        "exportPath": "/Users/bdecima/Sites/fishpickle",
+        "exportPath": "C:/apache/apache-tomcat-7.0.4/webapps/fishpickle",
         "extPath": "http://extjs.cachefly.net/touch/sencha-touch-designer-edition/builds/",
         "senchaIoKey": "",
         "senchaIoPath": "http://extjs.cachefly.net/designer/IO/",
@@ -144,12 +144,26 @@
             ],
             "className": "SearchController"
         },
-        "ac68f34f-8e6d-4cb4-b886-1908bfc3292a": {
+        "4870caa2-4eff-47cd-87c7-c9c5aab0301b": {
             "paths": [
-                "app/store/CurrentUserStore.js",
-                "app/store/base/CurrentUserStore.js"
+                "app/store/LocalSettingsStore.js",
+                "app/store/base/LocalSettingsStore.js"
             ],
-            "className": "CurrentUserStore"
+            "className": "LocalSettingsStore"
+        },
+        "0aec1fd1-fd38-4d22-95c4-168e770da9df": {
+            "paths": [
+                "app/view/LoadingView.js",
+                "app/view/ui/LoadingView.js"
+            ],
+            "className": "LoadingView"
+        },
+        "bfb51e23-97b7-4773-8ff1-7b3edea3c00c": {
+            "paths": [
+                "app/store/UserStore.js",
+                "app/store/base/UserStore.js"
+            ],
+            "className": "UserStore"
         }
     },
     "expandedState": {

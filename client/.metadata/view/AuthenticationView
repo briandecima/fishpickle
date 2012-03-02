@@ -1,13 +1,12 @@
 {
     "id": "ExtBox1-ext-gen4776",
-    "type": "panel",
+    "type": "formpanel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "layout": null,
         "designer|userClassName": "AuthenticationView",
         "designer|userAlias": "authenticationview"
     },
@@ -44,6 +43,7 @@
                 "docked": "top",
                 "label": "Name",
                 "labelAlign": "top",
+                "name": "login",
                 "designer|userClassName": "MyTextField"
             },
             "customConfigs": [],
@@ -61,6 +61,7 @@
                 "docked": null,
                 "label": "Password",
                 "labelAlign": "top",
+                "name": "password",
                 "designer|userClassName": "MyPasswordField"
             },
             "customConfigs": [],

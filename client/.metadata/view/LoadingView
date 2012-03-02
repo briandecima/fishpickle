@@ -1,0 +1,35 @@
+{
+    "id": "ExtBox1-ext-gen10491",
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "loadingitem",
+        "designer|userClassName": "LoadingView",
+        "designer|userAlias": "loadingview"
+    },
+    "customConfigs": [],
+    "designerId": "0aec1fd1-fd38-4d22-95c4-168e770da9df",
+    "$viewOrder": 7,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen13250",
+            "type": "label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "This is fishpickle....",
+                "designer|userClassName": "MyLabel"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

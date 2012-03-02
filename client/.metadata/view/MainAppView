@@ -20,6 +20,22 @@
     "expanded": true,
     "cn": [
         {
+            "id": "ExtBox1-ext-gen11752",
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "loadingitem"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-linkedinstance",
+            "expanded": true,
+            "masterInstanceId": "ExtBox1-ext-gen10491"
+        },
+        {
             "id": "ExtBox1-ext-gen15693",
             "type": "linkedinstance",
             "reference": {

@@ -1,0 +1,52 @@
+{
+    "id": "ExtBox1-ext-gen17142",
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "User",
+        "storeId": "UserStore",
+        "designer|userClassName": "UserStore",
+        "designer|userAlias": "UserStore"
+    },
+    "customConfigs": [],
+    "designerId": "bfb51e23-97b7-4773-8ff1-7b3edea3c00c",
+    "$viewOrder": 4,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen17148",
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "http://dynamicurl",
+                "designer|userClassName": "MyRestProxy4"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen17155",
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader5"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        }
+    ]
+}
