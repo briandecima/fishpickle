@@ -13,7 +13,7 @@
     "customConfigs": [],
     "designerId": "59d209db-27d4-4bf0-a6d7-34590ece6417",
     "$viewOrder": 0,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen9958",
@@ -100,7 +100,7 @@
                 "designer|params": [
                     "userModel"
                 ],
-                "implHandler": "        var localSettingsStore = Ext.getStore(\"LocalSettingsStore\");\n        localSettingsStore.removeAt(0);\n        var m = Ext.create('fishpickle.model.User');\n        m.setData(userModel);\n        localSettingsStore.add(m);\n        localSettingsStore.sync();",
+                "implHandler": "var localSettingsStore = Ext.getStore(\"LocalSettingsStore\");\nlocalSettingsStore.removeAt(0);\nvar m = Ext.create('fishpickle.model.User');\nm.setData(userModel);\nlocalSettingsStore.add(m);\nlocalSettingsStore.sync();\nfishpickle.currentUser = m;",
                 "designer|userClassName": "updateLocalSettings"
             },
             "customConfigs": [],

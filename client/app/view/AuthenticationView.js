@@ -17,7 +17,6 @@ Ext.define('fishpickle.view.AuthenticationView', {
     alias: 'widget.authenticationview',
 
     initialize: function() {
-
         var me = this;
         me.callParent(arguments);
     }

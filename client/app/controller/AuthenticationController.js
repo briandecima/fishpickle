@@ -60,6 +60,7 @@ Ext.define('fishpickle.controller.AuthenticationController', {
         m.setData(userModel);
         localSettingsStore.add(m);
         localSettingsStore.sync();
+        fishpickle.currentUser = m;
     },
 
     doLogin: function(loginName, password) {
