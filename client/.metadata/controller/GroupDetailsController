@@ -64,7 +64,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onButtonTap",
-                "implHandler": "        var group = this.getGroupDetailsView().getRecord();\n        group.set(this.getGroupDetailsView().getValues());\n        group.getProxy().setUrl(fishpickle.baseURL + 'rest/user/1/groups');\n\n        group.save({\n            callback: function(records, operation, success) {\n                this.getMainView().setActiveItem(0);\n            }\n        },\n        this\n        );",
+                "implHandler": "var group = this.getGroupDetailsView().getRecord();\ngroup.set(this.getGroupDetailsView().getValues());\ngroup.getProxy().setUrl(fishpickle.baseURL + 'rest/user/' + fishpickle.currentUser.data.id + '/groups');\n\ngroup.save({\n    callback: function(records, operation, success) {\n        this.getMainView().setActiveItem(0);\n    }\n},\nthis\n);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#saveGroupButton",

@@ -37,7 +37,7 @@ Ext.define('fishpickle.controller.GroupDetailsController', {
     onButtonTap: function(button, e, options) {
         var group = this.getGroupDetailsView().getRecord();
         group.set(this.getGroupDetailsView().getValues());
-        group.getProxy().setUrl(fishpickle.baseURL + 'rest/user/1/groups');
+        group.getProxy().setUrl(fishpickle.baseURL + 'rest/user/' + fishpickle.currentUser.data.id + '/groups');
 
         group.save({
             callback: function(records, operation, success) {
