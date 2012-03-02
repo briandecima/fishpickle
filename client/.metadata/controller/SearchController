@@ -13,7 +13,7 @@
     "customConfigs": [],
     "designerId": "3f90649c-112e-417d-a51c-0dc69596d468",
     "$viewOrder": 4,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen48648",
@@ -25,46 +25,11 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onContainerActivate",
-                "implHandler": "        if (fishpickle.baseURL) {\n            //console.log(\"Container Activate \" + fishpickle.baseURL);\n            Ext.getStore(\"AllGroupsStore\").getProxy().setUrl(fishpickle.baseURL + \"rest/search/group\");\n            Ext.getStore(\"AllGroupsStore\").load();  \n        }",
+                "implHandler": "        if (fishpickle.baseURL) {\n            //console.log(\"Container Activate \" + fishpickle.baseURL);\n            Ext.getStore(\"AllGroupsStore\").getProxy().setUrl(fishpickle.baseURL + \"rest/group\");\n            Ext.getStore(\"AllGroupsStore\").load();  \n        }",
                 "name": "activate",
                 "designer|targetType": "Ext.Container",
                 "designer|controlQuery": "#searchGroupsContainer",
                 "designer|userClassName": "onContainerActivate"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen7200",
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onTextfieldKeyup",
-                "implHandler": "console.log(textfield.getValue());\nExt.getStore(\"AllGroupsStore\").getProxy().setUrl(fishpickle.baseURL + \"rest/search/group/\" + textfield.getValue());\nthis.getSearchResultsList().setLoadingText(null);\nExt.getStore(\"AllGroupsStore\").load();",
-                "name": "keyup",
-                "designer|targetType": "Ext.field.Text",
-                "designer|controlQuery": "#groupSearchField",
-                "designer|userClassName": "onTextfieldKeyup"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen12986",
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "ref": "searchResultsList",
-                "selector": "#searchResultsList",
-                "designer|userClassName": "searchResultsList"
             },
             "customConfigs": [],
             "expanded": true

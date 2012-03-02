@@ -36,13 +36,6 @@ Ext.define('fishpickle.controller.SearchController', {
             Ext.getStore("AllGroupsStore").getProxy().setUrl(fishpickle.baseURL + "rest/search/group");
             Ext.getStore("AllGroupsStore").load();  
         }
-    },
-
-    onTextfieldKeyup: function(textfield, e, options) {
-        console.log(textfield.getValue());
-        Ext.getStore("AllGroupsStore").getProxy().setUrl(fishpickle.baseURL + "rest/search/group/" + textfield.getValue());
-        this.getSearchResultsList().setLoadingText(null);
-        Ext.getStore("AllGroupsStore").load();
     }
 
 });
