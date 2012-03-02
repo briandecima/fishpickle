@@ -7,7 +7,6 @@
     },
     "codeClass": null,
     "userConfig": {
-        "stores": null,
         "designer|init": "",
         "designer|userClassName": "AuthenticationController"
     },
@@ -26,7 +25,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onLoginButtonTap",
-                "implHandler": "        var loginFormData = this.getLoginView().getValues();\n        this.doLogin(loginFormData.login, loginFormData.password);",
+                "implHandler": "\r\n\n        //TODO: verify user name and password against server\n        var store = Ext.getStore(\"CurrentUserStore\");\n        store.load( {\n            callback:function() {\n                var user = store.findRecord(\"login\", \"marcb\");\n                console.log(\"User = \" + user);\n\n                if (!user) {\n                    console.log(\"Adding User\");\n\n\n                    //now add some Searches\n                    store.add({login: 'marcb'});\n                    store.add({login: 'reginar'});\n\n                    //finally, save our Search data to localStorage\n                    store.sync();\n                }\n                this.getMainAppView().setActiveItem(1);\n            }, \n            scope:this\n\n        }\n\n        );",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#LoginButton",
@@ -48,129 +47,6 @@
                 "selector": "mainappview",
                 "xtype": null,
                 "designer|userClassName": "mainAppView"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen6848",
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onLoadingViewActivate",
-                "implHandler": "        console.log('loading view activated');\n\n        var configStore = Ext.getStore(\"ConfigStore\");\n        configStore.load({\n            callback: function(records, operation, success) {\n                if (success) {\n                    this.doAutoLogin();\n                } else {\n                    this.navigateToLoginView();            \n                }\n            },\n            scope: this\n        });",
-                "name": "activate",
-                "designer|targetType": "Ext.Container",
-                "designer|controlQuery": "#loadingitem",
-                "designer|userClassName": "onLoadingViewActivate"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen18609",
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "ref": "loginView",
-                "selector": "authenticationview",
-                "xtype": "loginview",
-                "designer|userClassName": "loginView"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen24808",
-            "type": "basicfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "updateLocalSettings",
-                "designer|params": [
-                    "userModel"
-                ],
-                "implHandler": "        var localSettingsStore = Ext.getStore(\"LocalSettingsStore\");\n        localSettingsStore.removeAt(0);\n        var m = Ext.create('fishpickle.model.User');\n        m.setData(userModel);\n        localSettingsStore.add(m);\n        localSettingsStore.sync();",
-                "designer|userClassName": "updateLocalSettings"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen12174",
-            "type": "basicfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "doLogin",
-                "designer|params": [
-                    "loginName",
-                    "password"
-                ],
-                "implHandler": "        //get the user by login name\n        if (fishpickle.baseURL && loginName && password) {\n            var userStore = Ext.getStore('UserStore');\n            if (!userStore) {\n                userStore = Ext.create('fishpickle.store.UserStore');\n            }\n            userStore.getProxy().setUrl(fishpickle.baseURL + 'rest/login/' + loginName);\n            userStore.load({\n                callback: function(records, operation, success) {\n                    if (success) {\n                        var serverUser = records[0].data;\n                        if (serverUser && password == serverUser.password) {\n                            this.updateLocalSettings(serverUser);\n                            this.navigateToMyGroupsView();\n                        } else {\n                            this.navigateToLoginView();\n                            Ext.Msg.alert('Error', 'The password is invalid.  Please try again.');\n                        }\n                    } else {\n                        this.navigateToLoginView();\n                        Ext.Msg.alert('Error','The user name or password is invalid.  Please try again.');\n                    }\n                },\n                scope: this\n            });\n\n        } else {\n            //force user to login\n            this.navigateToLoginView();\n        }",
-                "designer|userClassName": "doLogin"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen11454",
-            "type": "basicfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "navigateToLoginView",
-                "implHandler": "        this.getMainAppView().setActiveItem(1);",
-                "designer|userClassName": "navigateToLoginView"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen11761",
-            "type": "basicfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "navigateToMyGroupsView",
-                "implHandler": "        this.getMainAppView().setActiveItem(2);",
-                "designer|userClassName": "navigateToMyGroupsView"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen22703",
-            "type": "basicfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "doAutoLogin",
-                "implHandler": "        var localSettingsStore = Ext.getStore(\"LocalSettingsStore\");\n        localSettingsStore.load({\n            callback: function(records, operation, success) {\n                if (success) {\n                    var settings = localSettingsStore.getAt(0);\n                    if (settings && settings.data && settings.data.login && settings.data.login.length > 0 && settings.data.password) {\n                        this.doLogin(settings.data.login, settings.data.password);\n                    } else {\n                        this.navigateToLoginView();\n                    }\n                } else {\n                    this.navigateToLoginView();\n                }\n\n            },\n            scope: this\n        });",
-                "designer|userClassName": "doAutoLogin"
             },
             "customConfigs": [],
             "expanded": true

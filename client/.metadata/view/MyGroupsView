@@ -1,0 +1,61 @@
+{
+    "id": "ExtBox1-ext-gen45732",
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": null,
+        "ui": null,
+        "layout": "fit",
+        "designer|userClassName": "MyGroupsView",
+        "designer|userAlias": "mygroupsview"
+    },
+    "customConfigs": [],
+    "designerId": "4eadc38b-80dc-418f-87fd-685c50c294b2",
+    "$viewOrder": 5,
+    "expanded": false,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen4378",
+            "type": "titlebar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "id": "myGroupsToolbar",
+                "title": "My Groups",
+                "designer|userClassName": "MyTitleBar1"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen5043",
+            "type": "list",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": null,
+                "height": null,
+                "id": "myGroupsList",
+                "ui": "round",
+                "emptyText": "You are not a member of any groups.",
+                "itemTpl": "<div>{name}</div>",
+                "store": "MyGroupsStore",
+                "onItemDisclosure": true,
+                "designer|userClassName": "MyList"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

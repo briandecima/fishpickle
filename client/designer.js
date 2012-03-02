@@ -29,8 +29,7 @@ Ext.application({
         'MyGroupsStore',
         'AllGroupsStore',
         'ConfigStore',
-        'LocalSettingsStore',
-        'UserStore'
+        'CurrentUserStore'
     ],
 
     views: [
@@ -40,8 +39,7 @@ Ext.application({
         'GroupDetailsView',
         'AuthenticationView',
         'MyGroupsView',
-        'SettingsView',
-        'LoadingView'
+        'SettingsView'
     ],
 
     name: 'fishpickle',

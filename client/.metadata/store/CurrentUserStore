@@ -1,6 +1,6 @@
 {
-    "id": "ExtBox1-ext-gen9197",
-    "type": "store",
+    "id": "ExtBox1-ext-gen53141",
+    "type": "jsonstore",
     "reference": {
         "name": "items",
         "type": "array"
@@ -8,16 +8,16 @@
     "codeClass": null,
     "userConfig": {
         "model": "User",
-        "storeId": "LocalSettingsStore",
-        "designer|userClassName": "LocalSettingsStore"
+        "storeId": "CurrentUserStore",
+        "designer|userClassName": "CurrentUserStore"
     },
     "customConfigs": [],
-    "designerId": "4870caa2-4eff-47cd-87c7-c9c5aab0301b",
+    "designerId": "ac68f34f-8e6d-4cb4-b886-1908bfc3292a",
     "$viewOrder": 3,
     "expanded": true,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen9493",
+            "id": "ExtBox1-ext-gen58955",
             "type": "localstorageproxy",
             "reference": {
                 "name": "proxy",
@@ -25,8 +25,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "localSettingsStoreProxy",
-                "designer|userClassName": "MyLocalStorageProxy1"
+                "id": "currentUserStoreProxy",
+                "designer|userClassName": "MyLocalStorageProxy"
             },
             "customConfigs": [],
             "expanded": true

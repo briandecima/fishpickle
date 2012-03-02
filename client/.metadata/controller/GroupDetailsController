@@ -1,0 +1,93 @@
+{
+    "id": "ExtBox1-ext-gen9232",
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "stores": [
+            "MyGroupsStore"
+        ],
+        "designer|init": "",
+        "designer|userClassName": "GroupDetailsController"
+    },
+    "customConfigs": [],
+    "designerId": "03147ff8-c626-43df-8c18-a8259890efac",
+    "$viewOrder": 1,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen9364",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "groupDetailsView",
+                "selector": "groupdetailsview",
+                "xtype": null,
+                "designer|userClassName": "groupDetailsView"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen9017",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onFormpanelActivate",
+                "implHandler": "        if (fishpickle.baseURL) {\n            //console.log(\"in activate create group view\");\n            var group = Ext.create('fishpickle.model.UserGroup', { id: '', name: '', description: '', isPrivate: false });\n            this.getGroupDetailsView().setRecord(group);\n        }",
+                "name": "activate",
+                "designer|targetType": "Ext.form.Panel",
+                "designer|controlQuery": "#groupDetailsContainer",
+                "designer|userClassName": "onFormpanelActivate"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen10833",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onButtonTap",
+                "implHandler": "        var group = this.getGroupDetailsView().getRecord();\n        group.set(this.getGroupDetailsView().getValues());\n        group.getProxy().setUrl(fishpickle.baseURL + 'rest/user/1/groups');\n\n        group.save({\n            callback: function(records, operation, success) {\n                this.getMainView().setActiveItem(0);\n            }\n        },\n        this\n        );",
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#saveGroupButton",
+                "designer|userClassName": "onButtonTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen21935",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mainView",
+                "selector": "mainview",
+                "designer|userClassName": "mainView"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

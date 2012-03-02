@@ -1,0 +1,97 @@
+{
+    "id": "ExtBox1-ext-gen41322",
+    "type": "formpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": null,
+        "itemId": "",
+        "layout": null,
+        "designer|userClassName": "GroupDetailsView",
+        "designer|userAlias": "groupdetailsview"
+    },
+    "customConfigs": [],
+    "designerId": "2d1ae554-25d4-4153-9341-e06ccf6d2313",
+    "$viewOrder": 3,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen41537",
+            "type": "titlebar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "id": "groupDetails",
+                "title": "Group Details",
+                "designer|userClassName": "MyTitleBar2"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen41742",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "right",
+                        "id": "saveGroupButton",
+                        "itemId": "saveGroupButton",
+                        "iconAlign": "right",
+                        "text": "Save",
+                        "designer|userClassName": "MyButton4",
+                        "align": "right"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen43199",
+            "type": "textfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "groupNameField",
+                "label": "Name",
+                "labelAlign": "top",
+                "name": "name",
+                "designer|userClassName": "MyTextField1"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen44003",
+            "type": "textareafield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "groupDescriptionField",
+                "label": "Description",
+                "labelAlign": "top",
+                "name": "description",
+                "designer|userClassName": "MyTextArea"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

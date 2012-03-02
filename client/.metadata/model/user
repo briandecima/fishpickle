@@ -94,6 +94,40 @@
             },
             "customConfigs": [],
             "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen29164",
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "/rest/user",
+                "format": "json",
+                "designer|userClassName": "MyRestProxy3"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen29623",
+                    "type": "jsonwriter",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "encode": true,
+                        "root": "user",
+                        "designer|userClassName": "MyJsonWriter1"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
         }
     ]
 }

@@ -38,6 +38,16 @@ Ext.define('fishpickle.model.User', {
                 name: 'email',
                 type: 'string'
             }
-        ]
+        ],
+        proxy: {
+            type: 'rest',
+            url: '/rest/user',
+            format: 'json',
+            writer: {
+                type: 'json',
+                encode: true,
+                root: 'user'
+            }
+        }
     }
 });

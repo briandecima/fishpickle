@@ -17,8 +17,7 @@
             "MyGroupsStore",
             "AllGroupsStore",
             "ConfigStore",
-            "LocalSettingsStore",
-            "UserStore"
+            "CurrentUserStore"
         ],
         "views": [
             "MainAppView",
@@ -27,8 +26,7 @@
             "GroupDetailsView",
             "AuthenticationView",
             "MyGroupsView",
-            "SettingsView",
-            "LoadingView"
+            "SettingsView"
         ],
         "designer|launch": "this.baseURL = undefined;",
         "name": "fishpickle"
