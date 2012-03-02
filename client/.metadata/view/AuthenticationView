@@ -1,6 +1,6 @@
 {
     "id": "ExtBox1-ext-gen4776",
-    "type": "panel",
+    "type": "formpanel",
     "reference": {
         "name": "items",
         "type": "array"
@@ -14,7 +14,7 @@
     "customConfigs": [],
     "designerId": "5c9c2d01-c8a8-40a2-ad47-82409c9b2366",
     "$viewOrder": 4,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen2861",
@@ -44,6 +44,7 @@
                 "docked": "top",
                 "label": "Name",
                 "labelAlign": "top",
+                "name": "login",
                 "designer|userClassName": "MyTextField"
             },
             "customConfigs": [],
@@ -61,6 +62,7 @@
                 "docked": null,
                 "label": "Password",
                 "labelAlign": "top",
+                "name": "password",
                 "designer|userClassName": "MyPasswordField"
             },
             "customConfigs": [],

@@ -1,6 +1,6 @@
 {
-    "id": "ExtBox1-ext-gen53141",
-    "type": "jsonstore",
+    "id": "ExtBox1-ext-gen12439",
+    "type": "store",
     "reference": {
         "name": "items",
         "type": "array"
@@ -8,16 +8,16 @@
     "codeClass": null,
     "userConfig": {
         "model": "User",
-        "storeId": "CurrentUserStore",
-        "designer|userClassName": "CurrentUserStore"
+        "storeId": "LocalSettingsStore",
+        "designer|userClassName": "LocalSettingsStore"
     },
     "customConfigs": [],
-    "designerId": "ac68f34f-8e6d-4cb4-b886-1908bfc3292a",
-    "$viewOrder": 3,
+    "designerId": "abb30875-f8f8-4177-a65c-5bbccfdc3d25",
+    "$viewOrder": 4,
     "expanded": true,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen58955",
+            "id": "ExtBox1-ext-gen12774",
             "type": "localstorageproxy",
             "reference": {
                 "name": "proxy",
@@ -25,8 +25,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "currentUserStoreProxy",
-                "designer|userClassName": "MyLocalStorageProxy"
+                "id": "fishpickleSettingsProxy",
+                "designer|userClassName": "MyLocalStorageProxy1"
             },
             "customConfigs": [],
             "expanded": true
