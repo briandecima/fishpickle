@@ -20,14 +20,13 @@ Ext.define('fishpickle.controller.MyGroupsController', {
             "#MainAppView": {
                 activeitemchange: 'onPanelActiveItemChange'
             },
-            "#home": {
+            "#myGroupsContainer": {
                 activate: 'onContainerActivate'
             }
         }
     },
 
     onPanelActiveItemChange: function(container, value, oldValue, options) {
-
         //TODO make the id in the url dynamic
         if (fishpickle.baseURL) {
             //console.log("Panel Active Item Change " + fishpickle.baseURL);
@@ -37,7 +36,6 @@ Ext.define('fishpickle.controller.MyGroupsController', {
     },
 
     onContainerActivate: function(container, newActiveItem, oldActiveItem, options) {
-
         //TODO make the id in the url dynamic
         if (fishpickle.baseURL) {
             //console.log("Container Activate " + fishpickle.baseURL);

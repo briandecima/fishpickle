@@ -26,7 +26,7 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "top",
-                "id": "SearchToolbar",
+                "id": "searchToolbar",
                 "designer|userClassName": "MyToolbar",
                 "container|align": "stretchmax",
                 "container|pack": null
@@ -66,7 +66,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "SearchResultsList",
+                "id": "searchResultsList",
                 "ui": "round",
                 "emptyText": "No groups found.",
                 "itemTpl": "<div>{name}</div>",

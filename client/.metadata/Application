@@ -8,25 +8,27 @@
     "codeClass": null,
     "userConfig": {
         "models": [
-            "user",
-            "userGroup",
-            "userGroupAssociations",
+            "User",
+            "UserGroup",
+            "UserGroupAssociations",
             "Configuration"
         ],
         "stores": [
             "MyGroupsStore",
             "AllGroupsStore",
             "ConfigStore",
+            "LocalSettingsStore",
             "UserStore"
         ],
         "views": [
             "MainAppView",
             "MainView",
             "SearchView",
-            "CreateGroupView",
+            "GroupDetailsView",
             "AuthenticationView",
-            "HomeView",
-            "SettingsView"
+            "MyGroupsView",
+            "SettingsView",
+            "LoadingView"
         ],
         "designer|launch": "this.baseURL = undefined;",
         "name": "fishpickle"

@@ -1,5 +1,5 @@
 {
-    "id": "ExtBox1-ext-gen12681",
+    "id": "ExtBox1-ext-gen17142",
     "type": "jsonpstore",
     "reference": {
         "name": "items",
@@ -7,18 +7,18 @@
     },
     "codeClass": null,
     "userConfig": {
-        "model": "user",
-        "storeId": "userStore",
+        "model": "User",
+        "storeId": "UserStore",
         "designer|userClassName": "UserStore",
-        "designer|userAlias": "userStore"
+        "designer|userAlias": "UserStore"
     },
     "customConfigs": [],
-    "designerId": "d615f23b-b9e2-46f5-b430-8e440a45173c",
-    "$viewOrder": 3,
+    "designerId": "bfb51e23-97b7-4773-8ff1-7b3edea3c00c",
+    "$viewOrder": 4,
     "expanded": true,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen12687",
+            "id": "ExtBox1-ext-gen17148",
             "type": "restproxy",
             "reference": {
                 "name": "proxy",
@@ -26,14 +26,14 @@
             },
             "codeClass": null,
             "userConfig": {
-                "url": "http://loadthisdynamically",
-                "designer|userClassName": "MyRestProxy2"
+                "url": "http://dynamicurl",
+                "designer|userClassName": "MyRestProxy4"
             },
             "customConfigs": [],
             "expanded": true,
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen12694",
+                    "id": "ExtBox1-ext-gen17155",
                     "type": "jsonreader",
                     "reference": {
                         "name": "reader",
@@ -41,7 +41,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyJsonReader3"
+                        "designer|userClassName": "MyJsonReader5"
                     },
                     "customConfigs": [],
                     "expanded": true

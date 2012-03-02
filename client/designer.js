@@ -19,9 +19,9 @@ Ext.Loader.setConfig({
 
 Ext.application({
     models: [
-        'user',
-        'userGroup',
-        'userGroupAssociations',
+        'User',
+        'UserGroup',
+        'UserGroupAssociations',
         'Configuration'
     ],
 
@@ -29,6 +29,7 @@ Ext.application({
         'MyGroupsStore',
         'AllGroupsStore',
         'ConfigStore',
+        'LocalSettingsStore',
         'UserStore'
     ],
 
@@ -36,19 +37,21 @@ Ext.application({
         'MainAppView',
         'MainView',
         'SearchView',
-        'CreateGroupView',
+        'GroupDetailsView',
         'AuthenticationView',
-        'HomeView',
-        'SettingsView'
+        'MyGroupsView',
+        'SettingsView',
+        'LoadingView'
     ],
 
     name: 'fishpickle',
 
     controllers: [
         'AuthenticationController',
-        'GroupController',
+        'GroupDetailsController',
         'UserController',
-        'MyGroupsController'
+        'MyGroupsController',
+        'SearchController'
     ],
 
     launch: function() {

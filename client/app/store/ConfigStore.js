@@ -25,9 +25,6 @@ Ext.define('fishpickle.store.ConfigStore', {
         var configRecord = Ext.getStore("ConfigStore").findRecord("name", "contextURL");
         if (configRecord) {
             fishpickle.baseURL = configRecord.data.value;
-
-            Ext.getStore("AllGroupsStore").getProxy().setUrl(fishpickle.baseURL + "rest/group");
-            Ext.getStore("AllGroupsStore").load();
         }
     }
 

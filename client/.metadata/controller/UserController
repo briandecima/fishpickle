@@ -13,7 +13,7 @@
     "customConfigs": [],
     "designerId": "920067bc-4b57-4a48-89ed-9c99a8649432",
     "$viewOrder": 2,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen15522",
@@ -24,10 +24,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "ref": "main",
+                "ref": "mainAppView",
                 "selector": "mainappview",
-                "xtype": "mainview",
-                "designer|userClassName": "main"
+                "xtype": null,
+                "designer|userClassName": "mainAppView"
             },
             "customConfigs": [],
             "expanded": true

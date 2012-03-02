@@ -7,8 +7,9 @@
     },
     "codeClass": null,
     "userConfig": {
+        "id": null,
         "designer|userClassName": "MainView",
-        "designer|userAlias": "primaryview"
+        "designer|userAlias": "mainview"
     },
     "customConfigs": [],
     "designerId": "6455e548-8780-4215-8023-2ae70bc2d295",
@@ -39,7 +40,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "home",
+                "id": "myGroupsContainer",
                 "layout": "fit",
                 "designer|userClassName": "MyContainer8",
                 "title": "Home",
@@ -57,7 +58,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "id": "HomeGroup"
+                        "id": "myGroupsItem"
                     },
                     "customConfigs": [],
                     "iconCls": "icon-linkedinstance",
@@ -78,6 +79,7 @@
                 "cls": [
                     "search"
                 ],
+                "id": "searchGroupsContainer",
                 "layout": "fit",
                 "designer|userClassName": "MyContainer5",
                 "title": "Search",
@@ -95,7 +97,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "itemId": "SearchGroup"
+                        "id": "searchGroupsItem",
+                        "itemId": ""
                     },
                     "customConfigs": [],
                     "iconCls": "icon-linkedinstance",
@@ -113,11 +116,11 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "createGroupView",
+                "id": "groupDetailsContainer",
                 "defaultType": null,
                 "layout": "fit",
                 "designer|userClassName": "MyContainer6",
-                "title": "Create",
+                "title": "Create Group",
                 "iconCls": "add"
             },
             "customConfigs": [],
@@ -132,7 +135,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "itemId": "CreateGroup"
+                        "id": "groupDetailsItem",
+                        "itemId": null
                     },
                     "customConfigs": [],
                     "iconCls": "icon-linkedinstance",
@@ -150,13 +154,14 @@
             },
             "codeClass": null,
             "userConfig": {
+                "id": "settingsContainer",
                 "layout": "fit",
                 "designer|userClassName": "MyContainer7",
                 "title": "Settings",
                 "iconCls": "settings"
             },
             "customConfigs": [],
-            "expanded": false,
+            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen6730",
@@ -166,7 +171,9 @@
                         "type": "array"
                     },
                     "codeClass": null,
-                    "userConfig": {},
+                    "userConfig": {
+                        "id": "settingsItem"
+                    },
                     "customConfigs": [],
                     "iconCls": "icon-linkedinstance",
                     "expanded": true,

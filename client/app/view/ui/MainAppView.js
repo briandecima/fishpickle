@@ -16,6 +16,7 @@
 Ext.define('fishpickle.view.ui.MainAppView', {
     extend: 'Ext.Panel',
     requires: [
+        'fishpickle.view.LoadingView',
         'fishpickle.view.AuthenticationView',
         'fishpickle.view.MainView'
     ],
@@ -27,12 +28,16 @@ Ext.define('fishpickle.view.ui.MainAppView', {
         },
         items: [
             {
-                xtype: 'loginview',
+                xtype: 'loadingview',
+                itemId: 'loadingitem'
+            },
+            {
+                xtype: 'authenticationview',
                 id: 'LoginView'
             },
             {
-                xtype: 'primaryview',
-                itemId: 'MainView'
+                xtype: 'mainview',
+                id: 'mainItem'
             }
         ]
     }

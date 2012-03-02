@@ -14,10 +14,9 @@
 
 Ext.define('fishpickle.store.UserStore', {
     extend: 'fishpickle.store.base.UserStore',
-    alias: 'widget.userStore',
+    alias: 'widget.UserStore',
 
     constructor: function(cfg) {
-
         var me = this;
         cfg = cfg || {};
         me.callParent([Ext.apply({}, cfg)]);
