@@ -28,7 +28,6 @@ Ext.define('fishpickle.controller.UserController', {
     },
 
     onButtonTap: function(button, e, options) {
-
         console.log('Saving the user settings');
     }
 

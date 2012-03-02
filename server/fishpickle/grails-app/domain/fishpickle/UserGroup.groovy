@@ -3,6 +3,8 @@ package fishpickle
 import java.util.List;
 
 class UserGroup {
+	
+	static searchable = true
 
      static constraints = {
 		name(blank:false, maxSize:50)

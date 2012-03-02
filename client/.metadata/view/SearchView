@@ -32,7 +32,7 @@
                 "container|pack": null
             },
             "customConfigs": [],
-            "expanded": false,
+            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen11802",
@@ -47,6 +47,7 @@
                         "centered": null,
                         "cls": null,
                         "docked": "top",
+                        "id": "groupSearchField",
                         "width": "",
                         "label": "",
                         "placeHolder": " Search",
@@ -68,8 +69,10 @@
             "userConfig": {
                 "id": "searchResultsList",
                 "ui": "round",
+                "hideOnMaskTap": null,
                 "emptyText": "No groups found.",
                 "itemTpl": "<div>{name}</div>",
+                "loadingText": null,
                 "store": "AllGroupsStore",
                 "onItemDisclosure": true,
                 "designer|userClassName": "MyList1"

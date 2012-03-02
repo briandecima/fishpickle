@@ -35,7 +35,6 @@ Ext.define('fishpickle.controller.GroupDetailsController', {
     },
 
     onButtonTap: function(button, e, options) {
-
         var group = this.getGroupDetailsView().getRecord();
         group.set(this.getGroupDetailsView().getValues());
         group.getProxy().setUrl(fishpickle.baseURL + 'rest/user/1/groups');
@@ -50,7 +49,6 @@ Ext.define('fishpickle.controller.GroupDetailsController', {
     },
 
     onFormpanelActivate: function(container, newActiveItem, oldActiveItem, options) {
-
         if (fishpickle.baseURL) {
             //console.log("in activate create group view");
             var group = Ext.create('fishpickle.model.UserGroup', { id: '', name: '', description: '', isPrivate: false });
