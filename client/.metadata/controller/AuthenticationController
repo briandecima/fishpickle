@@ -62,7 +62,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onLoadingViewActivate",
-                "implHandler": "console.log('loading view activated');\n\nvar configStore = Ext.getStore(\"ConfigStore\");\nconfigStore.load({\n    callback: function(records, operation, success) {\n        if (success) {\n            this.doAutoLogin();\n        } else {\n            this.navigateToLoginView();            \n        }\n    },\n    scope: this\n});",
+                "implHandler": "        console.log('loading view activated');\n\n        var configStore = Ext.getStore(\"ConfigStore\");\n        configStore.load({\n            callback: function(records, operation, success) {\n                if (success) {\n                    this.doAutoLogin();\n                } else {\n                    this.navigateToLoginView();            \n                }\n            },\n            scope: this\n        });",
                 "name": "activate",
                 "designer|targetType": "Ext.Container",
                 "designer|controlQuery": "#loadingitem",
@@ -101,7 +101,7 @@
                 "designer|params": [
                     "userModel"
                 ],
-                "implHandler": "var localSettingsStore = Ext.getStore(\"LocalSettingsStore\");\nlocalSettingsStore.removeAt(0);\nvar m = Ext.create('fishpickle.model.User');\nm.setData(userModel);\nlocalSettingsStore.add(m);\nlocalSettingsStore.sync();",
+                "implHandler": "        var localSettingsStore = Ext.getStore(\"LocalSettingsStore\");\n        localSettingsStore.removeAt(0);\n        var m = Ext.create('fishpickle.model.User');\n        m.setData(userModel);\n        localSettingsStore.add(m);\n        localSettingsStore.sync();",
                 "designer|userClassName": "updateLocalSettings"
             },
             "customConfigs": [],
@@ -121,7 +121,7 @@
                     "loginName",
                     "password"
                 ],
-                "implHandler": "//get the user by login name\nif (fishpickle.baseURL && loginName && password) {\n    var userStore = Ext.getStore('UserStore');\n    if (!userStore) {\n        userStore = Ext.create('fishpickle.store.UserStore');\n    }\n    userStore.getProxy().setUrl(fishpickle.baseURL + 'rest/login/' + loginName);\n    userStore.load({\n        callback: function(records, operation, success) {\n            if (success) {\n                var serverUser = records[0].data;\n                if (serverUser && password == serverUser.password) {\n                    this.updateLocalSettings(serverUser);\n                    this.navigateToMyGroupsView();\n                } else {\n                    this.navigateToLoginView();\n                    Ext.Msg.alert('Error', 'The password is invalid.  Please try again.');\n                }\n            } else {\n                this.navigateToLoginView();\n                Ext.Msg.alert('Error','The user name or password is invalid.  Please try again.');\n            }\n        },\n        scope: this\n    });\n\n} else {\n    //force user to login\n    this.navigateToLoginView();\n}\n\n",
+                "implHandler": "        //get the user by login name\n        if (fishpickle.baseURL && loginName && password) {\n            var userStore = Ext.getStore('UserStore');\n            if (!userStore) {\n                userStore = Ext.create('fishpickle.store.UserStore');\n            }\n            userStore.getProxy().setUrl(fishpickle.baseURL + 'rest/login/' + loginName);\n            userStore.load({\n                callback: function(records, operation, success) {\n                    if (success) {\n                        var serverUser = records[0].data;\n                        if (serverUser && password == serverUser.password) {\n                            this.updateLocalSettings(serverUser);\n                            this.navigateToMyGroupsView();\n                        } else {\n                            this.navigateToLoginView();\n                            Ext.Msg.alert('Error', 'The password is invalid.  Please try again.');\n                        }\n                    } else {\n                        this.navigateToLoginView();\n                        Ext.Msg.alert('Error','The user name or password is invalid.  Please try again.');\n                    }\n                },\n                scope: this\n            });\n\n        } else {\n            //force user to login\n            this.navigateToLoginView();\n        }",
                 "designer|userClassName": "doLogin"
             },
             "customConfigs": [],
@@ -137,7 +137,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "navigateToLoginView",
-                "implHandler": "this.getMainAppView().setActiveItem(1);",
+                "implHandler": "        this.getMainAppView().setActiveItem(1);",
                 "designer|userClassName": "navigateToLoginView"
             },
             "customConfigs": [],
@@ -153,7 +153,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "navigateToMyGroupsView",
-                "implHandler": "this.getMainAppView().setActiveItem(2);",
+                "implHandler": "        this.getMainAppView().setActiveItem(2);",
                 "designer|userClassName": "navigateToMyGroupsView"
             },
             "customConfigs": [],
@@ -169,7 +169,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "doAutoLogin",
-                "implHandler": "var localSettingsStore = Ext.getStore(\"LocalSettingsStore\");\nlocalSettingsStore.load({\n    callback: function(records, operation, success) {\n        if (success) {\n            var settings = localSettingsStore.getAt(0);\n            if (settings && settings.data && settings.data.login && settings.data.login.length > 0 && settings.data.password) {\n                this.doLogin(settings.data.login, settings.data.password);\n            } else {\n                this.navigateToLoginView();\n            }\n        } else {\n            this.navigateToLoginView();\n        }\n\n    },\n    scope: this\n});",
+                "implHandler": "        var localSettingsStore = Ext.getStore(\"LocalSettingsStore\");\n        localSettingsStore.load({\n            callback: function(records, operation, success) {\n                if (success) {\n                    var settings = localSettingsStore.getAt(0);\n                    if (settings && settings.data && settings.data.login && settings.data.login.length > 0 && settings.data.password) {\n                        this.doLogin(settings.data.login, settings.data.password);\n                    } else {\n                        this.navigateToLoginView();\n                    }\n                } else {\n                    this.navigateToLoginView();\n                }\n\n            },\n            scope: this\n        });",
                 "designer|userClassName": "doAutoLogin"
             },
             "customConfigs": [],

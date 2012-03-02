@@ -16,9 +16,16 @@ Ext.define('fishpickle.controller.SearchController', {
     extend: 'Ext.app.Controller',
 
     config: {
+        refs: {
+            searchResultsList: '#searchResultsList'
+        },
+
         control: {
             "#searchGroupsContainer": {
                 activate: 'onContainerActivate'
+            },
+            "#groupSearchField": {
+                keyup: 'onTextfieldKeyup'
             }
         }
     },
@@ -26,7 +33,7 @@ Ext.define('fishpickle.controller.SearchController', {
     onContainerActivate: function(container, newActiveItem, oldActiveItem, options) {
         if (fishpickle.baseURL) {
             //console.log("Container Activate " + fishpickle.baseURL);
-            Ext.getStore("AllGroupsStore").getProxy().setUrl(fishpickle.baseURL + "rest/group");
+            Ext.getStore("AllGroupsStore").getProxy().setUrl(fishpickle.baseURL + "rest/search/group");
             Ext.getStore("AllGroupsStore").load();  
         }
     }

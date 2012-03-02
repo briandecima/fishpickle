@@ -22,6 +22,10 @@ class UrlMappings {
 		"/rest/userGroupAssociation/$id?"(controller:"userGroupAssociationRest", parseRequest:true){
 			action = [GET: "show", PUT: "update", DELETE: "delete", POST: "save"]
 		}
+		
+		"/rest/search/group/$q?"(controller:"userGroupSearchRest", parseRequest:true){
+			action = [GET: "show", PUT: "update", DELETE: "delete", POST: "save"]
+		}
 
 		"/"(view:"/index")
 		"500"(view:'/error')

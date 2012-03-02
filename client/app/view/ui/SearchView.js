@@ -33,6 +33,7 @@ Ext.define('fishpickle.view.ui.SearchView', {
                     {
                         xtype: 'searchfield',
                         docked: 'top',
+                        id: 'groupSearchField',
                         width: '',
                         label: '',
                         placeHolder: ' Search'

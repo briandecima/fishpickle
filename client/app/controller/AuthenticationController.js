@@ -95,8 +95,6 @@ Ext.define('fishpickle.controller.AuthenticationController', {
             //force user to login
             this.navigateToLoginView();
         }
-
-
     },
 
     navigateToLoginView: function() {
