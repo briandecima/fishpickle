@@ -44,12 +44,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "onButtonTap",
-                "implHandler": "        var group = this.getGroupDetailsView().getRecord();\n        group.set(this.getGroupDetailsView().getValues());\n        group.getProxy().setUrl(fishpickle.baseURL + 'rest/user/' + fishpickle.currentUser.data.id + '/groups');\n\n        group.save({\n            callback: function(records, operation, success) {\n                this.getMainAppView().setActiveItem(2);\n            }\n        },\n        this\n        );",
+                "fn": "onSaveButtonTap",
+                "implHandler": "var group = this.getGroupDetailsView().getRecord();\ngroup.set(this.getGroupDetailsView().getValues());\nif (group.data.id === null) {\n    group.getProxy().setUrl(fishpickle.baseURL + 'rest/user/' + fishpickle.currentUser.data.id + '/groups');\n} else {\n    group.getProxy().setUrl(fishpickle.baseURL + 'rest/group/');\n}\n\n\ngroup.save({\n    callback: function(records, operation, success) {\n        this.getMainAppView().setActiveItem(2);\n    }\n},\nthis\n);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#saveGroupButton",
-                "designer|userClassName": "onButtonTap"
+                "designer|userClassName": "onSaveButtonTap"
             },
             "customConfigs": [],
             "expanded": true
@@ -79,12 +79,50 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "onListDisclose",
-                "implHandler": "this.getGroupDetailsView().setRecord(record);\nthis.getMainAppView().setActiveItem(3);\n",
+                "fn": "onMyGroupsListDisclose",
+                "implHandler": "this.openGroupDetails(record);\n",
                 "name": "disclose",
                 "designer|targetType": "Ext.dataview.List",
                 "designer|controlQuery": "#myGroupsList",
-                "designer|userClassName": "onListDisclose"
+                "designer|userClassName": "onMyGroupsListDisclose"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen8569",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onSearchResultsListDisclose",
+                "implHandler": "this.openGroupDetails(record);\n",
+                "name": "disclose",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "#searchResultsList",
+                "designer|userClassName": "onSearchResultsListDisclose"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen9114",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openGroupDetails",
+                "designer|params": [
+                    "record"
+                ],
+                "implHandler": "this.getGroupDetailsView().setRecord(record);\nthis.getMainAppView().setActiveItem(3);\n",
+                "designer|userClassName": "openGroupDetails"
             },
             "customConfigs": [],
             "expanded": true

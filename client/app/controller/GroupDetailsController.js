@@ -26,18 +26,26 @@ Ext.define('fishpickle.controller.GroupDetailsController', {
 
         control: {
             "#saveGroupButton": {
-                tap: 'onButtonTap'
+                tap: 'onSaveButtonTap'
             },
             "#myGroupsList": {
-                disclose: 'onListDisclose'
+                disclose: 'onMyGroupsListDisclose'
+            },
+            "#searchResultsList": {
+                disclose: 'onSearchResultsListDisclose'
             }
         }
     },
 
-    onButtonTap: function(button, e, options) {
+    onSaveButtonTap: function(button, e, options) {
         var group = this.getGroupDetailsView().getRecord();
         group.set(this.getGroupDetailsView().getValues());
-        group.getProxy().setUrl(fishpickle.baseURL + 'rest/user/' + fishpickle.currentUser.data.id + '/groups');
+        if (group.data.id === null) {
+            group.getProxy().setUrl(fishpickle.baseURL + 'rest/user/' + fishpickle.currentUser.data.id + '/groups');
+        } else {
+            group.getProxy().setUrl(fishpickle.baseURL + 'rest/group/');
+        }
+
 
         group.save({
             callback: function(records, operation, success) {
@@ -48,7 +56,17 @@ Ext.define('fishpickle.controller.GroupDetailsController', {
         );
     },
 
-    onListDisclose: function(list, record, target, index, e, options) {
+    onMyGroupsListDisclose: function(list, record, target, index, e, options) {
+        this.openGroupDetails(record);
+
+    },
+
+    onSearchResultsListDisclose: function(list, record, target, index, e, options) {
+        this.openGroupDetails(record);
+
+    },
+
+    openGroupDetails: function(record) {
         this.getGroupDetailsView().setRecord(record);
         this.getMainAppView().setActiveItem(3);
 
