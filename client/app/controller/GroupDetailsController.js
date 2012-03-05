@@ -21,15 +21,15 @@ Ext.define('fishpickle.controller.GroupDetailsController', {
         ],
         refs: {
             groupDetailsView: 'groupdetailsview',
-            mainView: 'mainview'
+            mainAppView: 'mainappview'
         },
 
         control: {
-            "#groupDetailsContainer": {
-                activate: 'onFormpanelActivate'
-            },
             "#saveGroupButton": {
                 tap: 'onButtonTap'
+            },
+            "#myGroupsList": {
+                disclose: 'onListDisclose'
             }
         }
     },
@@ -41,19 +41,17 @@ Ext.define('fishpickle.controller.GroupDetailsController', {
 
         group.save({
             callback: function(records, operation, success) {
-                this.getMainView().setActiveItem(0);
+                this.getMainAppView().setActiveItem(2);
             }
         },
         this
         );
     },
 
-    onFormpanelActivate: function(container, newActiveItem, oldActiveItem, options) {
-        if (fishpickle.baseURL) {
-            //console.log("in activate create group view");
-            var group = Ext.create('fishpickle.model.UserGroup', { id: '', name: '', description: '', isPrivate: false });
-            this.getGroupDetailsView().setRecord(group);
-        }
+    onListDisclose: function(list, record, target, index, e, options) {
+        this.getGroupDetailsView().setRecord(record);
+        this.getMainAppView().setActiveItem(3);
+
     }
 
 });

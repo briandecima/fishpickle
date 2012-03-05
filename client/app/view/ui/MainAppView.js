@@ -18,7 +18,8 @@ Ext.define('fishpickle.view.ui.MainAppView', {
     requires: [
         'fishpickle.view.LoadingView',
         'fishpickle.view.AuthenticationView',
-        'fishpickle.view.MainView'
+        'fishpickle.view.MainView',
+        'fishpickle.view.GroupDetailsView'
     ],
 
     config: {
@@ -39,6 +40,10 @@ Ext.define('fishpickle.view.ui.MainAppView', {
             {
                 xtype: 'mainview',
                 id: 'mainItem'
+            },
+            {
+                xtype: 'groupdetailsview',
+                id: 'groupDetailsItem'
             }
         ]
     }

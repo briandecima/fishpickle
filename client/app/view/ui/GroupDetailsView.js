@@ -27,10 +27,10 @@ Ext.define('fishpickle.view.ui.GroupDetailsView', {
                 items: [
                     {
                         xtype: 'button',
-                        docked: 'right',
                         id: 'saveGroupButton',
                         itemId: 'saveGroupButton',
-                        iconAlign: 'right',
+                        ui: 'action',
+                        iconAlign: 'center',
                         text: 'Save',
                         align: 'right'
                     }

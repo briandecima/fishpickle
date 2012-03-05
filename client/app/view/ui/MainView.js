@@ -18,7 +18,6 @@ Ext.define('fishpickle.view.ui.MainView', {
     requires: [
         'fishpickle.view.MyGroupsView',
         'fishpickle.view.SearchView',
-        'fishpickle.view.GroupDetailsView',
         'fishpickle.view.SettingsView'
     ],
 
@@ -58,21 +57,6 @@ Ext.define('fishpickle.view.ui.MainView', {
                         xtype: 'searchview',
                         id: 'searchGroupsItem',
                         itemId: ''
-                    }
-                ]
-            },
-            {
-                xtype: 'container',
-                id: 'groupDetailsContainer',
-                layout: {
-                    type: 'fit'
-                },
-                title: 'Create Group',
-                iconCls: 'add',
-                items: [
-                    {
-                        xtype: 'groupdetailsview',
-                        id: 'groupDetailsItem'
                     }
                 ]
             },

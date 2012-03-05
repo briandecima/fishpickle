@@ -17,7 +17,7 @@
     "customConfigs": [],
     "designerId": "5d022052-aab8-4784-9f88-ae1cc6c36c54",
     "$viewOrder": 0,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen8962",
@@ -68,6 +68,23 @@
             "iconCls": "icon-linkedinstance",
             "expanded": true,
             "masterInstanceId": "ExtBox1-ext-gen11643"
+        },
+        {
+            "id": "ExtBox1-ext-gen19959",
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "groupDetailsItem",
+                "itemId": null
+            },
+            "customConfigs": [],
+            "iconCls": "icon-linkedinstance",
+            "expanded": true,
+            "masterInstanceId": "ExtBox1-ext-gen41322"
         }
     ]
 }

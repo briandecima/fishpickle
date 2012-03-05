@@ -25,7 +25,17 @@ Ext.define('fishpickle.view.ui.MyGroupsView', {
                 xtype: 'titlebar',
                 docked: 'top',
                 id: 'myGroupsToolbar',
-                title: 'My Groups'
+                title: 'My Groups',
+                items: [
+                    {
+                        xtype: 'button',
+                        id: 'createGroup',
+                        ui: 'action',
+                        iconAlign: 'center',
+                        text: 'New',
+                        align: 'right'
+                    }
+                ]
             },
             {
                 xtype: 'list',
