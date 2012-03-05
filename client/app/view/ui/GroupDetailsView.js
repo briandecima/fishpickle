@@ -27,10 +27,15 @@ Ext.define('fishpickle.view.ui.GroupDetailsView', {
                 items: [
                     {
                         xtype: 'button',
+                        id: 'groupDetailsBackButton',
+                        ui: 'back',
+                        text: 'Back'
+                    },
+                    {
+                        xtype: 'button',
                         id: 'saveGroupButton',
                         itemId: 'saveGroupButton',
                         ui: 'action',
-                        iconAlign: 'center',
                         text: 'Save',
                         align: 'right'
                     }
@@ -49,6 +54,13 @@ Ext.define('fishpickle.view.ui.GroupDetailsView', {
                 label: 'Description',
                 labelAlign: 'top',
                 name: 'description'
+            },
+            {
+                xtype: 'togglefield',
+                id: 'isPrivateToggle',
+                label: 'Private',
+                name: 'isPrivate',
+                value: 1
             }
         ]
     }

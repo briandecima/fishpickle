@@ -62,12 +62,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "onButtonTap",
-                "implHandler": "        if (fishpickle.baseURL) {\n            //console.log(\"in activate create group view\");\n            var group = Ext.create('fishpickle.model.UserGroup', { id: '', name: '', description: '', isPrivate: false });\n            this.getGroupDetailsView().setRecord(group);\n            this.getMainAppView().setActiveItem(3);\n        }",
+                "fn": "onNewGroupButtonTap",
+                "implHandler": "if (fishpickle.baseURL) {\n    //console.log(\"in activate create group view\");\n    var group = Ext.create('fishpickle.model.UserGroup', { id: '', name: '', description: '', isPrivate: true });\n    this.getGroupDetailsView().setRecord(group);\n    this.getMainAppView().setActiveItem(3);\n}",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#createGroup",
-                "designer|userClassName": "onButtonTap"
+                "designer|userClassName": "onNewGroupButtonTap"
             },
             "customConfigs": [],
             "expanded": true

@@ -33,6 +33,9 @@ Ext.define('fishpickle.controller.GroupDetailsController', {
             },
             "#searchResultsList": {
                 disclose: 'onSearchResultsListDisclose'
+            },
+            "#groupDetailsBackButton": {
+                tap: 'onBackButtonTap'
             }
         }
     },
@@ -69,6 +72,11 @@ Ext.define('fishpickle.controller.GroupDetailsController', {
     openGroupDetails: function(record) {
         this.getGroupDetailsView().setRecord(record);
         this.getMainAppView().setActiveItem(3);
+
+    },
+
+    onBackButtonTap: function(button, e, options) {
+        this.getMainAppView().setActiveItem(2);
 
     }
 

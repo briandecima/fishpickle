@@ -126,6 +126,25 @@
             },
             "customConfigs": [],
             "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen11411",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onBackButtonTap",
+                "implHandler": "this.getMainAppView().setActiveItem(2);\n",
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#groupDetailsBackButton",
+                "designer|userClassName": "onBackButtonTap"
+            },
+            "customConfigs": [],
+            "expanded": true
         }
     ]
 }

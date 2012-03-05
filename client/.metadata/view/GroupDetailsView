@@ -36,6 +36,23 @@
             "expanded": true,
             "cn": [
                 {
+                    "id": "ExtBox1-ext-gen10712",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "groupDetailsBackButton",
+                        "ui": "back",
+                        "text": "Back",
+                        "designer|userClassName": "MyButton4"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
                     "id": "ExtBox1-ext-gen41742",
                     "type": "button",
                     "reference": {
@@ -48,7 +65,7 @@
                         "id": "saveGroupButton",
                         "itemId": "saveGroupButton",
                         "ui": "action",
-                        "iconAlign": "center",
+                        "iconAlign": null,
                         "text": "Save",
                         "designer|userClassName": "MyButton4",
                         "align": "right"
@@ -90,6 +107,24 @@
                 "labelAlign": "top",
                 "name": "description",
                 "designer|userClassName": "MyTextArea"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen13564",
+            "type": "togglefield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "isPrivateToggle",
+                "label": "Private",
+                "name": "isPrivate",
+                "value": 1,
+                "designer|userClassName": "MyToggleField"
             },
             "customConfigs": [],
             "expanded": true

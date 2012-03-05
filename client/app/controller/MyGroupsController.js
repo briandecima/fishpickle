@@ -29,7 +29,7 @@ Ext.define('fishpickle.controller.MyGroupsController', {
                 activate: 'onContainerActivate'
             },
             "#createGroup": {
-                tap: 'onButtonTap'
+                tap: 'onNewGroupButtonTap'
             }
         }
     },
@@ -50,10 +50,10 @@ Ext.define('fishpickle.controller.MyGroupsController', {
         }
     },
 
-    onButtonTap: function(button, e, options) {
+    onNewGroupButtonTap: function(button, e, options) {
         if (fishpickle.baseURL) {
             //console.log("in activate create group view");
-            var group = Ext.create('fishpickle.model.UserGroup', { id: '', name: '', description: '', isPrivate: false });
+            var group = Ext.create('fishpickle.model.UserGroup', { id: '', name: '', description: '', isPrivate: true });
             this.getGroupDetailsView().setRecord(group);
             this.getMainAppView().setActiveItem(3);
         }
