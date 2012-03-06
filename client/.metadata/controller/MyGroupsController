@@ -13,7 +13,7 @@
     "customConfigs": [],
     "designerId": "56caab43-4bf3-4d95-b5a7-787c20860f9b",
     "$viewOrder": 3,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen6464",
@@ -25,7 +25,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onPanelActiveItemChange",
-                "implHandler": "if (fishpickle.baseURL && fishpickle.currentUser) {\n    //console.log(\"Panel Active Item Change \" + fishpickle.baseURL);\n    Ext.getStore(\"MyGroupsStore\").getProxy().setUrl(fishpickle.baseURL + \"rest/user/\" + fishpickle.currentUser.data.id + \"/groups\");\n    Ext.getStore(\"MyGroupsStore\").load();  \n}",
+                "implHandler": "        if (fishpickle.baseURL && fishpickle.currentUser) {\n            //console.log(\"Panel Active Item Change \" + fishpickle.baseURL);\n            Ext.getStore(\"MyGroupsStore\").getProxy().setUrl(fishpickle.baseURL + \"rest/user/\" + fishpickle.currentUser.data.id + \"/groups\");\n            Ext.getStore(\"MyGroupsStore\").load();  \n        }",
                 "name": "activeitemchange",
                 "designer|targetType": "Ext.Panel",
                 "designer|controlQuery": "#MainAppView",
@@ -44,7 +44,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onContainerActivate",
-                "implHandler": "if (fishpickle.baseURL && fishpickle.currentUser) {\n    //console.log(\"Panel Active Item Change \" + fishpickle.baseURL);\n    Ext.getStore(\"MyGroupsStore\").getProxy().setUrl(fishpickle.baseURL + \"rest/user/\" + fishpickle.currentUser.data.id + \"/groups\");\n    Ext.getStore(\"MyGroupsStore\").load();  \n}",
+                "implHandler": "        if (fishpickle.baseURL && fishpickle.currentUser) {\n            //console.log(\"Panel Active Item Change \" + fishpickle.baseURL);\n            Ext.getStore(\"MyGroupsStore\").getProxy().setUrl(fishpickle.baseURL + \"rest/user/\" + fishpickle.currentUser.data.id + \"/groups\");\n            Ext.getStore(\"MyGroupsStore\").load();  \n        }",
                 "name": "activate",
                 "designer|targetType": "Ext.Container",
                 "designer|controlQuery": "#myGroupsContainer",

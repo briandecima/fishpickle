@@ -14,7 +14,7 @@
     "customConfigs": [],
     "designerId": "5c9c2d01-c8a8-40a2-ad47-82409c9b2366",
     "$viewOrder": 4,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen2861",
@@ -33,60 +33,111 @@
             "expanded": true
         },
         {
-            "id": "ExtBox1-ext-gen3056",
-            "type": "textfield",
+            "id": "ExtBox1-ext-gen7672",
+            "type": "container",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "docked": "top",
-                "label": "Name",
-                "labelAlign": "top",
-                "name": "login",
-                "designer|userClassName": "MyTextField"
+                "ui": "",
+                "layout": "vbox",
+                "designer|userClassName": "MyContainer6"
             },
             "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen3229",
-            "type": "passwordfield",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "docked": null,
-                "label": "Password",
-                "labelAlign": "top",
-                "name": "password",
-                "designer|userClassName": "MyPasswordField"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen3656",
-            "type": "button",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "centered": true,
-                "id": "LoginButton",
-                "itemId": "LoginButton",
-                "ui": "action",
-                "width": null,
-                "text": "Login",
-                "designer|userClassName": "MyButton"
-            },
-            "customConfigs": [],
-            "expanded": true
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen3056",
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "top",
+                        "label": "Name",
+                        "labelAlign": "top",
+                        "name": "login",
+                        "designer|userClassName": "MyTextField"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen3229",
+                    "type": "passwordfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": null,
+                        "label": "Password",
+                        "labelAlign": "top",
+                        "name": "password",
+                        "designer|userClassName": "MyPasswordField"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen3656",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "LoginButton",
+                        "itemId": "LoginButton",
+                        "ui": "action",
+                        "width": 100,
+                        "text": "Login",
+                        "designer|userClassName": "MyButton"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen10156",
+                    "type": "spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 50,
+                        "designer|userClassName": "MySpacer"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen7434",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "RegisterButton",
+                        "itemId": "RegisterButton",
+                        "ui": "action",
+                        "width": 100,
+                        "text": "Register",
+                        "designer|userClassName": "MyButton3"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
         }
     ]
 }

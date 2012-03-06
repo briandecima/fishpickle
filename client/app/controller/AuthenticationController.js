@@ -30,6 +30,9 @@ Ext.define('fishpickle.controller.AuthenticationController', {
             },
             "#loadingitem": {
                 activate: 'onLoadingViewActivate'
+            },
+            "#RegisterButton": {
+                tap: 'onRegisterButtonTap'
             }
         }
     },
@@ -122,6 +125,10 @@ Ext.define('fishpickle.controller.AuthenticationController', {
             },
             scope: this
         });
+    },
+
+    onRegisterButtonTap: function(button, e, options) {
+        this.getMainAppView().setActiveItem(3);
     }
 
 });

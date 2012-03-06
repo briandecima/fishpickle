@@ -17,18 +17,81 @@ Ext.define('fishpickle.controller.UserController', {
 
     config: {
         refs: {
-            mainAppView: 'mainappview'
+            mainAppView: 'mainappview',
+            registrationView: {
+                selector: 'registrationview',
+                xtype: 'registrationview'
+            }
         },
 
         control: {
             "#saveSettingsButton": {
                 tap: 'onButtonTap'
+            },
+            "#RegistrationBackButton": {
+                tap: 'onRegistrationBackButtonTap'
+            },
+            "#RegistrationSaveButton": {
+                tap: 'onRegistrationSaveButtonTap'
+            },
+            "#registrationitem": {
+                activate: 'onRegistrationViewActivate'
             }
         }
     },
 
     onButtonTap: function(button, e, options) {
         console.log('Saving the user settings');
+    },
+
+    onRegistrationBackButtonTap: function(button, e, options) {
+        this.getMainAppView().setActiveItem(1);
+    },
+
+    onRegistrationSaveButtonTap: function(button, e, options) {
+        console.log('save user');
+        var view = this.getRegistrationView();
+        var user = view.getRecord();
+        user.set(view.getValues());
+        user.getProxy().setUrl(fishpickle.baseURL + 'rest/user');
+
+        var errors = user.validate();
+        if (errors.isValid()) {
+            user.save({
+                callback: function(records, operation, success) {
+                    if (success) {
+                        this.getMainAppView().setActiveItem(1);
+                    } else {
+                        Ext.Msg.alert('Registration was not successful.');
+                    }
+                }
+            },
+            this
+            );
+        } else {
+            var msg = '';
+            for (i=0; i<errors.length; i++) {
+                var e = errors.items[i];
+                if ('name' == e.getField()) {
+                    msg += 'Name ' + e.getMessage() + '\n';
+                } else if ('email' == e.getField()) {
+                    msg += 'Email ' + e.getMessage() + '\n';
+                } else if ('login' == e.getField()) {
+                    msg += 'Login Name ' + e.getMessage() + '\n';
+                } else if ('password' == e.getField()) {
+                    msg += 'Password ' + e.getMessage() + '\n';
+                }
+            }
+            var f = view.getItems('testlabel');
+            // f.html = msg;
+            f.hidden = false;
+        }
+    },
+
+    onRegistrationViewActivate: function(container, newActiveItem, oldActiveItem, options) {
+        console.log('prepare user model');
+        var user = Ext.create('fishpickle.model.User', {login:'', displayName:'', email:'', password:''});
+        this.getRegistrationView().setRecord(user);
     }
 
 });

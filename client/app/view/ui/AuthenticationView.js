@@ -24,25 +24,46 @@ Ext.define('fishpickle.view.ui.AuthenticationView', {
                 title: 'fishpickle'
             },
             {
-                xtype: 'textfield',
-                docked: 'top',
-                label: 'Name',
-                labelAlign: 'top',
-                name: 'login'
-            },
-            {
-                xtype: 'passwordfield',
-                label: 'Password',
-                labelAlign: 'top',
-                name: 'password'
-            },
-            {
-                xtype: 'button',
-                centered: true,
-                id: 'LoginButton',
-                itemId: 'LoginButton',
-                ui: 'action',
-                text: 'Login'
+                xtype: 'container',
+                ui: '',
+                layout: {
+                    type: 'vbox'
+                },
+                items: [
+                    {
+                        xtype: 'textfield',
+                        docked: 'top',
+                        label: 'Name',
+                        labelAlign: 'top',
+                        name: 'login'
+                    },
+                    {
+                        xtype: 'passwordfield',
+                        label: 'Password',
+                        labelAlign: 'top',
+                        name: 'password'
+                    },
+                    {
+                        xtype: 'button',
+                        id: 'LoginButton',
+                        itemId: 'LoginButton',
+                        ui: 'action',
+                        width: 100,
+                        text: 'Login'
+                    },
+                    {
+                        xtype: 'spacer',
+                        height: 50
+                    },
+                    {
+                        xtype: 'button',
+                        id: 'RegisterButton',
+                        itemId: 'RegisterButton',
+                        ui: 'action',
+                        width: 100,
+                        text: 'Register'
+                    }
+                ]
             }
         ]
     }

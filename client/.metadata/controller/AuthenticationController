@@ -13,7 +13,7 @@
     "customConfigs": [],
     "designerId": "59d209db-27d4-4bf0-a6d7-34590ece6417",
     "$viewOrder": 0,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen9958",
@@ -100,7 +100,7 @@
                 "designer|params": [
                     "userModel"
                 ],
-                "implHandler": "var localSettingsStore = Ext.getStore(\"LocalSettingsStore\");\nlocalSettingsStore.removeAt(0);\nvar m = Ext.create('fishpickle.model.User');\nm.setData(userModel);\nlocalSettingsStore.add(m);\nlocalSettingsStore.sync();\nfishpickle.currentUser = m;",
+                "implHandler": "        var localSettingsStore = Ext.getStore(\"LocalSettingsStore\");\n        localSettingsStore.removeAt(0);\n        var m = Ext.create('fishpickle.model.User');\n        m.setData(userModel);\n        localSettingsStore.add(m);\n        localSettingsStore.sync();\n        fishpickle.currentUser = m;",
                 "designer|userClassName": "updateLocalSettings"
             },
             "customConfigs": [],
@@ -170,6 +170,25 @@
                 "fn": "doAutoLogin",
                 "implHandler": "        var localSettingsStore = Ext.getStore(\"LocalSettingsStore\");\n        localSettingsStore.load({\n            callback: function(records, operation, success) {\n                if (success) {\n                    var settings = localSettingsStore.getAt(0);\n                    if (settings && settings.data && settings.data.login && settings.data.login.length > 0 && settings.data.password) {\n                        this.doLogin(settings.data.login, settings.data.password);\n                    } else {\n                        this.navigateToLoginView();\n                    }\n                } else {\n                    this.navigateToLoginView();\n                }\n\n            },\n            scope: this\n        });",
                 "designer|userClassName": "doAutoLogin"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen29613",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onRegisterButtonTap",
+                "implHandler": "        this.getMainAppView().setActiveItem(3);",
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#RegisterButton",
+                "designer|userClassName": "onRegisterButtonTap"
             },
             "customConfigs": [],
             "expanded": true

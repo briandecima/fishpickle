@@ -28,7 +28,8 @@
             "AuthenticationView",
             "MyGroupsView",
             "SettingsView",
-            "LoadingView"
+            "LoadingView",
+            "RegistrationView"
         ],
         "designer|launch": "this.baseURL = undefined;",
         "name": "fishpickle"

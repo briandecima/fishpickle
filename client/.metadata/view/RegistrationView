@@ -1,0 +1,177 @@
+{
+    "id": "ExtBox1-ext-gen24843",
+    "type": "formpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "RegistrationView",
+        "designer|userAlias": "registrationview"
+    },
+    "customConfigs": [],
+    "designerId": "9d219b11-46a1-4e51-b981-2d563e463fc2",
+    "$viewOrder": 8,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen26793",
+            "type": "toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "id": "registrationtools",
+                "title": "New Account",
+                "designer|userClassName": "MyToolbar2"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen27298",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "left",
+                        "id": "RegistrationBackButton",
+                        "itemId": "RegistrationBackButton",
+                        "text": "Back",
+                        "designer|userClassName": "MyButton5"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen27693",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "right",
+                        "id": "RegistrationSaveButton",
+                        "itemId": "RegistrationSaveButton",
+                        "text": "Save",
+                        "designer|userClassName": "MyButton6"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen45214",
+            "type": "label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "hidden": true,
+                "itemId": "validationerrors",
+                "designer|userClassName": "MyLabel1"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen42054",
+            "type": "fieldset",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Account Information",
+                "designer|userClassName": "MyFieldSet"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen26507",
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Name",
+                        "name": "displayName",
+                        "required": true,
+                        "designer|userClassName": "MyTextField7"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen28269",
+                    "type": "emailfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Email",
+                        "name": "email",
+                        "required": true,
+                        "placeHolder": "email@example.com",
+                        "designer|userClassName": "MyEmailField3"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen28610",
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Login Name",
+                        "name": "login",
+                        "required": true,
+                        "designer|userClassName": "MyTextField8"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen28913",
+                    "type": "passwordfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Password",
+                        "labelAlign": null,
+                        "name": "password",
+                        "required": true,
+                        "designer|userClassName": "MyPasswordField5"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        }
+    ]
+}

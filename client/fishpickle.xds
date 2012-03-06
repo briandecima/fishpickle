@@ -164,10 +164,17 @@
                 "app/store/base/LocalSettingsStore.js"
             ],
             "className": "LocalSettingsStore"
+        },
+        "9d219b11-46a1-4e51-b981-2d563e463fc2": {
+            "paths": [
+                "app/view/RegistrationView.js",
+                "app/view/ui/RegistrationView.js"
+            ],
+            "className": "RegistrationView"
         }
     },
     "expandedState": {
-        "data": true,
+        "data": false,
         "model": true,
         "component": true,
         "controller": true

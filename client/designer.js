@@ -41,7 +41,8 @@ Ext.application({
         'AuthenticationView',
         'MyGroupsView',
         'SettingsView',
-        'LoadingView'
+        'LoadingView',
+        'RegistrationView'
     ],
 
     name: 'fishpickle',
