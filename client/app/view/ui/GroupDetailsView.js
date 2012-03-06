@@ -50,7 +50,9 @@ Ext.define('fishpickle.view.ui.GroupDetailsView', {
             },
             {
                 xtype: 'textareafield',
+                height: 50,
                 id: 'groupDescriptionField',
+                width: 282,
                 label: 'Description',
                 labelAlign: 'top',
                 name: 'description'
@@ -61,6 +63,18 @@ Ext.define('fishpickle.view.ui.GroupDetailsView', {
                 label: 'Private',
                 name: 'isPrivate',
                 value: 1
+            },
+            {
+                xtype: 'button',
+                id: 'joinGroupButton',
+                text: 'Join Group'
+            },
+            {
+                xtype: 'label',
+                hidden: true,
+                html: '<div>You are a member of this group</div>',
+                id: 'alreadyMemberLabel',
+                style: '{color:green}'
             }
         ]
     }

@@ -23,8 +23,34 @@ Ext.define('fishpickle.model.UserGroupAssociations', {
                 type: 'int'
             },
             {
-                name: 'field'
+                name: 'user'
+            },
+            {
+                name: 'group'
+            },
+            {
+                name: 'userId',
+                type: 'int'
+            },
+            {
+                name: 'groupId',
+                type: 'int'
             }
-        ]
+        ],
+        proxy: {
+            type: 'rest',
+            url: '/rest/userGroupAssociation',
+            format: 'json',
+            writer: {
+                type: 'json',
+                encode: true,
+                root: 'userGroupAssociation'
+            },
+            reader: {
+                type: 'json',
+                rootProperty: 'data',
+                record: 'data'
+            }
+        }
     }
 });

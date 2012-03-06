@@ -30,7 +30,8 @@ Ext.application({
         'AllGroupsStore',
         'ConfigStore',
         'UserStore',
-        'LocalSettingsStore'
+        'LocalSettingsStore',
+        'UserGroupAssociationStore'
     ],
 
     views: [

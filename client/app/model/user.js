@@ -37,6 +37,9 @@ Ext.define('fishpickle.model.User', {
             {
                 name: 'email',
                 type: 'string'
+            },
+            {
+                name: 'groupIds'
             }
         ]
     }

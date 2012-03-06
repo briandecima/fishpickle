@@ -63,7 +63,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onNewGroupButtonTap",
-                "implHandler": "if (fishpickle.baseURL) {\n    //console.log(\"in activate create group view\");\n    var group = Ext.create('fishpickle.model.UserGroup', { id: '', name: '', description: '', isPrivate: true });\n    this.getGroupDetailsView().setRecord(group);\n    this.getMainAppView().setActiveItem(3);\n}",
+                "implHandler": "if (fishpickle.baseURL) {\n    //console.log(\"in activate create group view\");\n    var group = Ext.create('fishpickle.model.UserGroup', { id: '', name: '', description: '', isPrivate: true });\n    this.getGroupDetailsView().setRecord(group);\n    this.getJoinGroupButton().setHidden(true);\n    this.getMainAppView().setActiveItem(3);\n}",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#createGroup",
@@ -100,6 +100,22 @@
                 "ref": "mainAppView",
                 "selector": "mainappview",
                 "designer|userClassName": "mainAppView"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen15131",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "joinGroupButton",
+                "selector": "#joinGroupButton",
+                "designer|userClassName": "joinGroupButton"
             },
             "customConfigs": [],
             "expanded": true

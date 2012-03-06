@@ -102,7 +102,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "height": 50,
                 "id": "groupDescriptionField",
+                "width": 282,
                 "label": "Description",
                 "labelAlign": "top",
                 "name": "description",
@@ -125,6 +127,40 @@
                 "name": "isPrivate",
                 "value": 1,
                 "designer|userClassName": "MyToggleField"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen7490",
+            "type": "button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "joinGroupButton",
+                "text": "Join Group",
+                "designer|userClassName": "MyButton5"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen24833",
+            "type": "label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "hidden": true,
+                "html": "<div>You are a member of this group</div>",
+                "id": "alreadyMemberLabel",
+                "style": "{color:green}",
+                "designer|userClassName": "MyLabel1"
             },
             "customConfigs": [],
             "expanded": true
