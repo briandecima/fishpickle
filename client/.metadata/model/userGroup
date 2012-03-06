@@ -88,7 +88,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "userGroupAssociation",
+                "name": "users",
+                "type": "auto",
                 "designer|userClassName": "MyField10"
             },
             "customConfigs": [],
@@ -108,7 +109,7 @@
                 "designer|userClassName": "MyRestProxy2"
             },
             "customConfigs": [],
-            "expanded": false,
+            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen25136",

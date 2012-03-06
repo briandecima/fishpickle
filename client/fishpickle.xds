@@ -171,6 +171,13 @@
                 "app/view/ui/RegistrationView.js"
             ],
             "className": "RegistrationView"
+        },
+        "73f2a8c6-e590-4577-82c9-69c000ccea29": {
+            "paths": [
+                "app/store/UserGroupAssociationStore.js",
+                "app/store/base/UserGroupAssociationStore.js"
+            ],
+            "className": "UserGroupAssociationStore"
         }
     },
     "expandedState": {

@@ -21,39 +21,112 @@ Ext.define('fishpickle.controller.GroupDetailsController', {
         ],
         refs: {
             groupDetailsView: 'groupdetailsview',
-            mainView: 'mainview'
+            mainAppView: 'mainappview',
+            joinGroupButton: '#joinGroupButton',
+            alreadyMemberLabel: '#alreadyMemberLabel'
         },
 
         control: {
-            "#groupDetailsContainer": {
-                activate: 'onFormpanelActivate'
-            },
             "#saveGroupButton": {
-                tap: 'onButtonTap'
+                tap: 'onSaveButtonTap'
+            },
+            "#myGroupsList": {
+                disclose: 'onMyGroupsListDisclose'
+            },
+            "#searchResultsList": {
+                disclose: 'onSearchResultsListDisclose'
+            },
+            "#groupDetailsBackButton": {
+                tap: 'onBackButtonTap'
+            },
+            "#joinGroupButton": {
+                tap: 'onJoinGroupButtonTap'
             }
         }
     },
 
-    onButtonTap: function(button, e, options) {
+    onSaveButtonTap: function(button, e, options) {
         var group = this.getGroupDetailsView().getRecord();
         group.set(this.getGroupDetailsView().getValues());
-        group.getProxy().setUrl(fishpickle.baseURL + 'rest/user/' + fishpickle.currentUser.data.id + '/groups');
+        if (group.data.id === null) {
+            group.getProxy().setUrl(fishpickle.baseURL + 'rest/user/' + fishpickle.currentUser.data.id + '/groups');
+        } else {
+            group.getProxy().setUrl(fishpickle.baseURL + 'rest/group/');
+        }
+
 
         group.save({
             callback: function(records, operation, success) {
-                this.getMainView().setActiveItem(0);
+                this.getMainAppView().setActiveItem(2);
             }
         },
         this
         );
     },
 
-    onFormpanelActivate: function(container, newActiveItem, oldActiveItem, options) {
-        if (fishpickle.baseURL) {
-            //console.log("in activate create group view");
-            var group = Ext.create('fishpickle.model.UserGroup', { id: '', name: '', description: '', isPrivate: false });
-            this.getGroupDetailsView().setRecord(group);
+    onMyGroupsListDisclose: function(list, record, target, index, e, options) {
+        this.openGroupDetails(record);
+    },
+
+    onSearchResultsListDisclose: function(list, record, target, index, e, options) {
+        this.openGroupDetails(record);
+    },
+
+    openGroupDetails: function(record) {
+        this.getGroupDetailsView().setRecord(record);
+        this.getMainAppView().setActiveItem(3);
+
+        if (fishpickle.baseURL && fishpickle.currentUser) {
+            //console.log("Panel Active Item Change " + fishpickle.baseURL);
+            Ext.getStore("UserGroupAssociationStore").getProxy().setUrl(fishpickle.baseURL + "rest/userGroupAssociation/");
+            Ext.getStore("UserGroupAssociationStore").load({
+                callback: function(records, operation, success) {
+                    if (success) {
+                        this.handleAssociationDisplay(record);
+                    } else {
+                        console.log("Could not retrieve user associations");
+                    }
+
+                },
+                scope: this
+
+            } );  
         }
+    },
+
+    onBackButtonTap: function(button, e, options) {
+        this.getMainAppView().setActiveItem(2);
+    },
+
+    onJoinGroupButtonTap: function(button, e, options) {
+        var group = this.getGroupDetailsView().getRecord();
+        var assoc = Ext.create('fishpickle.model.UserGroupAssociations', { id: '', userId: fishpickle.currentUser.data.id, groupId: group.data.id });
+
+
+        assoc.getProxy().setUrl(fishpickle.baseURL + 'rest/userGroupAssociation/');
+
+
+        assoc.save({
+            callback: function(records, operation, success) {
+                this.getMainAppView().setActiveItem(2);
+            }
+        },
+        this
+        );
+    },
+
+    handleAssociationDisplay: function(group) {
+        var store = Ext.getStore("UserGroupAssociationStore");
+        store.clearFilter();
+        store.filter([
+        {filterFn: function(item) { 
+            return (item.get("user").id == fishpickle.currentUser.data.id) && (item.get("group").id == group.data.id); 
+        }}
+        ]);
+
+        var alreadyMember = store.getData().length > 0;
+        this.getJoinGroupButton().setHidden(alreadyMember);
+        this.getAlreadyMemberLabel().setHidden(!alreadyMember);
     }
 
 });

@@ -16,12 +16,21 @@ Ext.define('fishpickle.controller.MyGroupsController', {
     extend: 'Ext.app.Controller',
 
     config: {
+        refs: {
+            groupDetailsView: 'groupdetailsview',
+            mainAppView: 'mainappview',
+            joinGroupButton: '#joinGroupButton'
+        },
+
         control: {
             "#MainAppView": {
                 activeitemchange: 'onPanelActiveItemChange'
             },
             "#myGroupsContainer": {
                 activate: 'onContainerActivate'
+            },
+            "#createGroup": {
+                tap: 'onNewGroupButtonTap'
             }
         }
     },
@@ -39,6 +48,16 @@ Ext.define('fishpickle.controller.MyGroupsController', {
             //console.log("Panel Active Item Change " + fishpickle.baseURL);
             Ext.getStore("MyGroupsStore").getProxy().setUrl(fishpickle.baseURL + "rest/user/" + fishpickle.currentUser.data.id + "/groups");
             Ext.getStore("MyGroupsStore").load();  
+        }
+    },
+
+    onNewGroupButtonTap: function(button, e, options) {
+        if (fishpickle.baseURL) {
+            //console.log("in activate create group view");
+            var group = Ext.create('fishpickle.model.UserGroup', { id: '', name: '', description: '', isPrivate: true });
+            this.getGroupDetailsView().setRecord(group);
+            this.getJoinGroupButton().setHidden(true);
+            this.getMainAppView().setActiveItem(3);
         }
     }
 

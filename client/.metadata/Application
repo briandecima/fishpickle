@@ -18,7 +18,8 @@
             "AllGroupsStore",
             "ConfigStore",
             "UserStore",
-            "LocalSettingsStore"
+            "LocalSettingsStore",
+            "UserGroupAssociationStore"
         ],
         "views": [
             "MainAppView",

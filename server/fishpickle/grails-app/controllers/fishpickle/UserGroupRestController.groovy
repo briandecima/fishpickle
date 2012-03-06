@@ -35,12 +35,12 @@ class UserGroupRestController {
 	 * url: <b>/rest/group</b><br>
 	 */
 	def save = {
-		def groupUser = JSON.parse(params.group)
+		def userGroup = JSON.parse(params.group)
 		
-		 if (renderUtil.isIdValid( groupUser.id)) {
+		 if (renderUtil.isIdValid( userGroup.id)) {
 			update();
 		} else {
-			UserGroup group = new UserGroup(groupUser)
+			UserGroup group = new UserGroup(userGroup)
 			renderUtil.saveAndRender(this, group)
 		}
 	}
@@ -53,7 +53,7 @@ class UserGroupRestController {
 	def update = {
 		def jsonGroup = JSON.parse(params.group)
 		UserGroup group = new UserGroup(jsonGroup)
-		UserGroup dbGroup = User.findById(jsonGroup.id)
+		UserGroup dbGroup = UserGroup.findById(jsonGroup.id) 
 		dbGroup.properties = group.properties
 		
 		renderUtil.saveAndRender(this, dbGroup)

@@ -16,7 +16,7 @@
     "customConfigs": [],
     "designerId": "2d1ae554-25d4-4153-9341-e06ccf6d2313",
     "$viewOrder": 3,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen41537",
@@ -36,6 +36,23 @@
             "expanded": true,
             "cn": [
                 {
+                    "id": "ExtBox1-ext-gen10712",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "groupDetailsBackButton",
+                        "ui": "back",
+                        "text": "Back",
+                        "designer|userClassName": "MyButton4"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
                     "id": "ExtBox1-ext-gen41742",
                     "type": "button",
                     "reference": {
@@ -44,10 +61,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "docked": "right",
+                        "docked": null,
                         "id": "saveGroupButton",
                         "itemId": "saveGroupButton",
-                        "iconAlign": "right",
+                        "ui": "action",
+                        "iconAlign": null,
                         "text": "Save",
                         "designer|userClassName": "MyButton4",
                         "align": "right"
@@ -84,11 +102,65 @@
             },
             "codeClass": null,
             "userConfig": {
+                "height": 50,
                 "id": "groupDescriptionField",
+                "width": 282,
                 "label": "Description",
                 "labelAlign": "top",
                 "name": "description",
                 "designer|userClassName": "MyTextArea"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen13564",
+            "type": "togglefield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "isPrivateToggle",
+                "label": "Private",
+                "name": "isPrivate",
+                "value": 1,
+                "designer|userClassName": "MyToggleField"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen7490",
+            "type": "button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "joinGroupButton",
+                "text": "Join Group",
+                "designer|userClassName": "MyButton5"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen24833",
+            "type": "label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "hidden": true,
+                "html": "<div>You are a member of this group</div>",
+                "id": "alreadyMemberLabel",
+                "style": "{color:green}",
+                "designer|userClassName": "MyLabel1"
             },
             "customConfigs": [],
             "expanded": true

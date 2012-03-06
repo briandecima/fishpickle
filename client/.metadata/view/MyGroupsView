@@ -16,7 +16,7 @@
     "customConfigs": [],
     "designerId": "4eadc38b-80dc-418f-87fd-685c50c294b2",
     "$viewOrder": 5,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen4378",
@@ -33,7 +33,29 @@
                 "designer|userClassName": "MyTitleBar1"
             },
             "customConfigs": [],
-            "expanded": true
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen9788",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "createGroup",
+                        "ui": "action",
+                        "iconAlign": "center",
+                        "iconCls": null,
+                        "text": "New",
+                        "designer|userClassName": "MyButton3",
+                        "align": "right"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
         },
         {
             "id": "ExtBox1-ext-gen5043",

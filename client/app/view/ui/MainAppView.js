@@ -19,7 +19,8 @@ Ext.define('fishpickle.view.ui.MainAppView', {
         'fishpickle.view.LoadingView',
         'fishpickle.view.AuthenticationView',
         'fishpickle.view.MainView',
-        'fishpickle.view.RegistrationView'
+        'fishpickle.view.RegistrationView',
+        'fishpickle.view.GroupDetailsView'
     ],
 
     config: {
@@ -44,6 +45,10 @@ Ext.define('fishpickle.view.ui.MainAppView', {
             {
                 xtype: 'registrationview',
                 id: 'registrationitem'
+            },
+            {
+                xtype: 'groupdetailsview',
+                id: 'groupDetailsItem'
             }
         ]
     }
