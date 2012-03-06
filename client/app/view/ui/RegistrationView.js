@@ -41,11 +41,6 @@ Ext.define('fishpickle.view.ui.RegistrationView', {
                 ]
             },
             {
-                xtype: 'label',
-                hidden: true,
-                itemId: 'validationerrors'
-            },
-            {
                 xtype: 'fieldset',
                 title: 'Account Information',
                 items: [

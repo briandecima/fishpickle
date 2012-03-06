@@ -82,9 +82,6 @@ Ext.define('fishpickle.controller.UserController', {
                     msg += 'Password ' + e.getMessage() + '\n';
                 }
             }
-            var f = view.getItems('testlabel');
-            // f.html = msg;
-            f.hidden = false;
         }
     },
 

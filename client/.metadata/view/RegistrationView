@@ -71,22 +71,6 @@
             ]
         },
         {
-            "id": "ExtBox1-ext-gen45214",
-            "type": "label",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "hidden": true,
-                "itemId": "validationerrors",
-                "designer|userClassName": "MyLabel1"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
             "id": "ExtBox1-ext-gen42054",
             "type": "fieldset",
             "reference": {
