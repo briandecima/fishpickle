@@ -27,18 +27,21 @@ Ext.define('fishpickle.view.ui.GroupDetailsView', {
                         xtype: 'textfield',
                         id: 'groupNameField',
                         label: 'Name',
+                        labelWidth: '40%',
                         name: 'name'
                     },
                     {
                         xtype: 'textareafield',
                         id: 'groupDescriptionField',
                         label: 'Description',
+                        labelWidth: '40%',
                         name: 'description'
                     },
                     {
                         xtype: 'togglefield',
                         id: 'isPrivateToggle',
                         label: 'Private',
+                        labelWidth: '40%',
                         name: 'isPrivate',
                         value: 1
                     }

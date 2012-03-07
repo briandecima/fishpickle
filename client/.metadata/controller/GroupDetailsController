@@ -156,7 +156,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onJoinGroupButtonTap",
-                "implHandler": "var group = this.getGroupDetailsView().getRecord();\nvar assoc = Ext.create('fishpickle.model.UserGroupAssociations', { id: '', userId: fishpickle.currentUser.data.id, groupId: group.data.id });\n\n\nassoc.getProxy().setUrl(fishpickle.baseURL + 'rest/userGroupAssociation/');\n\n\nassoc.save({\n    callback: function(records, operation, success) {\n        Ext.Msg.alert('Success', 'You are now part of ' + group.data.name + \". \");\n        this.getMainAppView().setActiveItem(2);\n\n    }\n},\nthis\n);",
+                "implHandler": "        var group = this.getGroupDetailsView().getRecord();\n        var assoc = Ext.create('fishpickle.model.UserGroupAssociations', { id: '', userId: fishpickle.currentUser.data.id, groupId: group.data.id });\n\n\n        assoc.getProxy().setUrl(fishpickle.baseURL + 'rest/userGroupAssociation/');\n\n\n        assoc.save({\n            callback: function(records, operation, success) {\n                Ext.Msg.alert('Success', 'You are now part of ' + group.data.name + \". \");\n                this.getMainAppView().setActiveItem(2);\n\n            }\n        },\n        this\n        );",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#joinGroupButton",

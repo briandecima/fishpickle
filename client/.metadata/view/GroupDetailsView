@@ -44,6 +44,7 @@
                     "userConfig": {
                         "id": "groupNameField",
                         "label": "Name",
+                        "labelWidth": "40%",
                         "name": "name",
                         "designer|userClassName": "MyTextField1"
                     },
@@ -63,6 +64,7 @@
                         "id": "groupDescriptionField",
                         "width": null,
                         "label": "Description",
+                        "labelWidth": "40%",
                         "name": "description",
                         "designer|userClassName": "MyTextArea"
                     },
@@ -80,6 +82,7 @@
                     "userConfig": {
                         "id": "isPrivateToggle",
                         "label": "Private",
+                        "labelWidth": "40%",
                         "name": "isPrivate",
                         "value": 1,
                         "designer|userClassName": "MyToggleField"
