@@ -65,16 +65,26 @@ Ext.define('fishpickle.view.ui.GroupDetailsView', {
                 value: 1
             },
             {
-                xtype: 'button',
-                id: 'joinGroupButton',
-                text: 'Join Group'
-            },
-            {
                 xtype: 'label',
                 hidden: true,
                 html: '<div>You are a member of this group</div>',
                 id: 'alreadyMemberLabel',
                 style: '{color:green}'
+            },
+            {
+                xtype: 'toolbar',
+                docked: 'bottom',
+                items: [
+                    {
+                        xtype: 'spacer'
+                    },
+                    {
+                        xtype: 'button',
+                        id: 'joinGroupButton',
+                        ui: 'forward',
+                        text: 'Join Group'
+                    }
+                ]
             }
         ]
     }

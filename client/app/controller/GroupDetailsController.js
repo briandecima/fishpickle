@@ -108,7 +108,9 @@ Ext.define('fishpickle.controller.GroupDetailsController', {
 
         assoc.save({
             callback: function(records, operation, success) {
+                Ext.Msg.alert('Success', 'You are now part of ' + group.data.name + ". ");
                 this.getMainAppView().setActiveItem(2);
+
             }
         },
         this

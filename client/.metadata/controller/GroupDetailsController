@@ -121,7 +121,7 @@
                 "designer|params": [
                     "record"
                 ],
-                "implHandler": "        this.getGroupDetailsView().setRecord(record);\n        this.getMainAppView().setActiveItem(3);\n\n        if (fishpickle.baseURL && fishpickle.currentUser) {\n            //console.log(\"Panel Active Item Change \" + fishpickle.baseURL);\n            Ext.getStore(\"UserGroupAssociationStore\").getProxy().setUrl(fishpickle.baseURL + \"rest/userGroupAssociation/\");\n            Ext.getStore(\"UserGroupAssociationStore\").load({\n                callback: function(records, operation, success) {\n                    if (success) {\n                        this.handleAssociationDisplay(record);\n                    } else {\n                        console.log(\"Could not retrieve user associations\");\n                    }\n\n                },\n                scope: this\n\n            } );  \n        }",
+                "implHandler": "        this.getGroupDetailsView().setRecord(record);\n        this.getMainAppView().setActiveItem(4);\n\n        if (fishpickle.baseURL && fishpickle.currentUser) {\n            //console.log(\"Panel Active Item Change \" + fishpickle.baseURL);\n            Ext.getStore(\"UserGroupAssociationStore\").getProxy().setUrl(fishpickle.baseURL + \"rest/userGroupAssociation/\");\n            Ext.getStore(\"UserGroupAssociationStore\").load({\n                callback: function(records, operation, success) {\n                    if (success) {\n                        this.handleAssociationDisplay(record);\n                    } else {\n                        console.log(\"Could not retrieve user associations\");\n                    }\n\n                },\n                scope: this\n\n            } );  \n        }",
                 "designer|userClassName": "openGroupDetails"
             },
             "customConfigs": [],
@@ -156,7 +156,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onJoinGroupButtonTap",
-                "implHandler": "        var group = this.getGroupDetailsView().getRecord();\n        var assoc = Ext.create('fishpickle.model.UserGroupAssociations', { id: '', userId: fishpickle.currentUser.data.id, groupId: group.data.id });\n\n\n        assoc.getProxy().setUrl(fishpickle.baseURL + 'rest/userGroupAssociation/');\n\n\n        assoc.save({\n            callback: function(records, operation, success) {\n                this.getMainAppView().setActiveItem(2);\n            }\n        },\n        this\n        );",
+                "implHandler": "var group = this.getGroupDetailsView().getRecord();\nvar assoc = Ext.create('fishpickle.model.UserGroupAssociations', { id: '', userId: fishpickle.currentUser.data.id, groupId: group.data.id });\n\n\nassoc.getProxy().setUrl(fishpickle.baseURL + 'rest/userGroupAssociation/');\n\n\nassoc.save({\n    callback: function(records, operation, success) {\n        Ext.Msg.alert('Success', 'You are now part of ' + group.data.name + \". \");\n        this.getMainAppView().setActiveItem(2);\n\n    }\n},\nthis\n);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#joinGroupButton",
