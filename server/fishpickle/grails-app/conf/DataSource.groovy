@@ -22,7 +22,7 @@ environments {
 	test {
 		dataSource {
 			dbCreate = "update"
-			url = "jdbc:mysql://localhost:3306/fishpickle?autoreconnect=true"
+			url = "jdbc:mysql://10.0.20.71:3306/fishpickle?autoreconnect=true"
 		}
 	}
 	production {
