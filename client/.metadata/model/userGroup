@@ -80,22 +80,6 @@
             "expanded": true
         },
         {
-            "id": "ExtBox1-ext-gen9355",
-            "type": "datafield",
-            "reference": {
-                "name": "fields",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "name": "users",
-                "type": "auto",
-                "designer|userClassName": "MyField10"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
             "id": "ExtBox1-ext-gen23102",
             "type": "restproxy",
             "reference": {

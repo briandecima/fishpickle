@@ -33,10 +33,6 @@ Ext.define('fishpickle.model.UserGroup', {
             {
                 name: 'name',
                 type: 'string'
-            },
-            {
-                name: 'users',
-                type: 'auto'
             }
         ],
         proxy: {

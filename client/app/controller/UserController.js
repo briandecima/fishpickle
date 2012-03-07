@@ -59,30 +59,31 @@ Ext.define('fishpickle.controller.UserController', {
         if (errors.isValid()) {
             user.save({
                 callback: function(records, operation, success) {
-                    if (success) {
-                        this.getMainAppView().setActiveItem(1);
+                    this.getMainAppView().setActiveItem(1);
+                    /*if (success) {
+                    this.getMainAppView().setActiveItem(1);
                     } else {
-                        Ext.Msg.alert('Registration was not successful.');
+                    Ext.Msg.alert('Registration was not successful.');
+                    }*/
                     }
-                }
-            },
-            this
-            );
-        } else {
-            var msg = '';
-            for (i=0; i<errors.length; i++) {
-                var e = errors.items[i];
-                if ('name' == e.getField()) {
+                    },
+                    this
+                    );
+                    } else {
+                    var msg = '';
+                    for (i=0; i<errors.length; i++) {
+                    var e = errors.items[i];
+                    if ('name' == e.getField()) {
                     msg += 'Name ' + e.getMessage() + '\n';
-                } else if ('email' == e.getField()) {
+                    } else if ('email' == e.getField()) {
                     msg += 'Email ' + e.getMessage() + '\n';
-                } else if ('login' == e.getField()) {
+                    } else if ('login' == e.getField()) {
                     msg += 'Login Name ' + e.getMessage() + '\n';
-                } else if ('password' == e.getField()) {
+                    } else if ('password' == e.getField()) {
                     msg += 'Password ' + e.getMessage() + '\n';
-                }
-            }
-        }
+                    }
+                    }
+                    }
     },
 
     onRegistrationViewActivate: function(container, newActiveItem, oldActiveItem, options) {

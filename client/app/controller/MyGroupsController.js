@@ -57,7 +57,7 @@ Ext.define('fishpickle.controller.MyGroupsController', {
             var group = Ext.create('fishpickle.model.UserGroup', { id: '', name: '', description: '', isPrivate: true });
             this.getGroupDetailsView().setRecord(group);
             this.getJoinGroupButton().setHidden(true);
-            this.getMainAppView().setActiveItem(3);
+            this.getMainAppView().setActiveItem(4);
         }
     }
 

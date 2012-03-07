@@ -74,7 +74,7 @@ Ext.define('fishpickle.controller.GroupDetailsController', {
 
     openGroupDetails: function(record) {
         this.getGroupDetailsView().setRecord(record);
-        this.getMainAppView().setActiveItem(3);
+        this.getMainAppView().setActiveItem(4);
 
         if (fishpickle.baseURL && fishpickle.currentUser) {
             //console.log("Panel Active Item Change " + fishpickle.baseURL);
