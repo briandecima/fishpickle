@@ -12,7 +12,8 @@
         "defaultType": null,
         "layout": "card",
         "designer|userClassName": "MainAppView",
-        "designer|userAlias": "mainappview"
+        "designer|userAlias": "mainappview",
+        "container|animation": "slide"
     },
     "customConfigs": [],
     "designerId": "5d022052-aab8-4784-9f88-ae1cc6c36c54",
@@ -95,7 +96,8 @@
             "codeClass": null,
             "userConfig": {
                 "id": "groupDetailsItem",
-                "itemId": null
+                "itemId": null,
+                "showAnimation": null
             },
             "customConfigs": [],
             "iconCls": "icon-linkedinstance",

@@ -26,6 +26,7 @@ Ext.define('fishpickle.view.ui.MainAppView', {
     config: {
         id: 'MainAppView',
         layout: {
+            animation: 'slide',
             type: 'card'
         },
         items: [

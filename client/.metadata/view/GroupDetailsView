@@ -19,6 +19,77 @@
     "expanded": true,
     "cn": [
         {
+            "id": "ExtBox1-ext-gen13919",
+            "type": "fieldset",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Group Information",
+                "designer|userClassName": "MyFieldSet1"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen43199",
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "groupNameField",
+                        "label": "Name",
+                        "name": "name",
+                        "designer|userClassName": "MyTextField1"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen44003",
+                    "type": "textareafield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": null,
+                        "id": "groupDescriptionField",
+                        "width": null,
+                        "label": "Description",
+                        "name": "description",
+                        "designer|userClassName": "MyTextArea"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen13564",
+                    "type": "togglefield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "isPrivateToggle",
+                        "label": "Private",
+                        "name": "isPrivate",
+                        "value": 1,
+                        "designer|userClassName": "MyToggleField"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        },
+        {
             "id": "ExtBox1-ext-gen41537",
             "type": "titlebar",
             "reference": {
@@ -74,62 +145,6 @@
                     "expanded": true
                 }
             ]
-        },
-        {
-            "id": "ExtBox1-ext-gen43199",
-            "type": "textfield",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "id": "groupNameField",
-                "label": "Name",
-                "labelAlign": "top",
-                "name": "name",
-                "designer|userClassName": "MyTextField1"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen44003",
-            "type": "textareafield",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "height": 50,
-                "id": "groupDescriptionField",
-                "width": 282,
-                "label": "Description",
-                "labelAlign": "top",
-                "name": "description",
-                "designer|userClassName": "MyTextArea"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen13564",
-            "type": "togglefield",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "id": "isPrivateToggle",
-                "label": "Private",
-                "name": "isPrivate",
-                "value": 1,
-                "designer|userClassName": "MyToggleField"
-            },
-            "customConfigs": [],
-            "expanded": true
         },
         {
             "id": "ExtBox1-ext-gen24833",

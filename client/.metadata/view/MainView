@@ -9,7 +9,8 @@
     "userConfig": {
         "id": null,
         "designer|userClassName": "MainView",
-        "designer|userAlias": "mainview"
+        "designer|userAlias": "mainview",
+        "container|animation": null
     },
     "customConfigs": [],
     "designerId": "6455e548-8780-4215-8023-2ae70bc2d295",

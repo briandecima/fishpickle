@@ -20,6 +20,31 @@ Ext.define('fishpickle.view.ui.GroupDetailsView', {
         itemId: '',
         items: [
             {
+                xtype: 'fieldset',
+                title: 'Group Information',
+                items: [
+                    {
+                        xtype: 'textfield',
+                        id: 'groupNameField',
+                        label: 'Name',
+                        name: 'name'
+                    },
+                    {
+                        xtype: 'textareafield',
+                        id: 'groupDescriptionField',
+                        label: 'Description',
+                        name: 'description'
+                    },
+                    {
+                        xtype: 'togglefield',
+                        id: 'isPrivateToggle',
+                        label: 'Private',
+                        name: 'isPrivate',
+                        value: 1
+                    }
+                ]
+            },
+            {
                 xtype: 'titlebar',
                 docked: 'top',
                 id: 'groupDetails',
@@ -40,29 +65,6 @@ Ext.define('fishpickle.view.ui.GroupDetailsView', {
                         align: 'right'
                     }
                 ]
-            },
-            {
-                xtype: 'textfield',
-                id: 'groupNameField',
-                label: 'Name',
-                labelAlign: 'top',
-                name: 'name'
-            },
-            {
-                xtype: 'textareafield',
-                height: 50,
-                id: 'groupDescriptionField',
-                width: 282,
-                label: 'Description',
-                labelAlign: 'top',
-                name: 'description'
-            },
-            {
-                xtype: 'togglefield',
-                id: 'isPrivateToggle',
-                label: 'Private',
-                name: 'isPrivate',
-                value: 1
             },
             {
                 xtype: 'label',
