@@ -18,9 +18,6 @@ Ext.define('fishpickle.view.SettingsView', {
     alias: 'widget.settingsview',
 
     config: {
-        layout: {
-            type: 'fit'
-        },
         items: [
             {
                 xtype: 'titlebar',
@@ -39,30 +36,37 @@ Ext.define('fishpickle.view.SettingsView', {
                 ]
             },
             {
-                xtype: 'textfield',
-                docked: 'top',
-                id: 'displayName',
-                label: 'Display Name',
-                labelAlign: 'top'
+                xtype: 'label',
+                html: '<div>Login Name:</div>'
             },
             {
-                xtype: 'emailfield',
-                docked: 'top',
-                label: 'Email',
-                labelAlign: 'top',
-                placeHolder: 'email@example.com'
+                xtype: 'fieldset',
+                title: 'Account Information',
+                items: [
+                    {
+                        xtype: 'textfield',
+                        label: 'Name',
+                        name: 'displayName',
+                        required: true
+                    },
+                    {
+                        xtype: 'emailfield',
+                        label: 'Email',
+                        name: 'email',
+                        required: true,
+                        placeHolder: 'email@example.com'
+                    },
+                    {
+                        xtype: 'passwordfield',
+                        label: 'Password',
+                        name: 'password',
+                        required: true
+                    }
+                ]
             },
             {
-                xtype: 'passwordfield',
-                docked: 'top',
-                label: 'New Password',
-                labelAlign: 'top'
-            },
-            {
-                xtype: 'passwordfield',
-                docked: 'top',
-                label: 'Confirm Password',
-                labelAlign: 'top'
+                xtype: 'button',
+                text: 'Log Out'
             }
         ]
     }

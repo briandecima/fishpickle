@@ -8,14 +8,13 @@
     "codeClass": null,
     "userConfig": {
         "id": null,
-        "layout": "fit",
         "designer|userClassName": "SettingsView",
         "designer|userAlias": "settingsview"
     },
     "customConfigs": [],
     "designerId": "90186d1a-11d8-4677-bf97-7464b91728dd",
     "$viewOrder": 6,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen10934",
@@ -57,71 +56,101 @@
             ]
         },
         {
-            "id": "ExtBox1-ext-gen8663",
-            "type": "textfield",
+            "id": "ExtBox1-ext-gen13312",
+            "type": "label",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "docked": "top",
-                "id": "displayName",
-                "label": "Display Name",
-                "labelAlign": "top",
-                "designer|userClassName": "MyTextField2"
+                "html": "<div>Login Name:</div>",
+                "designer|userClassName": "MyLabel2"
             },
             "customConfigs": [],
             "expanded": true
         },
         {
-            "id": "ExtBox1-ext-gen8992",
-            "type": "emailfield",
+            "id": "ExtBox1-ext-gen10623",
+            "type": "fieldset",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "docked": "top",
-                "label": "Email",
-                "labelAlign": "top",
-                "placeHolder": "email@example.com",
-                "designer|userClassName": "MyEmailField"
+                "title": "Account Information",
+                "designer|userClassName": "MyFieldSet"
             },
             "customConfigs": [],
-            "expanded": true
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen10626",
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Name",
+                        "name": "displayName",
+                        "required": true,
+                        "designer|userClassName": "MyTextField7"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen10630",
+                    "type": "emailfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Email",
+                        "name": "email",
+                        "required": true,
+                        "placeHolder": "email@example.com",
+                        "designer|userClassName": "MyEmailField3"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen10638",
+                    "type": "passwordfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Password",
+                        "labelAlign": null,
+                        "name": "password",
+                        "required": true,
+                        "designer|userClassName": "MyPasswordField5"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
         },
         {
-            "id": "ExtBox1-ext-gen9645",
-            "type": "passwordfield",
+            "id": "ExtBox1-ext-gen14977",
+            "type": "button",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "docked": "top",
-                "label": "New Password",
-                "labelAlign": "top",
-                "designer|userClassName": "MyPasswordField1"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen9968",
-            "type": "passwordfield",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "docked": "top",
-                "label": "Confirm Password",
-                "labelAlign": "top",
-                "designer|userClassName": "MyPasswordField2"
+                "text": "Log Out",
+                "designer|userClassName": "MyButton9"
             },
             "customConfigs": [],
             "expanded": true
