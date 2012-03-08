@@ -8,17 +8,63 @@
  * License of Sencha Designer does not include license for Sencha Touch 2.0.x. For more
  * details see http://www.sencha.com/license or contact license@sencha.com.
  *
- * You should implement event handling and custom methods in this
- * class.
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
  */
 
 Ext.define('fishpickle.view.SettingsView', {
-    extend: 'fishpickle.view.ui.SettingsView',
+    extend: 'Ext.form.Panel',
     alias: 'widget.settingsview',
 
-    initialize: function() {
-        var me = this;
-        me.callParent(arguments);
+    config: {
+        layout: {
+            type: 'fit'
+        },
+        items: [
+            {
+                xtype: 'titlebar',
+                docked: 'top',
+                title: 'Settings',
+                items: [
+                    {
+                        xtype: 'button',
+                        docked: 'right',
+                        id: 'saveSettingsButton',
+                        itemId: 'saveSettingsButton',
+                        iconAlign: 'right',
+                        text: 'Save',
+                        align: 'right'
+                    }
+                ]
+            },
+            {
+                xtype: 'textfield',
+                docked: 'top',
+                id: 'displayName',
+                label: 'Display Name',
+                labelAlign: 'top'
+            },
+            {
+                xtype: 'emailfield',
+                docked: 'top',
+                label: 'Email',
+                labelAlign: 'top',
+                placeHolder: 'email@example.com'
+            },
+            {
+                xtype: 'passwordfield',
+                docked: 'top',
+                label: 'New Password',
+                labelAlign: 'top'
+            },
+            {
+                xtype: 'passwordfield',
+                docked: 'top',
+                label: 'Confirm Password',
+                labelAlign: 'top'
+            }
+        ]
     }
 
 });

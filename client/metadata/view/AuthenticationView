@@ -14,7 +14,7 @@
     "customConfigs": [],
     "designerId": "5c9c2d01-c8a8-40a2-ad47-82409c9b2366",
     "$viewOrder": 4,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen2861",
@@ -49,40 +49,54 @@
             "expanded": true,
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen3056",
-                    "type": "textfield",
+                    "id": "ExtBox1-ext-gen15108",
+                    "type": "fieldset",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "docked": "top",
-                        "label": "Name",
-                        "labelAlign": "top",
-                        "name": "login",
-                        "designer|userClassName": "MyTextField"
+                        "title": "",
+                        "designer|userClassName": "MyFieldSet2"
                     },
                     "customConfigs": [],
-                    "expanded": true
-                },
-                {
-                    "id": "ExtBox1-ext-gen3229",
-                    "type": "passwordfield",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "docked": null,
-                        "label": "Password",
-                        "labelAlign": "top",
-                        "name": "password",
-                        "designer|userClassName": "MyPasswordField"
-                    },
-                    "customConfigs": [],
-                    "expanded": true
+                    "expanded": true,
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen21087",
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "label": "Login Id",
+                                "name": "login",
+                                "designer|userClassName": "MyTextField7"
+                            },
+                            "customConfigs": [],
+                            "expanded": true
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen3229",
+                            "type": "passwordfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": null,
+                                "label": "Password",
+                                "name": "password",
+                                "designer|userClassName": "MyPasswordField"
+                            },
+                            "customConfigs": [],
+                            "expanded": true
+                        }
+                    ]
                 },
                 {
                     "id": "ExtBox1-ext-gen3656",

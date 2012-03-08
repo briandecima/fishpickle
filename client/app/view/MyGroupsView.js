@@ -8,17 +8,48 @@
  * License of Sencha Designer does not include license for Sencha Touch 2.0.x. For more
  * details see http://www.sencha.com/license or contact license@sencha.com.
  *
- * You should implement event handling and custom methods in this
- * class.
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
  */
 
 Ext.define('fishpickle.view.MyGroupsView', {
-    extend: 'fishpickle.view.ui.MyGroupsView',
+    extend: 'Ext.Panel',
     alias: 'widget.mygroupsview',
 
-    initialize: function() {
-        var me = this;
-        me.callParent(arguments);
+    config: {
+        layout: {
+            type: 'fit'
+        },
+        items: [
+            {
+                xtype: 'titlebar',
+                docked: 'top',
+                id: 'myGroupsToolbar',
+                title: 'My Groups',
+                items: [
+                    {
+                        xtype: 'button',
+                        id: 'createGroup',
+                        ui: 'action',
+                        iconAlign: 'center',
+                        text: 'New',
+                        align: 'right'
+                    }
+                ]
+            },
+            {
+                xtype: 'list',
+                id: 'myGroupsList',
+                ui: 'round',
+                emptyText: 'You are not a member of any groups.',
+                itemTpl: [
+                    '<div>{name}</div>'
+                ],
+                store: 'MyGroupsStore',
+                onItemDisclosure: true
+            }
+        ]
     }
 
 });

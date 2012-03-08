@@ -8,17 +8,51 @@
  * License of Sencha Designer does not include license for Sencha Touch 2.0.x. For more
  * details see http://www.sencha.com/license or contact license@sencha.com.
  *
- * You should implement event handling and custom methods in this
- * class.
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
  */
 
 Ext.define('fishpickle.view.SearchView', {
-    extend: 'fishpickle.view.ui.SearchView',
+    extend: 'Ext.Panel',
     alias: 'widget.searchview',
 
-    initialize: function() {
-        var me = this;
-        me.callParent(arguments);
+    config: {
+        layout: {
+            type: 'fit'
+        },
+        items: [
+            {
+                xtype: 'toolbar',
+                docked: 'top',
+                id: 'searchToolbar',
+                layout: {
+                    align: 'stretchmax',
+                    type: 'hbox'
+                },
+                items: [
+                    {
+                        xtype: 'searchfield',
+                        docked: 'top',
+                        id: 'groupSearchField',
+                        width: '',
+                        label: '',
+                        placeHolder: ' Search'
+                    }
+                ]
+            },
+            {
+                xtype: 'list',
+                id: 'searchResultsList',
+                ui: 'round',
+                emptyText: 'No groups found.',
+                itemTpl: [
+                    '<div>{name}</div>'
+                ],
+                store: 'AllGroupsStore',
+                onItemDisclosure: true
+            }
+        ]
     }
 
 });

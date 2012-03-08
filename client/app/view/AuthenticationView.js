@@ -8,17 +8,68 @@
  * License of Sencha Designer does not include license for Sencha Touch 2.0.x. For more
  * details see http://www.sencha.com/license or contact license@sencha.com.
  *
- * You should implement event handling and custom methods in this
- * class.
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
  */
 
 Ext.define('fishpickle.view.AuthenticationView', {
-    extend: 'fishpickle.view.ui.AuthenticationView',
+    extend: 'Ext.form.Panel',
     alias: 'widget.authenticationview',
 
-    initialize: function() {
-        var me = this;
-        me.callParent(arguments);
+    config: {
+        items: [
+            {
+                xtype: 'titlebar',
+                docked: 'top',
+                title: 'fishpickle'
+            },
+            {
+                xtype: 'container',
+                ui: '',
+                layout: {
+                    type: 'vbox'
+                },
+                items: [
+                    {
+                        xtype: 'fieldset',
+                        title: '',
+                        items: [
+                            {
+                                xtype: 'textfield',
+                                label: 'Login Id',
+                                name: 'login'
+                            },
+                            {
+                                xtype: 'passwordfield',
+                                label: 'Password',
+                                name: 'password'
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'button',
+                        id: 'LoginButton',
+                        itemId: 'LoginButton',
+                        ui: 'action',
+                        width: 100,
+                        text: 'Login'
+                    },
+                    {
+                        xtype: 'spacer',
+                        height: 50
+                    },
+                    {
+                        xtype: 'button',
+                        id: 'RegisterButton',
+                        itemId: 'RegisterButton',
+                        ui: 'action',
+                        width: 100,
+                        text: 'Register'
+                    }
+                ]
+            }
+        ]
     }
 
 });

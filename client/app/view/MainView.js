@@ -8,17 +8,75 @@
  * License of Sencha Designer does not include license for Sencha Touch 2.0.x. For more
  * details see http://www.sencha.com/license or contact license@sencha.com.
  *
- * You should implement event handling and custom methods in this
- * class.
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
  */
 
 Ext.define('fishpickle.view.MainView', {
-    extend: 'fishpickle.view.ui.MainView',
+    extend: 'Ext.tab.Panel',
     alias: 'widget.mainview',
+    requires: [
+        'fishpickle.view.MyGroupsView',
+        'fishpickle.view.SearchView',
+        'fishpickle.view.SettingsView'
+    ],
 
-    initialize: function() {
-        var me = this;
-        me.callParent(arguments);
+    config: {
+        tabBar: {
+            docked: 'bottom'
+        },
+        items: [
+            {
+                xtype: 'container',
+                id: 'myGroupsContainer',
+                layout: {
+                    type: 'fit'
+                },
+                title: 'Home',
+                iconCls: 'home',
+                items: [
+                    {
+                        xtype: 'mygroupsview',
+                        id: 'myGroupsItem'
+                    }
+                ]
+            },
+            {
+                xtype: 'container',
+                cls: [
+                    'search'
+                ],
+                id: 'searchGroupsContainer',
+                layout: {
+                    type: 'fit'
+                },
+                title: 'Search',
+                iconCls: 'search',
+                items: [
+                    {
+                        xtype: 'searchview',
+                        id: 'searchGroupsItem',
+                        itemId: ''
+                    }
+                ]
+            },
+            {
+                xtype: 'container',
+                id: 'settingsContainer',
+                layout: {
+                    type: 'fit'
+                },
+                title: 'Settings',
+                iconCls: 'settings',
+                items: [
+                    {
+                        xtype: 'settingsview',
+                        id: 'settingsItem'
+                    }
+                ]
+            }
+        ]
     }
 
 });

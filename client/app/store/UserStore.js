@@ -8,17 +8,26 @@
  * License of Sencha Designer does not include license for Sencha Touch 2.0.x. For more
  * details see http://www.sencha.com/license or contact license@sencha.com.
  *
- * You should implement event handling and custom methods in this
- * class.
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
  */
 
 Ext.define('fishpickle.store.UserStore', {
-    extend: 'fishpickle.store.base.UserStore',
+    extend: 'Ext.data.Store',
+    requires: [
+        'fishpickle.model.User'
+    ],
 
-    constructor: function(cfg) {
-        var me = this;
-        cfg = cfg || {};
-        me.callParent([Ext.apply({}, cfg)]);
+    config: {
+        model: 'fishpickle.model.User',
+        storeId: 'UserStore',
+        proxy: {
+            type: 'rest',
+            url: 'http://dynamicurl',
+            reader: {
+                type: 'json'
+            }
+        }
     }
-
 });

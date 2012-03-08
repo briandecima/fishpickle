@@ -8,17 +8,71 @@
  * License of Sencha Designer does not include license for Sencha Touch 2.0.x. For more
  * details see http://www.sencha.com/license or contact license@sencha.com.
  *
- * You should implement event handling and custom methods in this
- * class.
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
  */
 
 Ext.define('fishpickle.view.RegistrationView', {
-    extend: 'fishpickle.view.ui.RegistrationView',
+    extend: 'Ext.form.Panel',
     alias: 'widget.registrationview',
 
-    initialize: function() {
-        var me = this;
-        me.callParent(arguments);
+    config: {
+        items: [
+            {
+                xtype: 'toolbar',
+                docked: 'top',
+                id: 'registrationtools',
+                title: 'New Account',
+                items: [
+                    {
+                        xtype: 'button',
+                        docked: 'left',
+                        id: 'RegistrationBackButton',
+                        itemId: 'RegistrationBackButton',
+                        text: 'Back'
+                    },
+                    {
+                        xtype: 'button',
+                        docked: 'right',
+                        id: 'RegistrationSaveButton',
+                        itemId: 'RegistrationSaveButton',
+                        text: 'Save'
+                    }
+                ]
+            },
+            {
+                xtype: 'fieldset',
+                title: 'Account Information',
+                items: [
+                    {
+                        xtype: 'textfield',
+                        label: 'Name',
+                        name: 'displayName',
+                        required: true
+                    },
+                    {
+                        xtype: 'emailfield',
+                        label: 'Email',
+                        name: 'email',
+                        required: true,
+                        placeHolder: 'email@example.com'
+                    },
+                    {
+                        xtype: 'textfield',
+                        label: 'Login Name',
+                        name: 'login',
+                        required: true
+                    },
+                    {
+                        xtype: 'passwordfield',
+                        label: 'Password',
+                        name: 'password',
+                        required: true
+                    }
+                ]
+            }
+        ]
     }
 
 });

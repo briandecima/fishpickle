@@ -8,6 +8,7 @@
     "codeClass": null,
     "userConfig": {
         "designer|init": "",
+        "designer|launch": "",
         "designer|userClassName": "SearchController"
     },
     "customConfigs": [],

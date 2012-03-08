@@ -8,8 +8,9 @@
  * License of Sencha Designer does not include license for Sencha Touch 2.0.x. For more
  * details see http://www.sencha.com/license or contact license@sencha.com.
  *
- * You should implement event handling and custom methods in this
- * class.
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
  */
 
 Ext.define('fishpickle.controller.GroupDetailsController', {
@@ -72,28 +73,6 @@ Ext.define('fishpickle.controller.GroupDetailsController', {
         this.openGroupDetails(record);
     },
 
-    openGroupDetails: function(record) {
-        this.getGroupDetailsView().setRecord(record);
-        this.getMainAppView().setActiveItem(4);
-
-        if (fishpickle.baseURL && fishpickle.currentUser) {
-            //console.log("Panel Active Item Change " + fishpickle.baseURL);
-            Ext.getStore("UserGroupAssociationStore").getProxy().setUrl(fishpickle.baseURL + "rest/userGroupAssociation/");
-            Ext.getStore("UserGroupAssociationStore").load({
-                callback: function(records, operation, success) {
-                    if (success) {
-                        this.handleAssociationDisplay(record);
-                    } else {
-                        console.log("Could not retrieve user associations");
-                    }
-
-                },
-                scope: this
-
-            } );  
-        }
-    },
-
     onBackButtonTap: function(button, e, options) {
         this.getMainAppView().setActiveItem(2);
     },
@@ -115,6 +94,28 @@ Ext.define('fishpickle.controller.GroupDetailsController', {
         },
         this
         );
+    },
+
+    openGroupDetails: function(record) {
+        this.getGroupDetailsView().setRecord(record);
+        this.getMainAppView().setActiveItem(4);
+
+        if (fishpickle.baseURL && fishpickle.currentUser) {
+            //console.log("Panel Active Item Change " + fishpickle.baseURL);
+            Ext.getStore("UserGroupAssociationStore").getProxy().setUrl(fishpickle.baseURL + "rest/userGroupAssociation/");
+            Ext.getStore("UserGroupAssociationStore").load({
+                callback: function(records, operation, success) {
+                    if (success) {
+                        this.handleAssociationDisplay(record);
+                    } else {
+                        console.log("Could not retrieve user associations");
+                    }
+
+                },
+                scope: this
+
+            } );  
+        }
     },
 
     handleAssociationDisplay: function(group) {

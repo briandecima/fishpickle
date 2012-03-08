@@ -8,17 +8,51 @@
  * License of Sencha Designer does not include license for Sencha Touch 2.0.x. For more
  * details see http://www.sencha.com/license or contact license@sencha.com.
  *
- * You should implement event handling and custom methods in this
- * class.
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
  */
 
 Ext.define('fishpickle.view.MainAppView', {
-    extend: 'fishpickle.view.ui.MainAppView',
+    extend: 'Ext.Panel',
     alias: 'widget.mainappview',
+    requires: [
+        'fishpickle.view.LoadingView',
+        'fishpickle.view.AuthenticationView',
+        'fishpickle.view.MainView',
+        'fishpickle.view.RegistrationView',
+        'fishpickle.view.GroupDetailsView'
+    ],
 
-    initialize: function() {
-        var me = this;
-        me.callParent(arguments);
+    config: {
+        id: 'MainAppView',
+        layout: {
+            animation: 'slide',
+            type: 'card'
+        },
+        items: [
+            {
+                xtype: 'loadingview',
+                id: 'loadingitem',
+                itemId: 'loadingitem'
+            },
+            {
+                xtype: 'authenticationview',
+                id: 'LoginView'
+            },
+            {
+                xtype: 'mainview',
+                id: 'mainItem'
+            },
+            {
+                xtype: 'registrationview',
+                id: 'registrationitem'
+            },
+            {
+                xtype: 'groupdetailsview',
+                id: 'groupDetailsItem'
+            }
+        ]
     }
 
 });

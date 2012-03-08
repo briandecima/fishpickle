@@ -1,5 +1,5 @@
 {
-    "id": "ExtBox1-ext-gen45732",
+    "id": "ExtBox1-ext-gen11579",
     "type": "panel",
     "reference": {
         "name": "items",
@@ -7,20 +7,18 @@
     },
     "codeClass": null,
     "userConfig": {
-        "id": null,
-        "ui": null,
         "layout": "fit",
-        "designer|userClassName": "MyGroupsView",
-        "designer|userAlias": "mygroupsview"
+        "designer|userClassName": "SearchView",
+        "designer|userAlias": "searchview"
     },
     "customConfigs": [],
-    "designerId": "4eadc38b-80dc-418f-87fd-685c50c294b2",
-    "$viewOrder": 5,
-    "expanded": true,
+    "designerId": "60201bd1-774d-4f51-a8ff-24cfe8385d73",
+    "$viewOrder": 2,
+    "expanded": false,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen4378",
-            "type": "titlebar",
+            "id": "ExtBox1-ext-gen19415",
+            "type": "toolbar",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -28,29 +26,32 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "top",
-                "id": "myGroupsToolbar",
-                "title": "My Groups",
-                "designer|userClassName": "MyTitleBar1"
+                "id": "searchToolbar",
+                "designer|userClassName": "MyToolbar",
+                "container|align": "stretchmax",
+                "container|pack": null
             },
             "customConfigs": [],
             "expanded": true,
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen9788",
-                    "type": "button",
+                    "id": "ExtBox1-ext-gen11802",
+                    "type": "searchfield",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "id": "createGroup",
-                        "ui": "action",
-                        "iconAlign": "center",
-                        "iconCls": null,
-                        "text": "New",
-                        "designer|userClassName": "MyButton3",
-                        "align": "right"
+                        "border": null,
+                        "centered": null,
+                        "cls": null,
+                        "docked": "top",
+                        "id": "groupSearchField",
+                        "width": "",
+                        "label": "",
+                        "placeHolder": " Search",
+                        "designer|userClassName": "MySearchField"
                     },
                     "customConfigs": [],
                     "expanded": true
@@ -58,7 +59,7 @@
             ]
         },
         {
-            "id": "ExtBox1-ext-gen5043",
+            "id": "ExtBox1-ext-gen17607",
             "type": "list",
             "reference": {
                 "name": "items",
@@ -66,15 +67,15 @@
             },
             "codeClass": null,
             "userConfig": {
-                "docked": null,
-                "height": null,
-                "id": "myGroupsList",
+                "id": "searchResultsList",
                 "ui": "round",
-                "emptyText": "You are not a member of any groups.",
+                "hideOnMaskTap": null,
+                "emptyText": "No groups found.",
                 "itemTpl": "<div>{name}</div>",
-                "store": "MyGroupsStore",
+                "loadingText": null,
+                "store": "AllGroupsStore",
                 "onItemDisclosure": true,
-                "designer|userClassName": "MyList"
+                "designer|userClassName": "MyList1"
             },
             "customConfigs": [],
             "expanded": true
