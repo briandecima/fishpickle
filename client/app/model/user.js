@@ -42,6 +42,7 @@ Ext.define('fishpickle.model.User', {
         proxy: {
             type: 'rest',
             url: 'http://dynamicurl',
+            format: 'json',
             writer: {
                 type: 'json',
                 encode: true,
@@ -49,7 +50,8 @@ Ext.define('fishpickle.model.User', {
             },
             reader: {
                 type: 'json',
-                rootProperty: 'user'
+                rootProperty: 'data',
+                record: 'data'
             }
         },
         validations: [

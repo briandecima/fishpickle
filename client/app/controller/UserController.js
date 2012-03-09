@@ -22,13 +22,11 @@ Ext.define('fishpickle.controller.UserController', {
             registrationView: {
                 selector: 'registrationview',
                 xtype: 'registrationview'
-            }
+            },
+            settingsView: 'settingsview'
         },
 
         control: {
-            "#saveSettingsButton": {
-                tap: 'onButtonTap'
-            },
             "#RegistrationBackButton": {
                 tap: 'onRegistrationBackButtonTap'
             },
@@ -37,12 +35,11 @@ Ext.define('fishpickle.controller.UserController', {
             },
             "#registrationitem": {
                 activate: 'onRegistrationViewActivate'
+            },
+            "#saveSettingsButton": {
+                tap: 'onSaveSettingsButtonTap'
             }
         }
-    },
-
-    onButtonTap: function(button, e, options) {
-        console.log('Saving the user settings');
     },
 
     onRegistrationBackButtonTap: function(button, e, options) {
@@ -50,47 +47,58 @@ Ext.define('fishpickle.controller.UserController', {
     },
 
     onRegistrationSaveButtonTap: function(button, e, options) {
-        console.log('save user');
-        var view = this.getRegistrationView();
-        var user = view.getRecord();
-        user.set(view.getValues());
-        user.getProxy().setUrl(fishpickle.baseURL + 'rest/user');
-
-        var errors = user.validate();
-        if (errors.isValid()) {
-            user.save({
-                callback: function(records, operation, success) {
-                    this.getMainAppView().setActiveItem(1);
-                    /*if (success) {
-                    this.getMainAppView().setActiveItem(1);
-                    } else {
-                    Ext.Msg.alert('Registration was not successful.');
-                    }*/
-                    }
-                    },
-                    this
-                    );
-                    } else {
-                    var msg = '';
-                    for (i=0; i<errors.length; i++) {
-                    var e = errors.items[i];
-                    if ('name' == e.getField()) {
-                    msg += 'Name ' + e.getMessage() + '\n';
-                    } else if ('email' == e.getField()) {
-                    msg += 'Email ' + e.getMessage() + '\n';
-                    } else if ('login' == e.getField()) {
-                    msg += 'Login Name ' + e.getMessage() + '\n';
-                    } else if ('password' == e.getField()) {
-                    msg += 'Password ' + e.getMessage() + '\n';
-                    }
-                    }
-                    }
+        var mainAppView = this.getMainAppView();
+        var callbackFn = function(){ mainAppView.setActiveItem(1);};
+        this.saveUser(this.getRegistrationView(), callbackFn);
     },
 
     onRegistrationViewActivate: function(container, newActiveItem, oldActiveItem, options) {
         console.log('prepare user model');
         var user = Ext.create('fishpickle.model.User', {login:'', displayName:'', email:'', password:''});
         this.getRegistrationView().setRecord(user);
+    },
+
+    onSaveSettingsButtonTap: function(button, e, options) {
+        var mainAppView = this.getMainAppView();
+        var callbackFn = function(){  Ext.Msg.alert('Success', 'Settings successfully saved. ');};
+        this.saveUser(this.getSettingsView(), callbackFn);
+    },
+
+    saveUser: function(view, callbackFn) {
+        console.log('save user');
+        var user = view.getRecord();
+        user.set(view.getValues());
+        user.getProxy().setUrl(fishpickle.baseURL + 'rest/user');
+        //user.phantom = true;
+        var errors = user.validate();
+        if (errors.isValid()) {
+            user.save({
+                callback: function(records, operation, success) {
+                    //success is not working
+                    //   if (success) {
+                    callbackFn();
+                    //  } else {
+                    //      Ext.Msg.alert('Error', 'An error occured while saving user. ');
+                    //  }
+
+                }
+            },
+            this);
+        } else {
+            var msg = '';
+            for (i=0; i<errors.length; i++) {
+                var e = errors.items[i];
+                if ('name' == e.getField()) {
+                    msg += 'Name ' + e.getMessage() + '\n';
+                } else if ('email' == e.getField()) {
+                    msg += 'Email ' + e.getMessage() + '\n';
+                } else if ('login' == e.getField()) {
+                    msg += 'Login Name ' + e.getMessage() + '\n';
+                } else if ('password' == e.getField()) {
+                    msg += 'Password ' + e.getMessage() + '\n';
+                }
+            }
+        }
     }
 
 });

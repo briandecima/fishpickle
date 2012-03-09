@@ -105,6 +105,7 @@
             "codeClass": null,
             "userConfig": {
                 "url": "http://dynamicurl",
+                "format": "json",
                 "designer|userClassName": "MyRestProxy4"
             },
             "customConfigs": [],
@@ -135,7 +136,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "rootProperty": "user",
+                        "rootProperty": "data",
+                        "record": "data",
                         "designer|userClassName": "MyJsonReader5"
                     },
                     "customConfigs": [],

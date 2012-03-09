@@ -1,0 +1,73 @@
+{
+    "id": "ExtBox1-ext-gen15587",
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|init": "",
+        "designer|launch": "",
+        "designer|userClassName": "SettingsController"
+    },
+    "customConfigs": [],
+    "designerId": "93ef4aa1-6741-4d0a-a7b6-6649f1734acc",
+    "$viewOrder": 5,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen15739",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onContainerActivate",
+                "implHandler": "this.getSettingsView().setRecord(fishpickle.currentUser);",
+                "name": "activate",
+                "designer|targetType": "Ext.Container",
+                "designer|controlQuery": "#settingsContainer",
+                "designer|userClassName": "onContainerActivate"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen22969",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onLogoutButtonTap",
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#ogoutButton",
+                "designer|userClassName": "onLogoutButtonTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen17360",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "settingsView",
+                "selector": "settingsview",
+                "designer|userClassName": "settingsView"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

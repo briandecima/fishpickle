@@ -212,10 +212,18 @@
                 "app/store/UserGroupAssociationStore.js"
             ],
             "className": "UserGroupAssociationStore"
+        },
+        "93ef4aa1-6741-4d0a-a7b6-6649f1734acc": {
+            "paths": [
+                "metadata/controller/SettingsController",
+                "app/controller/override/SettingsController.js",
+                "app/controller/SettingsController.js"
+            ],
+            "className": "SettingsController"
         }
     },
     "expandedState": {
-        "data": true,
+        "data": false,
         "model": true,
         "component": true,
         "controller": true

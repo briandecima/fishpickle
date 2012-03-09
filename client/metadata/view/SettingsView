@@ -56,21 +56,6 @@
             ]
         },
         {
-            "id": "ExtBox1-ext-gen13312",
-            "type": "label",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "html": "<div>Login Name:</div>",
-                "designer|userClassName": "MyLabel2"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
             "id": "ExtBox1-ext-gen10623",
             "type": "fieldset",
             "reference": {
@@ -85,6 +70,23 @@
             "customConfigs": [],
             "expanded": true,
             "cn": [
+                {
+                    "id": "ExtBox1-ext-gen20887",
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Login",
+                        "name": "login",
+                        "readOnly": true,
+                        "designer|userClassName": "MyTextField2"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
                 {
                     "id": "ExtBox1-ext-gen10626",
                     "type": "textfield",
@@ -149,6 +151,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "id": "logoutButton",
                 "text": "Log Out",
                 "designer|userClassName": "MyButton9"
             },

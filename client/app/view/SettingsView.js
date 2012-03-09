@@ -36,13 +36,15 @@ Ext.define('fishpickle.view.SettingsView', {
                 ]
             },
             {
-                xtype: 'label',
-                html: '<div>Login Name:</div>'
-            },
-            {
                 xtype: 'fieldset',
                 title: 'Account Information',
                 items: [
+                    {
+                        xtype: 'textfield',
+                        label: 'Login',
+                        name: 'login',
+                        readOnly: true
+                    },
                     {
                         xtype: 'textfield',
                         label: 'Name',
@@ -66,6 +68,7 @@ Ext.define('fishpickle.view.SettingsView', {
             },
             {
                 xtype: 'button',
+                id: 'logoutButton',
                 text: 'Log Out'
             }
         ]

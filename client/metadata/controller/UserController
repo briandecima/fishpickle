@@ -14,7 +14,7 @@
     "customConfigs": [],
     "designerId": "920067bc-4b57-4a48-89ed-9c99a8649432",
     "$viewOrder": 2,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen15522",
@@ -29,25 +29,6 @@
                 "selector": "mainappview",
                 "xtype": null,
                 "designer|userClassName": "mainAppView"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen16040",
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onButtonTap",
-                "implHandler": "        console.log('Saving the user settings');",
-                "name": "tap",
-                "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "#saveSettingsButton",
-                "designer|userClassName": "onButtonTap"
             },
             "customConfigs": [],
             "expanded": true
@@ -81,7 +62,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onRegistrationSaveButtonTap",
-                "implHandler": "        console.log('save user');\n        var view = this.getRegistrationView();\n        var user = view.getRecord();\n        user.set(view.getValues());\n        user.getProxy().setUrl(fishpickle.baseURL + 'rest/user');\n\n        var errors = user.validate();\n        if (errors.isValid()) {\n            user.save({\n                callback: function(records, operation, success) {\n                    this.getMainAppView().setActiveItem(1);\n                    /*if (success) {\n                    this.getMainAppView().setActiveItem(1);\n                    } else {\n                    Ext.Msg.alert('Registration was not successful.');\n                    }*/\n                    }\n                    },\n                    this\n                    );\n                    } else {\n                    var msg = '';\n                    for (i=0; i<errors.length; i++) {\n                    var e = errors.items[i];\n                    if ('name' == e.getField()) {\n                    msg += 'Name ' + e.getMessage() + '\\n';\n                    } else if ('email' == e.getField()) {\n                    msg += 'Email ' + e.getMessage() + '\\n';\n                    } else if ('login' == e.getField()) {\n                    msg += 'Login Name ' + e.getMessage() + '\\n';\n                    } else if ('password' == e.getField()) {\n                    msg += 'Password ' + e.getMessage() + '\\n';\n                    }\n                    }\n                    }",
+                "implHandler": "var mainAppView = this.getMainAppView();\nvar callbackFn = function(){ mainAppView.setActiveItem(1);};\nthis.saveUser(this.getRegistrationView(), callbackFn);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#RegistrationSaveButton",
@@ -122,6 +103,60 @@
                 "selector": "registrationview",
                 "xtype": "registrationview",
                 "designer|userClassName": "registrationView"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen23942",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "saveUser",
+                "designer|params": [
+                    "view, callbackFn"
+                ],
+                "implHandler": "console.log('save user');\nvar user = view.getRecord();\nuser.set(view.getValues());\nuser.getProxy().setUrl(fishpickle.baseURL + 'rest/user');\n//user.phantom = true;\nvar errors = user.validate();\nif (errors.isValid()) {\n    user.save({\n        callback: function(records, operation, success) {\n            //success is not working\n            //   if (success) {\n            callbackFn();\n            //  } else {\n            //      Ext.Msg.alert('Error', 'An error occured while saving user. ');\n            //  }\n\n        }\n    },\n    this);\n} else {\n    var msg = '';\n    for (i=0; i<errors.length; i++) {\n        var e = errors.items[i];\n        if ('name' == e.getField()) {\n            msg += 'Name ' + e.getMessage() + '\\n';\n        } else if ('email' == e.getField()) {\n            msg += 'Email ' + e.getMessage() + '\\n';\n        } else if ('login' == e.getField()) {\n            msg += 'Login Name ' + e.getMessage() + '\\n';\n        } else if ('password' == e.getField()) {\n            msg += 'Password ' + e.getMessage() + '\\n';\n        }\n    }\n}",
+                "designer|userClassName": "saveUser"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen25714",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onSaveSettingsButtonTap",
+                "implHandler": "var mainAppView = this.getMainAppView();\nvar callbackFn = function(){  Ext.Msg.alert('Success', 'Settings successfully saved. ');};\nthis.saveUser(this.getSettingsView(), callbackFn);",
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#saveSettingsButton",
+                "designer|userClassName": "onSaveSettingsButtonTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen26985",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "settingsView",
+                "selector": "settingsview",
+                "designer|userClassName": "settingsView"
             },
             "customConfigs": [],
             "expanded": true
