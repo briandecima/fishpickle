@@ -14,7 +14,7 @@
     "customConfigs": [],
     "designerId": "59d209db-27d4-4bf0-a6d7-34590ece6417",
     "$viewOrder": 0,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen9958",
@@ -26,7 +26,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onLoginButtonTap",
-                "implHandler": "        var loginFormData = this.getLoginView().getValues();\n        this.doLogin(loginFormData.login, loginFormData.password);",
+                "implHandler": "var loginFormData = this.getLoginView().getValues();\nthis.doLogin(loginFormData.login, loginFormData.password);\n",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#LoginButton",
@@ -104,7 +104,7 @@
                     "loginName",
                     "password"
                 ],
-                "implHandler": "        //get the user by login name\n        if (fishpickle.baseURL && loginName && password) {\n            var userStore = Ext.getStore('UserStore');\n            if (!userStore) {\n                userStore = Ext.create('fishpickle.store.UserStore');\n            }\n            userStore.getProxy().setUrl(fishpickle.baseURL + 'rest/login/' + loginName);\n            userStore.load({\n                callback: function(records, operation, success) {\n                    if (success) {\n                        var serverUser = records[0].data;\n                        if (serverUser && password == serverUser.password) {\n                            this.updateLocalSettings(serverUser);\n                            this.navigateToMyGroupsView();\n                        } else {\n                            this.navigateToLoginView();\n                            Ext.Msg.alert('Error', 'The password is invalid.  Please try again.');\n                        }\n                    } else {\n                        this.navigateToLoginView();\n                        Ext.Msg.alert('Error','The user name or password is invalid.  Please try again.');\n                    }\n                },\n                scope: this\n            });\n\n        } else {\n            //force user to login\n            this.navigateToLoginView();\n        }",
+                "implHandler": "//get the user by login name\nif (fishpickle.baseURL && loginName && password) {\n    var userStore = Ext.getStore('UserStore');\n    if (!userStore) {\n        userStore = Ext.create('fishpickle.store.UserStore');\n    }\n    userStore.getProxy().setUrl(fishpickle.baseURL + 'rest/login/' + loginName);\n    userStore.load({\n        callback: function(records, operation, success) {\n            if (success) {\n                var serverUser = records[0].data;\n                if (serverUser && password == serverUser.password) {\n                    this.updateLocalSettings(serverUser);\n                    this.navigateToMyGroupsView();\n                    this.getLoginView().setValues({login:'', password:''});\n                } else {\n                    this.navigateToLoginView();\n                    Ext.Msg.alert('Error', 'The password is invalid.  Please try again.');\n                }\n            } else {\n                this.navigateToLoginView();\n                Ext.Msg.alert('Error','The user name or password is invalid.  Please try again.');\n            }\n        },\n        scope: this\n    });\n\n} else {\n    //force user to login\n    this.navigateToLoginView();\n}",
                 "designer|userClassName": "doLogin"
             },
             "customConfigs": [],
@@ -173,6 +173,25 @@
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#RegisterButton",
                 "designer|userClassName": "onRegisterButtonTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen8637",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onLogoutButtonTap",
+                "implHandler": "var userStore = Ext.getStore('UserStore');\nif (userStore) {\n    userStore.removeAll();\n} \n\nvar localSettingsStore = Ext.getStore(\"LocalSettingsStore\");\nif (localSettingsStore) {\n    localSettingsStore.removeAll();  \n    localSettingsStore.sync();\n}\n\nthis.getApplication().fireEvent('navigateToLoginView');",
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#logoutButton",
+                "designer|userClassName": "onLogoutButtonTap"
             },
             "customConfigs": [],
             "expanded": true

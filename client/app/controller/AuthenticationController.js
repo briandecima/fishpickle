@@ -33,6 +33,9 @@ Ext.define('fishpickle.controller.AuthenticationController', {
             },
             "#RegisterButton": {
                 tap: 'onRegisterButtonTap'
+            },
+            "#logoutButton": {
+                tap: 'onLogoutButtonTap'
             }
         }
     },
@@ -40,6 +43,7 @@ Ext.define('fishpickle.controller.AuthenticationController', {
     onLoginButtonTap: function(button, e, options) {
         var loginFormData = this.getLoginView().getValues();
         this.doLogin(loginFormData.login, loginFormData.password);
+
     },
 
     onLoadingViewActivate: function(container, newActiveItem, oldActiveItem, options) {
@@ -60,6 +64,21 @@ Ext.define('fishpickle.controller.AuthenticationController', {
 
     onRegisterButtonTap: function(button, e, options) {
         this.getApplication().fireEvent('navigateToRegistrationView');
+    },
+
+    onLogoutButtonTap: function(button, e, options) {
+        var userStore = Ext.getStore('UserStore');
+        if (userStore) {
+            userStore.removeAll();
+        } 
+
+        var localSettingsStore = Ext.getStore("LocalSettingsStore");
+        if (localSettingsStore) {
+            localSettingsStore.removeAll();  
+            localSettingsStore.sync();
+        }
+
+        this.getApplication().fireEvent('navigateToLoginView');
     },
 
     updateLocalSettings: function(userModel) {
@@ -87,6 +106,7 @@ Ext.define('fishpickle.controller.AuthenticationController', {
                         if (serverUser && password == serverUser.password) {
                             this.updateLocalSettings(serverUser);
                             this.navigateToMyGroupsView();
+                            this.getLoginView().setValues({login:'', password:''});
                         } else {
                             this.navigateToLoginView();
                             Ext.Msg.alert('Error', 'The password is invalid.  Please try again.');

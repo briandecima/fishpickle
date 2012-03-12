@@ -21,6 +21,10 @@ Ext.define('fishpickle.controller.NavigationController', {
             mainAppView: {
                 selector: 'mainappview',
                 xtype: 'mainappview'
+            },
+            mainView: {
+                selector: 'mainview',
+                xtype: 'mainview'
             }
         }
     },
@@ -42,6 +46,7 @@ Ext.define('fishpickle.controller.NavigationController', {
 
     onNavigateToMyGroupsView: function() {
         this.getMainAppView().setActiveItem(2);
+        this.getMainView().setActiveItem(0);
     },
 
     onNavigateToRegistrationView: function() {
