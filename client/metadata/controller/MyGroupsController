@@ -14,7 +14,7 @@
     "customConfigs": [],
     "designerId": "56caab43-4bf3-4d95-b5a7-787c20860f9b",
     "$viewOrder": 3,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen6464",
@@ -64,7 +64,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onNewGroupButtonTap",
-                "implHandler": "if (fishpickle.baseURL) {\n    //console.log(\"in activate create group view\");\n    var group = Ext.create('fishpickle.model.UserGroup', { id: '', name: '', description: '', isPrivate: true });\n    this.getGroupDetailsView().setRecord(group);\n    this.getJoinGroupButton().setHidden(true);\n    this.getAlreadyMemberLabel().setHidden(true);\n    this.getMainAppView().setActiveItem(4);\n}",
+                "implHandler": "if (fishpickle.baseURL) {\n    //console.log(\"in activate create group view\");\n    var group = Ext.create('fishpickle.model.UserGroup', { id: '', name: '', description: '', isPrivate: true });\n    this.getGroupDetailsView().setRecord(group);\n    this.getJoinGroupButton().setHidden(true);\n    this.getAlreadyMemberLabel().setHidden(true);\n    this.getApplication().fireEvent('navigateToGroupDetailsView');\n}",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#createGroup",
@@ -85,22 +85,6 @@
                 "ref": "groupDetailsView",
                 "selector": "groupdetailsview",
                 "designer|userClassName": "groupDetailsView"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen12620",
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "ref": "mainAppView",
-                "selector": "mainappview",
-                "designer|userClassName": "mainAppView"
             },
             "customConfigs": [],
             "expanded": true

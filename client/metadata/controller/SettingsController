@@ -45,9 +45,10 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onLogoutButtonTap",
+                "implHandler": "var userStore = Ext.getStore('UserStore');\nif (userStore) {\n    userStore.removeAll();\n} \n\nvar localSettingsStore = Ext.getStore(\"LocalSettingsStore\");\nif (localSettingsStore) {\n    localSettingsStore.removeAll();  \n    localSettingsStore.sync();\n}\n\nthis.getApplication().fireEvent('navigateToLoginView');",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "#ogoutButton",
+                "designer|controlQuery": "#logoutButton",
                 "designer|userClassName": "onLogoutButtonTap"
             },
             "customConfigs": [],

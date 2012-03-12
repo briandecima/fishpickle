@@ -18,7 +18,7 @@
         "cssPath": ""
     },
     "xdsVersion": "2.0.0",
-    "xdsBuild": "309",
+    "xdsBuild": "311",
     "framework": "touch20",
     "topInstanceFileMap": {
         "59d209db-27d4-4bf0-a6d7-34590ece6417": {
@@ -220,11 +220,19 @@
                 "app/controller/SettingsController.js"
             ],
             "className": "SettingsController"
+        },
+        "84c9d6b8-efe6-4d8a-a5b3-b062114d689e": {
+            "paths": [
+                "metadata/controller/NavigationController",
+                "app/controller/override/NavigationController.js",
+                "app/controller/NavigationController.js"
+            ],
+            "className": "NavigationController"
         }
     },
     "expandedState": {
         "data": false,
-        "model": true,
+        "model": false,
         "component": true,
         "controller": true
     }

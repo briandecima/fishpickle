@@ -25,7 +25,7 @@ Ext.define('fishpickle.controller.SettingsController', {
             "#settingsContainer": {
                 activate: 'onContainerActivate'
             },
-            "#ogoutButton": {
+            "#logoutButton": {
                 tap: 'onLogoutButtonTap'
             }
         }
@@ -36,7 +36,18 @@ Ext.define('fishpickle.controller.SettingsController', {
     },
 
     onLogoutButtonTap: function(button, e, options) {
+        var userStore = Ext.getStore('UserStore');
+        if (userStore) {
+            userStore.removeAll();
+        } 
 
+        var localSettingsStore = Ext.getStore("LocalSettingsStore");
+        if (localSettingsStore) {
+            localSettingsStore.removeAll();  
+            localSettingsStore.sync();
+        }
+
+        this.getApplication().fireEvent('navigateToLoginView');
     }
 
 });

@@ -19,7 +19,6 @@ Ext.define('fishpickle.controller.MyGroupsController', {
     config: {
         refs: {
             groupDetailsView: 'groupdetailsview',
-            mainAppView: 'mainappview',
             joinGroupButton: '#joinGroupButton',
             alreadyMemberLabel: '#alreadyMemberLabel'
         },
@@ -60,7 +59,7 @@ Ext.define('fishpickle.controller.MyGroupsController', {
             this.getGroupDetailsView().setRecord(group);
             this.getJoinGroupButton().setHidden(true);
             this.getAlreadyMemberLabel().setHidden(true);
-            this.getMainAppView().setActiveItem(4);
+            this.getApplication().fireEvent('navigateToGroupDetailsView');
         }
     }
 

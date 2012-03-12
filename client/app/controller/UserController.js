@@ -18,7 +18,6 @@ Ext.define('fishpickle.controller.UserController', {
 
     config: {
         refs: {
-            mainAppView: 'mainappview',
             registrationView: {
                 selector: 'registrationview',
                 xtype: 'registrationview'
@@ -43,12 +42,12 @@ Ext.define('fishpickle.controller.UserController', {
     },
 
     onRegistrationBackButtonTap: function(button, e, options) {
-        this.getMainAppView().setActiveItem(1);
+        this.getApplication().fireEvent('navigateToLoginView');
     },
 
     onRegistrationSaveButtonTap: function(button, e, options) {
-        var mainAppView = this.getMainAppView();
-        var callbackFn = function(){ mainAppView.setActiveItem(1);};
+        var app = this.getApplication();
+        var callbackFn = function(){ app.fireEvent('navigateToLoginView');};
         this.saveUser(this.getRegistrationView(), callbackFn);
     },
 
@@ -59,7 +58,6 @@ Ext.define('fishpickle.controller.UserController', {
     },
 
     onSaveSettingsButtonTap: function(button, e, options) {
-        var mainAppView = this.getMainAppView();
         var callbackFn = function(){  Ext.Msg.alert('Success', 'Settings successfully saved. ');};
         this.saveUser(this.getSettingsView(), callbackFn);
     },

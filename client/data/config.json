@@ -1,6 +1,6 @@
 {
     data: [{
         name: 'contextURL',
-        value: 'http://10.0.11.8:8080/fishpickle/',
+        value: 'http://10.0.20.71:8080/fishpickle-0.1/',
     }]
 }

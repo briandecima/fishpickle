@@ -1,0 +1,109 @@
+{
+    "id": "ExtBox1-ext-gen10420",
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|init": "",
+        "designer|launch": "",
+        "designer|userClassName": "NavigationController"
+    },
+    "customConfigs": [],
+    "designerId": "84c9d6b8-efe6-4d8a-a5b3-b062114d689e",
+    "$viewOrder": 6,
+    "expanded": false,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen10646",
+            "type": "applicationaction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onNavigateToLoginView",
+                "implHandler": "this.getMainAppView().setActiveItem(1);\n\n",
+                "name": "navigateToLoginView",
+                "scope": "this",
+                "designer|userClassName": "onNavigateToLoginView"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen10870",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mainAppView",
+                "selector": "mainappview",
+                "xtype": "mainappview",
+                "designer|userClassName": "mainAppView"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen11294",
+            "type": "applicationaction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onNavigateToMyGroupsView",
+                "implHandler": "this.getMainAppView().setActiveItem(2);",
+                "name": "navigateToMyGroupsView",
+                "scope": "this",
+                "designer|userClassName": "onNavigateToMyGroupsView"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen11509",
+            "type": "applicationaction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onNavigateToRegistrationView",
+                "implHandler": "this.getMainAppView().setActiveItem(3);",
+                "name": "navigateToRegistrationView",
+                "scope": "this",
+                "designer|userClassName": "onNavigateToRegistrationView"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen12199",
+            "type": "applicationaction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onNavigateToGroupDetailsView",
+                "implHandler": "this.getMainAppView().setActiveItem(4);",
+                "name": "navigateToGroupDetailsView",
+                "scope": "this",
+                "designer|userClassName": "onNavigateToGroupDetailsView"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

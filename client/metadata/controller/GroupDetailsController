@@ -17,7 +17,7 @@
     "customConfigs": [],
     "designerId": "03147ff8-c626-43df-8c18-a8259890efac",
     "$viewOrder": 1,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen9364",
@@ -46,27 +46,11 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onSaveButtonTap",
-                "implHandler": "        var group = this.getGroupDetailsView().getRecord();\n        group.set(this.getGroupDetailsView().getValues());\n        if (group.data.id === null) {\n            group.getProxy().setUrl(fishpickle.baseURL + 'rest/user/' + fishpickle.currentUser.data.id + '/groups');\n        } else {\n            group.getProxy().setUrl(fishpickle.baseURL + 'rest/group/');\n        }\n\n\n        group.save({\n            callback: function(records, operation, success) {\n                this.getMainAppView().setActiveItem(2);\n            }\n        },\n        this\n        );",
+                "implHandler": "var group = this.getGroupDetailsView().getRecord();\ngroup.set(this.getGroupDetailsView().getValues());\nif (group.data.id === null) {\n    group.getProxy().setUrl(fishpickle.baseURL + 'rest/user/' + fishpickle.currentUser.data.id + '/groups');\n} else {\n    group.getProxy().setUrl(fishpickle.baseURL + 'rest/group/');\n}\n\n\ngroup.save({\n    callback: function(records, operation, success) {\n        this.getApplication().fireEvent('navigateToMyGroupsView');\n    }\n},\nthis\n);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#saveGroupButton",
                 "designer|userClassName": "onSaveButtonTap"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen21935",
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "ref": "mainAppView",
-                "selector": "mainappview",
-                "designer|userClassName": "mainAppView"
             },
             "customConfigs": [],
             "expanded": true
@@ -122,7 +106,7 @@
                 "designer|params": [
                     "record"
                 ],
-                "implHandler": "        this.getGroupDetailsView().setRecord(record);\n        this.getMainAppView().setActiveItem(4);\n\n        if (fishpickle.baseURL && fishpickle.currentUser) {\n            //console.log(\"Panel Active Item Change \" + fishpickle.baseURL);\n            Ext.getStore(\"UserGroupAssociationStore\").getProxy().setUrl(fishpickle.baseURL + \"rest/userGroupAssociation/\");\n            Ext.getStore(\"UserGroupAssociationStore\").load({\n                callback: function(records, operation, success) {\n                    if (success) {\n                        this.handleAssociationDisplay(record);\n                    } else {\n                        console.log(\"Could not retrieve user associations\");\n                    }\n\n                },\n                scope: this\n\n            } );  \n        }",
+                "implHandler": "this.getGroupDetailsView().setRecord(record);\nthis.getApplication().fireEvent('navigateToGroupDetailsView');\n\nif (fishpickle.baseURL && fishpickle.currentUser) {\n    //console.log(\"Panel Active Item Change \" + fishpickle.baseURL);\n    Ext.getStore(\"UserGroupAssociationStore\").getProxy().setUrl(fishpickle.baseURL + \"rest/userGroupAssociation/\");\n    Ext.getStore(\"UserGroupAssociationStore\").load({\n        callback: function(records, operation, success) {\n            if (success) {\n                this.handleAssociationDisplay(record);\n            } else {\n                console.log(\"Could not retrieve user associations\");\n            }\n\n        },\n        scope: this\n\n    } );  \n}",
                 "designer|userClassName": "openGroupDetails"
             },
             "customConfigs": [],
@@ -138,7 +122,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onBackButtonTap",
-                "implHandler": "        this.getMainAppView().setActiveItem(2);",
+                "implHandler": "this.getApplication().fireEvent('navigateToMyGroupsView');",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#groupDetailsBackButton",
@@ -157,7 +141,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onJoinGroupButtonTap",
-                "implHandler": "        var group = this.getGroupDetailsView().getRecord();\n        var assoc = Ext.create('fishpickle.model.UserGroupAssociations', { id: '', userId: fishpickle.currentUser.data.id, groupId: group.data.id });\n\n\n        assoc.getProxy().setUrl(fishpickle.baseURL + 'rest/userGroupAssociation/');\n\n\n        assoc.save({\n            callback: function(records, operation, success) {\n                Ext.Msg.alert('Success', 'You are now part of ' + group.data.name + \". \");\n                this.getMainAppView().setActiveItem(2);\n\n            }\n        },\n        this\n        );",
+                "implHandler": "var group = this.getGroupDetailsView().getRecord();\nvar assoc = Ext.create('fishpickle.model.UserGroupAssociations', { id: '', userId: fishpickle.currentUser.data.id, groupId: group.data.id });\n\n\nassoc.getProxy().setUrl(fishpickle.baseURL + 'rest/userGroupAssociation/');\n\n\nassoc.save({\n    callback: function(records, operation, success) {\n        Ext.Msg.alert('Success', 'You are now part of ' + group.data.name + \". \");\n        this.getApplication().fireEvent('navigateToMyGroupsView');\n\n    }\n},\nthis\n);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#joinGroupButton",

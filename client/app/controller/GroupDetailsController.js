@@ -22,7 +22,6 @@ Ext.define('fishpickle.controller.GroupDetailsController', {
         ],
         refs: {
             groupDetailsView: 'groupdetailsview',
-            mainAppView: 'mainappview',
             joinGroupButton: '#joinGroupButton',
             alreadyMemberLabel: '#alreadyMemberLabel'
         },
@@ -58,7 +57,7 @@ Ext.define('fishpickle.controller.GroupDetailsController', {
 
         group.save({
             callback: function(records, operation, success) {
-                this.getMainAppView().setActiveItem(2);
+                this.getApplication().fireEvent('navigateToMyGroupsView');
             }
         },
         this
@@ -74,7 +73,7 @@ Ext.define('fishpickle.controller.GroupDetailsController', {
     },
 
     onBackButtonTap: function(button, e, options) {
-        this.getMainAppView().setActiveItem(2);
+        this.getApplication().fireEvent('navigateToMyGroupsView');
     },
 
     onJoinGroupButtonTap: function(button, e, options) {
@@ -88,7 +87,7 @@ Ext.define('fishpickle.controller.GroupDetailsController', {
         assoc.save({
             callback: function(records, operation, success) {
                 Ext.Msg.alert('Success', 'You are now part of ' + group.data.name + ". ");
-                this.getMainAppView().setActiveItem(2);
+                this.getApplication().fireEvent('navigateToMyGroupsView');
 
             }
         },
@@ -98,7 +97,7 @@ Ext.define('fishpickle.controller.GroupDetailsController', {
 
     openGroupDetails: function(record) {
         this.getGroupDetailsView().setRecord(record);
-        this.getMainAppView().setActiveItem(4);
+        this.getApplication().fireEvent('navigateToGroupDetailsView');
 
         if (fishpickle.baseURL && fishpickle.currentUser) {
             //console.log("Panel Active Item Change " + fishpickle.baseURL);

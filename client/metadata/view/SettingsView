@@ -152,6 +152,8 @@
             "codeClass": null,
             "userConfig": {
                 "id": "logoutButton",
+                "ui": "action",
+                "width": 100,
                 "text": "Log Out",
                 "designer|userClassName": "MyButton9"
             },

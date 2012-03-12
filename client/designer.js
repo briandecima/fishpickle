@@ -54,7 +54,8 @@ Ext.application({
         'UserController',
         'MyGroupsController',
         'SearchController',
-        'SettingsController'
+        'SettingsController',
+        'NavigationController'
     ],
 
     launch: function() {

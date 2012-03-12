@@ -14,25 +14,8 @@
     "customConfigs": [],
     "designerId": "920067bc-4b57-4a48-89ed-9c99a8649432",
     "$viewOrder": 2,
-    "expanded": true,
+    "expanded": false,
     "cn": [
-        {
-            "id": "ExtBox1-ext-gen15522",
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "ref": "mainAppView",
-                "selector": "mainappview",
-                "xtype": null,
-                "designer|userClassName": "mainAppView"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
         {
             "id": "ExtBox1-ext-gen30816",
             "type": "controlleraction",
@@ -43,7 +26,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onRegistrationBackButtonTap",
-                "implHandler": "        this.getMainAppView().setActiveItem(1);",
+                "implHandler": "this.getApplication().fireEvent('navigateToLoginView');",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#RegistrationBackButton",
@@ -62,7 +45,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onRegistrationSaveButtonTap",
-                "implHandler": "var mainAppView = this.getMainAppView();\nvar callbackFn = function(){ mainAppView.setActiveItem(1);};\nthis.saveUser(this.getRegistrationView(), callbackFn);",
+                "implHandler": "var app = this.getApplication();\nvar callbackFn = function(){ app.fireEvent('navigateToLoginView');};\nthis.saveUser(this.getRegistrationView(), callbackFn);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#RegistrationSaveButton",
@@ -136,7 +119,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onSaveSettingsButtonTap",
-                "implHandler": "var mainAppView = this.getMainAppView();\nvar callbackFn = function(){  Ext.Msg.alert('Success', 'Settings successfully saved. ');};\nthis.saveUser(this.getSettingsView(), callbackFn);",
+                "implHandler": "var callbackFn = function(){  Ext.Msg.alert('Success', 'Settings successfully saved. ');};\nthis.saveUser(this.getSettingsView(), callbackFn);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#saveSettingsButton",

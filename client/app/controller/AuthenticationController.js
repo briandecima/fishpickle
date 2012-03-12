@@ -18,7 +18,6 @@ Ext.define('fishpickle.controller.AuthenticationController', {
 
     config: {
         refs: {
-            mainAppView: 'mainappview',
             loginView: {
                 selector: 'authenticationview',
                 xtype: 'loginview'
@@ -60,12 +59,12 @@ Ext.define('fishpickle.controller.AuthenticationController', {
     },
 
     onRegisterButtonTap: function(button, e, options) {
-        this.getMainAppView().setActiveItem(3);
+        this.getApplication().fireEvent('navigateToRegistrationView');
     },
 
     updateLocalSettings: function(userModel) {
         var localSettingsStore = Ext.getStore("LocalSettingsStore");
-        localSettingsStore.removeAt(0);
+        localSettingsStore.removeAll();
         var m = Ext.create('fishpickle.model.User');
         m.setData(userModel);
         localSettingsStore.add(m);
@@ -107,11 +106,13 @@ Ext.define('fishpickle.controller.AuthenticationController', {
     },
 
     navigateToLoginView: function() {
-        this.getMainAppView().setActiveItem(1);
+        console.log('go to login ' + this.getApplication());
+        var result = this.getApplication().fireEvent('navigateToLoginView');
+        console.log(result);
     },
 
     navigateToMyGroupsView: function() {
-        this.getMainAppView().setActiveItem(2);
+        this.getApplication().fireEvent('navigateToMyGroupsView');
     },
 
     doAutoLogin: function() {

@@ -14,7 +14,7 @@
     "customConfigs": [],
     "designerId": "59d209db-27d4-4bf0-a6d7-34590ece6417",
     "$viewOrder": 0,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen9958",
@@ -31,23 +31,6 @@
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#LoginButton",
                 "designer|userClassName": "onLoginButtonTap"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen25180",
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "ref": "mainAppView",
-                "selector": "mainappview",
-                "xtype": null,
-                "designer|userClassName": "mainAppView"
             },
             "customConfigs": [],
             "expanded": true
@@ -101,7 +84,7 @@
                 "designer|params": [
                     "userModel"
                 ],
-                "implHandler": "        var localSettingsStore = Ext.getStore(\"LocalSettingsStore\");\n        localSettingsStore.removeAt(0);\n        var m = Ext.create('fishpickle.model.User');\n        m.setData(userModel);\n        localSettingsStore.add(m);\n        localSettingsStore.sync();\n        fishpickle.currentUser = m;",
+                "implHandler": "var localSettingsStore = Ext.getStore(\"LocalSettingsStore\");\nlocalSettingsStore.removeAll();\nvar m = Ext.create('fishpickle.model.User');\nm.setData(userModel);\nlocalSettingsStore.add(m);\nlocalSettingsStore.sync();\nfishpickle.currentUser = m;",
                 "designer|userClassName": "updateLocalSettings"
             },
             "customConfigs": [],
@@ -137,7 +120,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "navigateToLoginView",
-                "implHandler": "        this.getMainAppView().setActiveItem(1);",
+                "implHandler": "console.log('go to login ' + this.getApplication());\nvar result = this.getApplication().fireEvent('navigateToLoginView');\nconsole.log(result);",
                 "designer|userClassName": "navigateToLoginView"
             },
             "customConfigs": [],
@@ -153,7 +136,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "navigateToMyGroupsView",
-                "implHandler": "        this.getMainAppView().setActiveItem(2);",
+                "implHandler": "this.getApplication().fireEvent('navigateToMyGroupsView');",
                 "designer|userClassName": "navigateToMyGroupsView"
             },
             "customConfigs": [],
@@ -185,7 +168,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onRegisterButtonTap",
-                "implHandler": "        this.getMainAppView().setActiveItem(3);",
+                "implHandler": "this.getApplication().fireEvent('navigateToRegistrationView');",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#RegisterButton",
