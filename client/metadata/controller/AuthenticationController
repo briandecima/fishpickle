@@ -26,7 +26,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onLoginButtonTap",
-                "implHandler": "var view = this.getLoginView();\nvar loginFormData = view.getValues();\nthis.doLogin(loginFormData.login, loginFormData.password);\nview.setValues({login:'', password:''});",
+                "implHandler": "var loginFormData = this.getLoginView().getValues();\nthis.doLogin(loginFormData.login, loginFormData.password);\n",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#LoginButton",
@@ -104,7 +104,7 @@
                     "loginName",
                     "password"
                 ],
-                "implHandler": "        //get the user by login name\n        if (fishpickle.baseURL && loginName && password) {\n            var userStore = Ext.getStore('UserStore');\n            if (!userStore) {\n                userStore = Ext.create('fishpickle.store.UserStore');\n            }\n            userStore.getProxy().setUrl(fishpickle.baseURL + 'rest/login/' + loginName);\n            userStore.load({\n                callback: function(records, operation, success) {\n                    if (success) {\n                        var serverUser = records[0].data;\n                        if (serverUser && password == serverUser.password) {\n                            this.updateLocalSettings(serverUser);\n                            this.navigateToMyGroupsView();\n                        } else {\n                            this.navigateToLoginView();\n                            Ext.Msg.alert('Error', 'The password is invalid.  Please try again.');\n                        }\n                    } else {\n                        this.navigateToLoginView();\n                        Ext.Msg.alert('Error','The user name or password is invalid.  Please try again.');\n                    }\n                },\n                scope: this\n            });\n\n        } else {\n            //force user to login\n            this.navigateToLoginView();\n        }",
+                "implHandler": "//get the user by login name\nif (fishpickle.baseURL && loginName && password) {\n    var userStore = Ext.getStore('UserStore');\n    if (!userStore) {\n        userStore = Ext.create('fishpickle.store.UserStore');\n    }\n    userStore.getProxy().setUrl(fishpickle.baseURL + 'rest/login/' + loginName);\n    userStore.load({\n        callback: function(records, operation, success) {\n            if (success) {\n                var serverUser = records[0].data;\n                if (serverUser && password == serverUser.password) {\n                    this.updateLocalSettings(serverUser);\n                    this.navigateToMyGroupsView();\n                    this.getLoginView().setValues({login:'', password:''});\n                } else {\n                    this.navigateToLoginView();\n                    Ext.Msg.alert('Error', 'The password is invalid.  Please try again.');\n                }\n            } else {\n                this.navigateToLoginView();\n                Ext.Msg.alert('Error','The user name or password is invalid.  Please try again.');\n            }\n        },\n        scope: this\n    });\n\n} else {\n    //force user to login\n    this.navigateToLoginView();\n}",
                 "designer|userClassName": "doLogin"
             },
             "customConfigs": [],

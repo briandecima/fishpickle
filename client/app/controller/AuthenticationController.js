@@ -41,10 +41,9 @@ Ext.define('fishpickle.controller.AuthenticationController', {
     },
 
     onLoginButtonTap: function(button, e, options) {
-        var view = this.getLoginView();
-        var loginFormData = view.getValues();
+        var loginFormData = this.getLoginView().getValues();
         this.doLogin(loginFormData.login, loginFormData.password);
-        view.setValues({login:'', password:''});
+
     },
 
     onLoadingViewActivate: function(container, newActiveItem, oldActiveItem, options) {
@@ -107,6 +106,7 @@ Ext.define('fishpickle.controller.AuthenticationController', {
                         if (serverUser && password == serverUser.password) {
                             this.updateLocalSettings(serverUser);
                             this.navigateToMyGroupsView();
+                            this.getLoginView().setValues({login:'', password:''});
                         } else {
                             this.navigateToLoginView();
                             Ext.Msg.alert('Error', 'The password is invalid.  Please try again.');
