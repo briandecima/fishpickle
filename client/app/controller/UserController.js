@@ -67,7 +67,11 @@ Ext.define('fishpickle.controller.UserController', {
         var user = view.getRecord();
         user.set(view.getValues());
         user.getProxy().setUrl(fishpickle.baseURL + 'rest/user');
-        //user.phantom = true;
+
+        //workaround to a grails/tomcat issue with PUT.  phantom is used to determine whether a 
+        // create (POST) when phantom=true or an update (PUT) when phantom=false is done.  PUT does not work with grails/tomcat for whatever reason
+        //so we have to always do a POST then figure out on the server side if it is a create or update
+        user.phantom = true;
         var errors = user.validate();
         if (errors.isValid()) {
             user.save({

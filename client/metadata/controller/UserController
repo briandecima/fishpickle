@@ -14,7 +14,7 @@
     "customConfigs": [],
     "designerId": "920067bc-4b57-4a48-89ed-9c99a8649432",
     "$viewOrder": 2,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen30816",
@@ -103,7 +103,7 @@
                 "designer|params": [
                     "view, callbackFn"
                 ],
-                "implHandler": "console.log('save user');\nvar user = view.getRecord();\nuser.set(view.getValues());\nuser.getProxy().setUrl(fishpickle.baseURL + 'rest/user');\n//user.phantom = true;\nvar errors = user.validate();\nif (errors.isValid()) {\n    user.save({\n        callback: function(records, operation, success) {\n            //success is not working\n            //   if (success) {\n            callbackFn();\n            //  } else {\n            //      Ext.Msg.alert('Error', 'An error occured while saving user. ');\n            //  }\n\n        }\n    },\n    this);\n} else {\n    var msg = '';\n    for (i=0; i<errors.length; i++) {\n        var e = errors.items[i];\n        if ('name' == e.getField()) {\n            msg += 'Name ' + e.getMessage() + '\\n';\n        } else if ('email' == e.getField()) {\n            msg += 'Email ' + e.getMessage() + '\\n';\n        } else if ('login' == e.getField()) {\n            msg += 'Login Name ' + e.getMessage() + '\\n';\n        } else if ('password' == e.getField()) {\n            msg += 'Password ' + e.getMessage() + '\\n';\n        }\n    }\n}",
+                "implHandler": "console.log('save user');\nvar user = view.getRecord();\nuser.set(view.getValues());\nuser.getProxy().setUrl(fishpickle.baseURL + 'rest/user');\n\n//workaround to a grails/tomcat issue with PUT.  phantom is used to determine whether a \n// create (POST) when phantom=true or an update (PUT) when phantom=false is done.  PUT does not work with grails/tomcat for whatever reason\n//so we have to always do a POST then figure out on the server side if it is a create or update\nuser.phantom = true;\nvar errors = user.validate();\nif (errors.isValid()) {\n    user.save({\n        callback: function(records, operation, success) {\n            //success is not working\n            //   if (success) {\n            callbackFn();\n            //  } else {\n            //      Ext.Msg.alert('Error', 'An error occured while saving user. ');\n            //  }\n\n        }\n    },\n    this);\n} else {\n    var msg = '';\n    for (i=0; i<errors.length; i++) {\n        var e = errors.items[i];\n        if ('name' == e.getField()) {\n            msg += 'Name ' + e.getMessage() + '\\n';\n        } else if ('email' == e.getField()) {\n            msg += 'Email ' + e.getMessage() + '\\n';\n        } else if ('login' == e.getField()) {\n            msg += 'Login Name ' + e.getMessage() + '\\n';\n        } else if ('password' == e.getField()) {\n            msg += 'Password ' + e.getMessage() + '\\n';\n        }\n    }\n}",
                 "designer|userClassName": "saveUser"
             },
             "customConfigs": [],
