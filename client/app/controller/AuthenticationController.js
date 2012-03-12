@@ -41,8 +41,10 @@ Ext.define('fishpickle.controller.AuthenticationController', {
     },
 
     onLoginButtonTap: function(button, e, options) {
-        var loginFormData = this.getLoginView().getValues();
+        var view = this.getLoginView();
+        var loginFormData = view.getValues();
         this.doLogin(loginFormData.login, loginFormData.password);
+        view.setValues({login:'', password:''});
     },
 
     onLoadingViewActivate: function(container, newActiveItem, oldActiveItem, options) {

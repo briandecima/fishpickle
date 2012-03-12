@@ -14,7 +14,7 @@
     "customConfigs": [],
     "designerId": "59d209db-27d4-4bf0-a6d7-34590ece6417",
     "$viewOrder": 0,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen9958",
@@ -26,7 +26,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onLoginButtonTap",
-                "implHandler": "        var loginFormData = this.getLoginView().getValues();\n        this.doLogin(loginFormData.login, loginFormData.password);",
+                "implHandler": "var view = this.getLoginView();\nvar loginFormData = view.getValues();\nthis.doLogin(loginFormData.login, loginFormData.password);\nview.setValues({login:'', password:''});",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#LoginButton",
