@@ -14,7 +14,7 @@
     "customConfigs": [],
     "designerId": "93ef4aa1-6741-4d0a-a7b6-6649f1734acc",
     "$viewOrder": 5,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen15739",
@@ -31,25 +31,6 @@
                 "designer|targetType": "Ext.Container",
                 "designer|controlQuery": "#settingsContainer",
                 "designer|userClassName": "onContainerActivate"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen22969",
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onLogoutButtonTap",
-                "implHandler": "var userStore = Ext.getStore('UserStore');\nif (userStore) {\n    userStore.removeAll();\n} \n\nvar localSettingsStore = Ext.getStore(\"LocalSettingsStore\");\nif (localSettingsStore) {\n    localSettingsStore.removeAll();  \n    localSettingsStore.sync();\n}\n\nthis.getApplication().fireEvent('navigateToLoginView');",
-                "name": "tap",
-                "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "#logoutButton",
-                "designer|userClassName": "onLogoutButtonTap"
             },
             "customConfigs": [],
             "expanded": true

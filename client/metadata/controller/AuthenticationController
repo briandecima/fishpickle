@@ -176,6 +176,25 @@
             },
             "customConfigs": [],
             "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen8637",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onLogoutButtonTap",
+                "implHandler": "var userStore = Ext.getStore('UserStore');\nif (userStore) {\n    userStore.removeAll();\n} \n\nvar localSettingsStore = Ext.getStore(\"LocalSettingsStore\");\nif (localSettingsStore) {\n    localSettingsStore.removeAll();  \n    localSettingsStore.sync();\n}\n\nthis.getApplication().fireEvent('navigateToLoginView');",
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#logoutButton",
+                "designer|userClassName": "onLogoutButtonTap"
+            },
+            "customConfigs": [],
+            "expanded": true
         }
     ]
 }

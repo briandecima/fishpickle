@@ -33,6 +33,9 @@ Ext.define('fishpickle.controller.AuthenticationController', {
             },
             "#RegisterButton": {
                 tap: 'onRegisterButtonTap'
+            },
+            "#logoutButton": {
+                tap: 'onLogoutButtonTap'
             }
         }
     },
@@ -60,6 +63,21 @@ Ext.define('fishpickle.controller.AuthenticationController', {
 
     onRegisterButtonTap: function(button, e, options) {
         this.getApplication().fireEvent('navigateToRegistrationView');
+    },
+
+    onLogoutButtonTap: function(button, e, options) {
+        var userStore = Ext.getStore('UserStore');
+        if (userStore) {
+            userStore.removeAll();
+        } 
+
+        var localSettingsStore = Ext.getStore("LocalSettingsStore");
+        if (localSettingsStore) {
+            localSettingsStore.removeAll();  
+            localSettingsStore.sync();
+        }
+
+        this.getApplication().fireEvent('navigateToLoginView');
     },
 
     updateLocalSettings: function(userModel) {

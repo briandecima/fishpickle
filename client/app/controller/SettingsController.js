@@ -24,30 +24,12 @@ Ext.define('fishpickle.controller.SettingsController', {
         control: {
             "#settingsContainer": {
                 activate: 'onContainerActivate'
-            },
-            "#logoutButton": {
-                tap: 'onLogoutButtonTap'
             }
         }
     },
 
     onContainerActivate: function(container, newActiveItem, oldActiveItem, options) {
         this.getSettingsView().setRecord(fishpickle.currentUser);
-    },
-
-    onLogoutButtonTap: function(button, e, options) {
-        var userStore = Ext.getStore('UserStore');
-        if (userStore) {
-            userStore.removeAll();
-        } 
-
-        var localSettingsStore = Ext.getStore("LocalSettingsStore");
-        if (localSettingsStore) {
-            localSettingsStore.removeAll();  
-            localSettingsStore.sync();
-        }
-
-        this.getApplication().fireEvent('navigateToLoginView');
     }
 
 });

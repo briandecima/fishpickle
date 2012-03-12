@@ -14,7 +14,7 @@
     "customConfigs": [],
     "designerId": "84c9d6b8-efe6-4d8a-a5b3-b062114d689e",
     "$viewOrder": 6,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen10646",
@@ -61,7 +61,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onNavigateToMyGroupsView",
-                "implHandler": "this.getMainAppView().setActiveItem(2);",
+                "implHandler": "this.getMainAppView().setActiveItem(2);\nthis.getMainView().setActiveItem(0);",
                 "name": "navigateToMyGroupsView",
                 "scope": "this",
                 "designer|userClassName": "onNavigateToMyGroupsView"
@@ -101,6 +101,23 @@
                 "name": "navigateToGroupDetailsView",
                 "scope": "this",
                 "designer|userClassName": "onNavigateToGroupDetailsView"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen9700",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mainView",
+                "selector": "mainview",
+                "xtype": "mainview",
+                "designer|userClassName": "mainView"
             },
             "customConfigs": [],
             "expanded": true
