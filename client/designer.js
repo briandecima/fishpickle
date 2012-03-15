@@ -43,7 +43,8 @@ Ext.application({
         'MyGroupsView',
         'SettingsView',
         'LoadingView',
-        'RegistrationView'
+        'RegistrationView',
+        'MapView'
     ],
 
     name: 'fishpickle',
@@ -55,7 +56,8 @@ Ext.application({
         'MyGroupsController',
         'SearchController',
         'SettingsController',
-        'NavigationController'
+        'NavigationController',
+        'MapController'
     ],
 
     launch: function() {

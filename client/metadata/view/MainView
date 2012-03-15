@@ -15,7 +15,7 @@
     "customConfigs": [],
     "designerId": "6455e548-8780-4215-8023-2ae70bc2d295",
     "$viewOrder": 1,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen11651",
@@ -141,6 +141,42 @@
                     "iconCls": "icon-linkedinstance",
                     "expanded": true,
                     "masterInstanceId": "ExtBox1-ext-gen6075"
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen12956",
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "mapContainer",
+                "layout": "fit",
+                "designer|userClassName": "MyContainer6",
+                "title": "Map",
+                "iconCls": "info"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen39097",
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "mapitem"
+                    },
+                    "customConfigs": [],
+                    "iconCls": "icon-linkedinstance",
+                    "expanded": true,
+                    "masterInstanceId": "ExtBox1-ext-gen38949"
                 }
             ]
         }

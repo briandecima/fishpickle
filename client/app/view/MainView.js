@@ -19,7 +19,8 @@ Ext.define('fishpickle.view.MainView', {
     requires: [
         'fishpickle.view.MyGroupsView',
         'fishpickle.view.SearchView',
-        'fishpickle.view.SettingsView'
+        'fishpickle.view.SettingsView',
+        'fishpickle.view.MapView'
     ],
 
     config: {
@@ -73,6 +74,21 @@ Ext.define('fishpickle.view.MainView', {
                     {
                         xtype: 'settingsview',
                         id: 'settingsItem'
+                    }
+                ]
+            },
+            {
+                xtype: 'container',
+                id: 'mapContainer',
+                layout: {
+                    type: 'fit'
+                },
+                title: 'Map',
+                iconCls: 'info',
+                items: [
+                    {
+                        xtype: 'mapview',
+                        id: 'mapitem'
                     }
                 ]
             }

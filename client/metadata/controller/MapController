@@ -1,0 +1,214 @@
+{
+    "id": "ExtBox1-ext-gen18759",
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|init": "",
+        "designer|launch": "",
+        "designer|userClassName": "MapController"
+    },
+    "customConfigs": [],
+    "designerId": "8d8f1344-fa74-4552-843a-bd112e0318af",
+    "$viewOrder": 7,
+    "expanded": false,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen9600",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onGetDirectionsButtonTap",
+                "implHandler": "if (!fishpickle.mapOverlayResults) {\n    fishpickle.mapOverlayResults = [];\n}\nvar view = this.getMapView();\nvar location = view.getValues();\nvar gmap = view.child('map').getMap();\n\nvar modeOfTravel = google.maps.TravelMode.WALKING;\nif (location.routeType == 'D') {\n    modeOfTravel = google.maps.TravelMode.DRIVING;\n} else if (location.routeType == 'B') {\n    modeOfTravel = google.maps.TravelMode.BICYCLING;\n}\n\nvar directionService = new google.maps.DirectionsService();\n\nvar request = {origin: fishpickle.mapOriginLatLng, destination: fishpickle.mapDestinationLatLng, travelMode:modeOfTravel};\nvar scope = this;\n\ndirectionService.route(request, function (result, status) {\n    if (status == 'OK' && result) {\n        var renderer = new google.maps.DirectionsRenderer({\n            map: gmap,\n            directions: result\n        });\n        fishpickle.mapOverlayResults.push(renderer);\n        scope.walkPath(result.routes[0].overview_path, gmap);\n    }\n});\n",
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#getDirectionsButton",
+                "designer|userClassName": "onGetDirectionsButtonTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen9998",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mapView",
+                "selector": "mapview",
+                "xtype": "mapview",
+                "designer|userClassName": "mapView"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen50550",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onRemovePinButtonTap",
+                "implHandler": "if (fishpickle.mapOverlayMarkers) {\n    var i;\n    for(i in fishpickle.mapOverlayMarkers) {\n        var marker = fishpickle.mapOverlayMarkers[i];\n        if (marker) {\n            marker.setMap(null);\n            marker = null;\n        }\n    }\n    fishpickle.mapOverlayMarkers = [];\n}\n\nif (fishpickle.mapOverlayResults) {\n    for(var j=0; j<fishpickle.mapOverlayResults.length; j++) {\n        var result = fishpickle.mapOverlayResults[j];\n        result.setMap(null);\n        result = null;\n    }\n    fishpickle.mapOverlayResults = [];\n}",
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#removePinButton",
+                "designer|userClassName": "onRemovePinButtonTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen53430",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onMapRender",
+                "implHandler": "google.maps.event.addListener(gmap, 'click', this.onMapClick);\n",
+                "name": "maprender",
+                "designer|targetType": "Ext.Map",
+                "designer|controlQuery": "map",
+                "designer|userClassName": "onMapRender"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen55719",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onMapClick",
+                "designer|params": [
+                    "event"
+                ],
+                "implHandler": "var location = event.latLng;\nvar pos = new google.maps.LatLng(Number(location.lat()), Number(location.lng()) );\n\nvar marker = new google.maps.Marker({\n    position: pos,\n    title: (location.lat() + ', ' + location.lng()),\n    map: this,\n    animation: google.maps.Animation.DROP\n});\n\ngoogle.maps.event.addListener(marker, 'click', function () {\n    Ext.Msg.show({\n        title: 'Set as...',\n        buttons: [{text:'Origin', itemId:'orig'},{text:'Destination', itemId:'dest'}],\n        fn: function (event) {\n            var markerPos = this.getPosition();\n            if (event == 'orig') {\n                fishpickle.mapOriginLatLng = markerPos;\n            } else {\n                fishpickle.mapDestinationLatLng = markerPos;\n            }\n        }, \n        scope: marker\n    });\n});\n\n\n\nif (!fishpickle.mapOverlayMarkers) {\n    fishpickle.mapOverlayMarkers = [];\n}\nfishpickle.mapOverlayMarkers.push(marker);\n\n",
+                "designer|userClassName": "onMapClick"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen20950",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onOriginChange",
+                "implHandler": "this.updateLatLng(newValue, 'origin');\n",
+                "name": "change",
+                "designer|targetType": "Ext.field.Text",
+                "designer|controlQuery": "#mapOrigin",
+                "designer|userClassName": "onOriginChange"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen22936",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "updateLatLng",
+                "designer|params": [
+                    "addressValue",
+                    "fieldType"
+                ],
+                "implHandler": "var geoService = new google.maps.Geocoder();\nvar request = {address: addressValue};\n\ngeoService.geocode(request, function (result, status) {\n    if (status == 'OK' && result && result[0]) {\n        if (fieldType == 'origin') {\n            fishpickle.mapOriginLatLng = result[0].geometry.location;     \n        } else {\n            fishpickle.mapDestinationLatLng = result[0].geometry.location;\n        }\n    } else {\n        if (fieldType == 'origin') {\n            fishpickle.mapOriginLatLng = undefined;     \n        } else {\n            fishpickle.mapDestinationLatLng = undefined;\n        }\n    }\n});",
+                "designer|userClassName": "updateLatLng"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen24013",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onDestinationChange",
+                "implHandler": "this.updateLatLng(newValue, 'destination');",
+                "name": "change",
+                "designer|targetType": "Ext.field.Text",
+                "designer|controlQuery": "#mapDestination",
+                "designer|userClassName": "onDestinationChange"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen30355",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "walkPath",
+                "designer|params": [
+                    "path",
+                    "gmap"
+                ],
+                "implHandler": "if (path.length > 0) {\n    var img = new google.maps.MarkerImage('touch/resources/images/stickfig.gif');\n    Ext.defer(this.walkNextStep, 1000, this, [path, gmap, null, img, 0]);\n}",
+                "designer|userClassName": "walkPath"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen33513",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "walkNextStep",
+                "designer|params": [
+                    "path",
+                    "gmap",
+                    "lastMarker",
+                    "img",
+                    "index"
+                ],
+                "implHandler": "if (path.length > 0) {\n    var animationType = google.maps.Animation.DROP;\n    if (lastMarker) {\n        lastMarker.setMap(null);\n        lastMarker = null;\n        animationType = null;\n    }\n    lastMarker = new google.maps.Marker({\n        position: path[index],\n        map: gmap,\n        icon: img,\n        animation: animationType\n    });\n    if (index+1 <= path.length) {\n        Ext.defer(this.walkNextStep, 1000, this, [path, gmap, lastMarker, img, index+1]);\n    }\n}\n",
+                "designer|userClassName": "walkNextStep"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

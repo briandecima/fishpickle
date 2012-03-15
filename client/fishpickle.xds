@@ -228,6 +228,22 @@
                 "app/controller/NavigationController.js"
             ],
             "className": "NavigationController"
+        },
+        "8d8f1344-fa74-4552-843a-bd112e0318af": {
+            "paths": [
+                "metadata/controller/MapController",
+                "app/controller/override/MapController.js",
+                "app/controller/MapController.js"
+            ],
+            "className": "MapController"
+        },
+        "4fbc56d4-0f2f-4682-bedc-eaecf5cfe7f8": {
+            "paths": [
+                "metadata/view/MapView",
+                "app/view/override/MapView.js",
+                "app/view/MapView.js"
+            ],
+            "className": "MapView"
         }
     },
     "expandedState": {

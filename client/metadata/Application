@@ -30,7 +30,8 @@
             "MyGroupsView",
             "SettingsView",
             "LoadingView",
-            "RegistrationView"
+            "RegistrationView",
+            "MapView"
         ],
         "designer|launch": "this.baseURL = undefined;",
         "name": "fishpickle"

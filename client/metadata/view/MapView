@@ -1,0 +1,211 @@
+{
+    "id": "ExtBox1-ext-gen38949",
+    "type": "formpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MapView",
+        "designer|userAlias": "mapview"
+    },
+    "customConfigs": [],
+    "designerId": "4fbc56d4-0f2f-4682-bedc-eaecf5cfe7f8",
+    "$viewOrder": 9,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen37998",
+            "type": "toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "designer|userClassName": "MyToolbar3"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen15528",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "right",
+                        "id": "getDirectionsButton",
+                        "ui": "action",
+                        "width": 150,
+                        "text": "Get Directions",
+                        "designer|userClassName": "MyButton10"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen49909",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "right",
+                        "id": "removePinButton",
+                        "ui": "action",
+                        "text": "Clear Map",
+                        "designer|userClassName": "MyButton12"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen42878",
+            "type": "fieldset",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Location",
+                "designer|userClassName": "MyFieldSet6"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen42887",
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "mapOrigin",
+                        "label": "Origin",
+                        "name": "origin",
+                        "designer|userClassName": "MyTextField10"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen42894",
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "mapDestination",
+                        "label": "Destination",
+                        "name": "destination",
+                        "designer|userClassName": "MyTextField11"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen48664",
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "vbox",
+                        "designer|userClassName": "MyContainer9"
+                    },
+                    "customConfigs": [],
+                    "expanded": true,
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen46578",
+                            "type": "radiofield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "label": "Walking",
+                                "name": "routeType",
+                                "value": "W",
+                                "checked": true,
+                                "designer|userClassName": "MyRadioButton"
+                            },
+                            "customConfigs": [],
+                            "expanded": true
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen47406",
+                            "type": "radiofield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "label": "Driving",
+                                "name": "routeType",
+                                "value": "D",
+                                "designer|userClassName": "MyRadioButton1"
+                            },
+                            "customConfigs": [],
+                            "expanded": true
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen47992",
+                            "type": "radiofield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "label": "Bicycling",
+                                "name": "routeType",
+                                "value": "B",
+                                "designer|userClassName": "MyRadioButton2"
+                            },
+                            "customConfigs": [],
+                            "expanded": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen43357",
+            "type": "map",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 300,
+                "id": "map",
+                "itemId": "map",
+                "useCurrentLocation": true,
+                "designer|userClassName": "MyMap2"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}
