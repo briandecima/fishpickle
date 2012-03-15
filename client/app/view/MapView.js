@@ -28,7 +28,6 @@ Ext.define('fishpickle.view.MapView', {
                         docked: 'right',
                         id: 'getDirectionsButton',
                         ui: 'action',
-                        width: 150,
                         text: 'Get Directions'
                     },
                     {

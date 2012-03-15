@@ -15,7 +15,7 @@
     "customConfigs": [],
     "designerId": "6455e548-8780-4215-8023-2ae70bc2d295",
     "$viewOrder": 1,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen11651",
@@ -42,6 +42,7 @@
             "codeClass": null,
             "userConfig": {
                 "id": "myGroupsContainer",
+                "ui": null,
                 "layout": "fit",
                 "designer|userClassName": "MyContainer8",
                 "title": "Home",
@@ -59,7 +60,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "id": "myGroupsItem"
+                        "id": "myGroupsItem",
+                        "ui": null
                     },
                     "customConfigs": [],
                     "iconCls": "icon-linkedinstance",

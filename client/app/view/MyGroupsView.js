@@ -18,9 +18,13 @@ Ext.define('fishpickle.view.MyGroupsView', {
     alias: 'widget.mygroupsview',
 
     config: {
+        baseCls: 'x-form',
         layout: {
             type: 'fit'
         },
+        cls: [
+            'backgroundImg'
+        ],
         items: [
             {
                 xtype: 'titlebar',

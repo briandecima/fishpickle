@@ -45,6 +45,9 @@ $radius: 25px;
 	color: #ffffff;
 }
 
+@include sencha-button-ui('action', #005692, 'glossy');
+@include sencha-button-ui('back', #005692, 'glossy');
+
 
 
 body {
@@ -148,6 +151,17 @@ body {
 .basicSecondaryButton {
 	margin: 10px;
 	@include secondaryButton();
+}
+
+.x-form .x-scroll-container  {
+  background-image: url("../images/background.png");
+}
+
+
+.x-list .x-list-disclosure {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #88b82f), color-stop(2%, #88b82f), color-stop(100%, #88b82f));
+  background-image: -webkit-linear-gradient(#88b82f, #88b82f 2%, #88b82f);
+  background-image: linear-gradient(#88b82f, #88b82f 2%, #88b82f);
 }
 
 

@@ -7,6 +7,8 @@
     },
     "codeClass": null,
     "userConfig": {
+        "baseCls": null,
+        "cls": null,
         "id": null,
         "itemId": "",
         "layout": null,
@@ -152,7 +154,7 @@
                 "designer|userClassName": "MyTitleBar2"
             },
             "customConfigs": [],
-            "expanded": false,
+            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen10712",
@@ -185,7 +187,7 @@
                         "docked": null,
                         "id": "saveGroupButton",
                         "itemId": "saveGroupButton",
-                        "ui": "caction",
+                        "ui": "action",
                         "iconAlign": null,
                         "text": "Save",
                         "designer|userClassName": "MyButton4",
@@ -283,7 +285,7 @@
                 "designer|userClassName": "MyToolbar2"
             },
             "customConfigs": [],
-            "expanded": false,
+            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen8938",

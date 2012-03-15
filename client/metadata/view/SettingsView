@@ -14,7 +14,7 @@
     "customConfigs": [],
     "designerId": "90186d1a-11d8-4677-bf97-7464b91728dd",
     "$viewOrder": 6,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen10934",
@@ -45,6 +45,7 @@
                         "docked": "right",
                         "id": "saveSettingsButton",
                         "itemId": "saveSettingsButton",
+                        "ui": "action",
                         "iconAlign": "right",
                         "text": "Save",
                         "designer|userClassName": "MyButton2",

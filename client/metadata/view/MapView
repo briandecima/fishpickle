@@ -42,7 +42,7 @@
                         "docked": "right",
                         "id": "getDirectionsButton",
                         "ui": "action",
-                        "width": 150,
+                        "width": null,
                         "text": "Get Directions",
                         "designer|userClassName": "MyButton10"
                     },

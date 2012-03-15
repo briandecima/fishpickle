@@ -29,6 +29,7 @@ Ext.define('fishpickle.view.SettingsView', {
                         docked: 'right',
                         id: 'saveSettingsButton',
                         itemId: 'saveSettingsButton',
+                        ui: 'action',
                         iconAlign: 'right',
                         text: 'Save',
                         align: 'right'
