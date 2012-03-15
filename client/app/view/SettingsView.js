@@ -39,7 +39,6 @@ Ext.define('fishpickle.view.SettingsView', {
                 items: [
                     {
                         xtype: 'button',
-                        docked: 'right',
                         id: 'saveSettingsButton',
                         itemId: 'saveSettingsButton',
                         ui: 'action',

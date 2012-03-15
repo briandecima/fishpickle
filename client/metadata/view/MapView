@@ -16,8 +16,8 @@
     "expanded": true,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen37998",
-            "type": "toolbar",
+            "id": "ExtBox1-ext-gen34616",
+            "type": "titlebar",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -25,30 +25,11 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "top",
-                "designer|userClassName": "MyToolbar3"
+                "designer|userClassName": "MyTitleBar4"
             },
             "customConfigs": [],
             "expanded": true,
             "cn": [
-                {
-                    "id": "ExtBox1-ext-gen15528",
-                    "type": "button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "docked": "right",
-                        "id": "getDirectionsButton",
-                        "ui": "action",
-                        "width": null,
-                        "text": "Get Directions",
-                        "designer|userClassName": "MyButton10"
-                    },
-                    "customConfigs": [],
-                    "expanded": true
-                },
                 {
                     "id": "ExtBox1-ext-gen49909",
                     "type": "button",
@@ -58,11 +39,32 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "docked": "right",
+                        "docked": null,
                         "id": "removePinButton",
                         "ui": "action",
                         "text": "Clear Map",
-                        "designer|userClassName": "MyButton12"
+                        "designer|userClassName": "MyButton12",
+                        "align": "right"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen15528",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": null,
+                        "id": "getDirectionsButton",
+                        "ui": "action",
+                        "width": null,
+                        "text": "Get Directions",
+                        "designer|userClassName": "MyButton10",
+                        "align": "right"
                     },
                     "customConfigs": [],
                     "expanded": true

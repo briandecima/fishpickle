@@ -20,22 +20,22 @@ Ext.define('fishpickle.view.MapView', {
     config: {
         items: [
             {
-                xtype: 'toolbar',
+                xtype: 'titlebar',
                 docked: 'top',
                 items: [
                     {
                         xtype: 'button',
-                        docked: 'right',
-                        id: 'getDirectionsButton',
+                        id: 'removePinButton',
                         ui: 'action',
-                        text: 'Get Directions'
+                        text: 'Clear Map',
+                        align: 'right'
                     },
                     {
                         xtype: 'button',
-                        docked: 'right',
-                        id: 'removePinButton',
+                        id: 'getDirectionsButton',
                         ui: 'action',
-                        text: 'Clear Map'
+                        text: 'Get Directions',
+                        align: 'right'
                     }
                 ]
             },
