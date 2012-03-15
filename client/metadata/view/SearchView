@@ -7,6 +7,8 @@
     },
     "codeClass": null,
     "userConfig": {
+        "baseCls": "x-form",
+        "cls": null,
         "layout": "fit",
         "designer|userClassName": "SearchView",
         "designer|userAlias": "searchview"
@@ -28,7 +30,7 @@
                 "docked": "top",
                 "id": "searchToolbar",
                 "designer|userClassName": "MyToolbar",
-                "container|align": "stretchmax",
+                "container|align": null,
                 "container|pack": null
             },
             "customConfigs": [],
@@ -50,6 +52,7 @@
                         "id": "groupSearchField",
                         "width": "",
                         "label": "",
+                        "value": null,
                         "placeHolder": " Search",
                         "designer|userClassName": "MySearchField"
                     },
@@ -70,7 +73,7 @@
                 "id": "searchResultsList",
                 "ui": "round",
                 "hideOnMaskTap": null,
-                "emptyText": "No groups found.",
+                "emptyText": "<h2>No Groups Found</h2>",
                 "itemTpl": "<div>{name}</div>",
                 "loadingText": null,
                 "store": "AllGroupsStore",

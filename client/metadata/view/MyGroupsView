@@ -8,9 +8,7 @@
     "codeClass": null,
     "userConfig": {
         "baseCls": "x-form",
-        "cls": [
-            "backgroundImg"
-        ],
+        "cls": null,
         "id": null,
         "ui": null,
         "layout": "fit",
@@ -20,7 +18,7 @@
     "customConfigs": [],
     "designerId": "4eadc38b-80dc-418f-87fd-685c50c294b2",
     "$viewOrder": 5,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen4378",

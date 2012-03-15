@@ -18,6 +18,7 @@ Ext.define('fishpickle.view.SearchView', {
     alias: 'widget.searchview',
 
     config: {
+        baseCls: 'x-form',
         layout: {
             type: 'fit'
         },
@@ -26,10 +27,6 @@ Ext.define('fishpickle.view.SearchView', {
                 xtype: 'toolbar',
                 docked: 'top',
                 id: 'searchToolbar',
-                layout: {
-                    align: 'stretchmax',
-                    type: 'hbox'
-                },
                 items: [
                     {
                         xtype: 'searchfield',
@@ -45,7 +42,7 @@ Ext.define('fishpickle.view.SearchView', {
                 xtype: 'list',
                 id: 'searchResultsList',
                 ui: 'round',
-                emptyText: 'No groups found.',
+                emptyText: '<h2>No Groups Found</h2>',
                 itemTpl: [
                     '<div>{name}</div>'
                 ],

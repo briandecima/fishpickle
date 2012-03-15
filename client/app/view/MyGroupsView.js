@@ -22,9 +22,6 @@ Ext.define('fishpickle.view.MyGroupsView', {
         layout: {
             type: 'fit'
         },
-        cls: [
-            'backgroundImg'
-        ],
         items: [
             {
                 xtype: 'titlebar',

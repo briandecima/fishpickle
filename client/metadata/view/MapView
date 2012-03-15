@@ -70,6 +70,41 @@
             ]
         },
         {
+            "id": "ExtBox1-ext-gen23856",
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "titleContainer"
+                ],
+                "designer|userClassName": "MyContainer7"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen23859",
+                    "type": "label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "<h2>Location</h2>",
+                        "id": "locationLabel",
+                        "designer|userClassName": "MyLabel2"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        },
+        {
             "id": "ExtBox1-ext-gen42878",
             "type": "fieldset",
             "reference": {
@@ -78,7 +113,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "title": "Location",
+                "baseCls": "fieldSetHeader",
+                "cls": [
+                    "formFieldSet"
+                ],
+                "id": "locationFieldSet",
+                "title": null,
                 "designer|userClassName": "MyFieldSet6"
             },
             "customConfigs": [],
@@ -94,7 +134,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "id": "mapOrigin",
+                        "inputCls": "fieldSetField",
                         "label": "Origin",
+                        "labelCls": "fieldSetLabel",
                         "name": "origin",
                         "designer|userClassName": "MyTextField10"
                     },
@@ -111,7 +153,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "id": "mapDestination",
+                        "inputCls": "fieldSetField",
                         "label": "Destination",
+                        "labelCls": "fieldSetLabel",
                         "name": "destination",
                         "designer|userClassName": "MyTextField11"
                     },
@@ -119,73 +163,23 @@
                     "expanded": true
                 },
                 {
-                    "id": "ExtBox1-ext-gen48664",
-                    "type": "container",
+                    "id": "ExtBox1-ext-gen30607",
+                    "type": "selectfield",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "layout": "vbox",
-                        "designer|userClassName": "MyContainer9"
+                        "inputCls": "fieldSetField",
+                        "label": "Travel By",
+                        "labelCls": "fieldSetLabel",
+                        "value": "[{value:'W', name:'Walking'}]",
+                        "options": "[{value:'W', text:'Walking'}\n,{value:'D', text:'Driving'}\n,{value:'B', text:'Bicycling'}]",
+                        "designer|userClassName": "MySelectField"
                     },
                     "customConfigs": [],
-                    "expanded": true,
-                    "cn": [
-                        {
-                            "id": "ExtBox1-ext-gen46578",
-                            "type": "radiofield",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "label": "Walking",
-                                "name": "routeType",
-                                "value": "W",
-                                "checked": true,
-                                "designer|userClassName": "MyRadioButton"
-                            },
-                            "customConfigs": [],
-                            "expanded": true
-                        },
-                        {
-                            "id": "ExtBox1-ext-gen47406",
-                            "type": "radiofield",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "label": "Driving",
-                                "name": "routeType",
-                                "value": "D",
-                                "designer|userClassName": "MyRadioButton1"
-                            },
-                            "customConfigs": [],
-                            "expanded": true
-                        },
-                        {
-                            "id": "ExtBox1-ext-gen47992",
-                            "type": "radiofield",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "label": "Bicycling",
-                                "name": "routeType",
-                                "value": "B",
-                                "designer|userClassName": "MyRadioButton2"
-                            },
-                            "customConfigs": [],
-                            "expanded": true
-                        }
-                    ]
+                    "expanded": true
                 }
             ]
         },
@@ -198,11 +192,31 @@
             },
             "codeClass": null,
             "userConfig": {
+                "cls": [
+                    "mapContainer"
+                ],
                 "height": 300,
                 "id": "map",
                 "itemId": "map",
                 "useCurrentLocation": true,
                 "designer|userClassName": "MyMap2"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen31918",
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "messageContainer"
+                ],
+                "designer|userClassName": "MyContainer6"
             },
             "customConfigs": [],
             "expanded": true

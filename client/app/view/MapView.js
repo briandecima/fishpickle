@@ -40,45 +40,65 @@ Ext.define('fishpickle.view.MapView', {
                 ]
             },
             {
+                xtype: 'container',
+                cls: [
+                    'titleContainer'
+                ],
+                items: [
+                    {
+                        xtype: 'label',
+                        html: '<h2>Location</h2>',
+                        id: 'locationLabel'
+                    }
+                ]
+            },
+            {
                 xtype: 'fieldset',
-                title: 'Location',
+                baseCls: 'fieldSetHeader',
+                cls: [
+                    'formFieldSet'
+                ],
+                id: 'locationFieldSet',
                 items: [
                     {
                         xtype: 'textfield',
                         id: 'mapOrigin',
+                        inputCls: 'fieldSetField',
                         label: 'Origin',
+                        labelCls: 'fieldSetLabel',
                         name: 'origin'
                     },
                     {
                         xtype: 'textfield',
                         id: 'mapDestination',
+                        inputCls: 'fieldSetField',
                         label: 'Destination',
+                        labelCls: 'fieldSetLabel',
                         name: 'destination'
                     },
                     {
-                        xtype: 'container',
-                        layout: {
-                            type: 'vbox'
-                        },
-                        items: [
+                        xtype: 'selectfield',
+                        inputCls: 'fieldSetField',
+                        label: 'Travel By',
+                        labelCls: 'fieldSetLabel',
+                        value: [
                             {
-                                xtype: 'radiofield',
-                                label: 'Walking',
-                                name: 'routeType',
                                 value: 'W',
-                                checked: true
+                                name: 'Walking'
+                            }
+                        ],
+                        options: [
+                            {
+                                value: 'W',
+                                text: 'Walking'
                             },
                             {
-                                xtype: 'radiofield',
-                                label: 'Driving',
-                                name: 'routeType',
-                                value: 'D'
+                                value: 'D',
+                                text: 'Driving'
                             },
                             {
-                                xtype: 'radiofield',
-                                label: 'Bicycling',
-                                name: 'routeType',
-                                value: 'B'
+                                value: 'B',
+                                text: 'Bicycling'
                             }
                         ]
                     }
@@ -86,10 +106,19 @@ Ext.define('fishpickle.view.MapView', {
             },
             {
                 xtype: 'map',
+                cls: [
+                    'mapContainer'
+                ],
                 height: 300,
                 id: 'map',
                 itemId: 'map',
                 useCurrentLocation: true
+            },
+            {
+                xtype: 'container',
+                cls: [
+                    'messageContainer'
+                ]
             }
         ]
     }

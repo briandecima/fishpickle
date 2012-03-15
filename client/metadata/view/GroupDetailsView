@@ -18,7 +18,7 @@
     "customConfigs": [],
     "designerId": "2d1ae554-25d4-4153-9341-e06ccf6d2313",
     "$viewOrder": 3,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen12313",
@@ -72,7 +72,7 @@
                 "designer|userClassName": "MyFieldSet1"
             },
             "customConfigs": [],
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen43199",
@@ -154,7 +154,7 @@
                 "designer|userClassName": "MyTitleBar2"
             },
             "customConfigs": [],
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen10712",
@@ -214,7 +214,7 @@
                 "designer|userClassName": "MyContainer6"
             },
             "customConfigs": [],
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen9675",

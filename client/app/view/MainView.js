@@ -25,7 +25,8 @@ Ext.define('fishpickle.view.MainView', {
 
     config: {
         tabBar: {
-            docked: 'bottom'
+            docked: 'bottom',
+            ui: 'light'
         },
         items: [
             {

@@ -17,6 +17,41 @@
     "expanded": true,
     "cn": [
         {
+            "id": "ExtBox1-ext-gen20114",
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "titleContainer"
+                ],
+                "designer|userClassName": "MyContainer7"
+            },
+            "customConfigs": [],
+            "expanded": false,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen20117",
+                    "type": "label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "<h2>Account Information</h2>",
+                        "id": "accountInfoLabel",
+                        "designer|userClassName": "MyLabel2"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        },
+        {
             "id": "ExtBox1-ext-gen10934",
             "type": "titlebar",
             "reference": {
@@ -31,7 +66,7 @@
                 "container|align": null
             },
             "customConfigs": [],
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen11449",
@@ -65,11 +100,15 @@
             },
             "codeClass": null,
             "userConfig": {
-                "title": "Account Information",
+                "baseCls": "fieldSetHeader",
+                "cls": [
+                    "formFieldSet"
+                ],
+                "title": null,
                 "designer|userClassName": "MyFieldSet"
             },
             "customConfigs": [],
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen20887",
@@ -80,7 +119,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "inputCls": "fieldSetField",
                         "label": "Login",
+                        "labelCls": "fieldSetLabel",
                         "name": "login",
                         "readOnly": true,
                         "designer|userClassName": "MyTextField2"
@@ -97,7 +138,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "inputCls": "fieldSetField",
                         "label": "Name",
+                        "labelCls": "fieldSetLabel",
                         "name": "displayName",
                         "required": true,
                         "designer|userClassName": "MyTextField7"
@@ -114,7 +157,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "inputCls": "fieldSetField",
                         "label": "Email",
+                        "labelCls": "fieldSetLabel",
                         "name": "email",
                         "required": true,
                         "placeHolder": "email@example.com",
@@ -132,8 +177,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "inputCls": "fieldSetField",
                         "label": "Password",
                         "labelAlign": null,
+                        "labelCls": "fieldSetLabel",
                         "name": "password",
                         "required": true,
                         "designer|userClassName": "MyPasswordField5"
@@ -144,24 +191,43 @@
             ]
         },
         {
-            "id": "ExtBox1-ext-gen14977",
-            "type": "button",
+            "id": "ExtBox1-ext-gen21959",
+            "type": "container",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "cls": "button1",
-                "id": "logoutButton",
-                "style": null,
-                "ui": "action",
-                "width": 100,
-                "text": "Log Out",
-                "designer|userClassName": "MyButton9"
+                "cls": [
+                    "messageContainer"
+                ],
+                "designer|userClassName": "MyContainer6"
             },
             "customConfigs": [],
-            "expanded": true
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen14977",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": "basicButton",
+                        "id": "logoutButton",
+                        "style": null,
+                        "ui": null,
+                        "width": 100,
+                        "text": "Log Out",
+                        "designer|userClassName": "MyButton9"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
         }
     ]
 }

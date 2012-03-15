@@ -15,7 +15,7 @@
     "customConfigs": [],
     "designerId": "6455e548-8780-4215-8023-2ae70bc2d295",
     "$viewOrder": 1,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen11651",
@@ -27,6 +27,7 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "bottom",
+                "ui": "light",
                 "designer|userClassName": "MyTabBar"
             },
             "customConfigs": [],
@@ -41,6 +42,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "cls": null,
                 "id": "myGroupsContainer",
                 "ui": null,
                 "layout": "fit",

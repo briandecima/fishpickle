@@ -20,6 +20,19 @@ Ext.define('fishpickle.view.SettingsView', {
     config: {
         items: [
             {
+                xtype: 'container',
+                cls: [
+                    'titleContainer'
+                ],
+                items: [
+                    {
+                        xtype: 'label',
+                        html: '<h2>Account Information</h2>',
+                        id: 'accountInfoLabel'
+                    }
+                ]
+            },
+            {
                 xtype: 'titlebar',
                 docked: 'top',
                 title: 'Settings',
@@ -38,42 +51,60 @@ Ext.define('fishpickle.view.SettingsView', {
             },
             {
                 xtype: 'fieldset',
-                title: 'Account Information',
+                baseCls: 'fieldSetHeader',
+                cls: [
+                    'formFieldSet'
+                ],
                 items: [
                     {
                         xtype: 'textfield',
+                        inputCls: 'fieldSetField',
                         label: 'Login',
+                        labelCls: 'fieldSetLabel',
                         name: 'login',
                         readOnly: true
                     },
                     {
                         xtype: 'textfield',
+                        inputCls: 'fieldSetField',
                         label: 'Name',
+                        labelCls: 'fieldSetLabel',
                         name: 'displayName',
                         required: true
                     },
                     {
                         xtype: 'emailfield',
+                        inputCls: 'fieldSetField',
                         label: 'Email',
+                        labelCls: 'fieldSetLabel',
                         name: 'email',
                         required: true,
                         placeHolder: 'email@example.com'
                     },
                     {
                         xtype: 'passwordfield',
+                        inputCls: 'fieldSetField',
                         label: 'Password',
+                        labelCls: 'fieldSetLabel',
                         name: 'password',
                         required: true
                     }
                 ]
             },
             {
-                xtype: 'button',
-                cls: 'button1',
-                id: 'logoutButton',
-                ui: 'action',
-                width: 100,
-                text: 'Log Out'
+                xtype: 'container',
+                cls: [
+                    'messageContainer'
+                ],
+                items: [
+                    {
+                        xtype: 'button',
+                        cls: 'basicButton',
+                        id: 'logoutButton',
+                        width: 100,
+                        text: 'Log Out'
+                    }
+                ]
             }
         ]
     }
