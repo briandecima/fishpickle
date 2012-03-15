@@ -14,8 +14,43 @@
     "customConfigs": [],
     "designerId": "5c9c2d01-c8a8-40a2-ad47-82409c9b2366",
     "$viewOrder": 4,
-    "expanded": false,
+    "expanded": true,
     "cn": [
+        {
+            "id": "ExtBox1-ext-gen9427",
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "titleContainer"
+                ],
+                "designer|userClassName": "MyContainer7"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen9430",
+                    "type": "label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "<h2>Welcome to Fishpickle</h2>",
+                        "id": "welcomeLabel",
+                        "designer|userClassName": "MyLabel2"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        },
         {
             "id": "ExtBox1-ext-gen2861",
             "type": "titlebar",
@@ -57,6 +92,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "baseCls": "fieldSetHeader",
+                        "cls": [
+                            "formFieldSet"
+                        ],
                         "title": "",
                         "designer|userClassName": "MyFieldSet2"
                     },
@@ -72,7 +111,9 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "label": "Login Id",
+                                "inputCls": "fieldSetField",
+                                "label": "LOGIN ID",
+                                "labelCls": "fieldSetLabel",
                                 "name": "login",
                                 "designer|userClassName": "MyTextField7"
                             },
@@ -89,7 +130,9 @@
                             "codeClass": null,
                             "userConfig": {
                                 "docked": null,
-                                "label": "Password",
+                                "inputCls": "fieldSetField",
+                                "label": "PASSWORD",
+                                "labelCls": "fieldSetLabel",
                                 "name": "password",
                                 "designer|userClassName": "MyPasswordField"
                             },
@@ -97,7 +140,28 @@
                             "expanded": true
                         }
                     ]
-                },
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen9899",
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "messageContainer"
+                ],
+                "id": "loginButtonContainer",
+                "layout": "hbox",
+                "designer|userClassName": "MyContainer6"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
                 {
                     "id": "ExtBox1-ext-gen3656",
                     "type": "button",
@@ -107,9 +171,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "cls": "basicButton",
                         "id": "LoginButton",
                         "itemId": "LoginButton",
-                        "ui": "action",
+                        "ui": null,
                         "width": 100,
                         "text": "Login",
                         "designer|userClassName": "MyButton"
@@ -141,9 +206,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "cls": "basicSecondaryButton",
                         "id": "RegisterButton",
                         "itemId": "RegisterButton",
-                        "ui": "action",
+                        "ui": null,
                         "width": 100,
                         "text": "Register",
                         "designer|userClassName": "MyButton3"

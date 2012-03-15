@@ -22,8 +22,8 @@ Ext.define('fishpickle.controller.GroupDetailsController', {
         ],
         refs: {
             groupDetailsView: 'groupdetailsview',
-            joinGroupButton: '#joinGroupButton',
-            alreadyMemberLabel: '#alreadyMemberLabel'
+            alreadyMemberLabel: '#alreadyMemberLabel',
+            joinGroupContainer: '#joinGroupContainer'
         },
 
         control: {
@@ -127,7 +127,7 @@ Ext.define('fishpickle.controller.GroupDetailsController', {
         ]);
 
         var alreadyMember = store.getData().length > 0;
-        this.getJoinGroupButton().setHidden(alreadyMember);
+        this.getJoinGroupContainer().setHidden(alreadyMember);
         this.getAlreadyMemberLabel().setHidden(!alreadyMember);
     }
 

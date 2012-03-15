@@ -68,6 +68,7 @@ Ext.define('fishpickle.view.SettingsView', {
             },
             {
                 xtype: 'button',
+                cls: 'button1',
                 id: 'logoutButton',
                 ui: 'action',
                 width: 100,

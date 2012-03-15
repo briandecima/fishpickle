@@ -14,7 +14,7 @@
     "customConfigs": [],
     "designerId": "56caab43-4bf3-4d95-b5a7-787c20860f9b",
     "$viewOrder": 3,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen6464",
@@ -64,7 +64,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onNewGroupButtonTap",
-                "implHandler": "if (fishpickle.baseURL) {\n    //console.log(\"in activate create group view\");\n    var group = Ext.create('fishpickle.model.UserGroup', { id: '', name: '', description: '', isPrivate: true });\n    this.getGroupDetailsView().setRecord(group);\n    this.getJoinGroupButton().setHidden(true);\n    this.getAlreadyMemberLabel().setHidden(true);\n    this.getApplication().fireEvent('navigateToGroupDetailsView');\n}",
+                "implHandler": "if (fishpickle.baseURL) {\n    //console.log(\"in activate create group view\");\n    var group = Ext.create('fishpickle.model.UserGroup', { id: '', name: '', description: '', isPrivate: true });\n    this.getGroupDetailsView().setRecord(group);\n    this.getJoinGroupContainer().setHidden(true);\n    this.getAlreadyMemberLabel().setHidden(true);\n    this.getApplication().fireEvent('navigateToGroupDetailsView');\n}",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#createGroup",
@@ -90,22 +90,6 @@
             "expanded": true
         },
         {
-            "id": "ExtBox1-ext-gen15131",
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "ref": "joinGroupButton",
-                "selector": "#joinGroupButton",
-                "designer|userClassName": "joinGroupButton"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
             "id": "ExtBox1-ext-gen8433",
             "type": "controllerref",
             "reference": {
@@ -117,6 +101,22 @@
                 "ref": "alreadyMemberLabel",
                 "selector": "#alreadyMemberLabel",
                 "designer|userClassName": "alreadyMemberLabel"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen15604",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "joinGroupContainer",
+                "selector": "#joinGroupContainer",
+                "designer|userClassName": "joinGroupContainer"
             },
             "customConfigs": [],
             "expanded": true

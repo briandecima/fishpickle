@@ -151,7 +151,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "cls": "button1",
                 "id": "logoutButton",
+                "style": null,
                 "ui": "action",
                 "width": 100,
                 "text": "Log Out",

@@ -19,8 +19,8 @@ Ext.define('fishpickle.controller.MyGroupsController', {
     config: {
         refs: {
             groupDetailsView: 'groupdetailsview',
-            joinGroupButton: '#joinGroupButton',
-            alreadyMemberLabel: '#alreadyMemberLabel'
+            alreadyMemberLabel: '#alreadyMemberLabel',
+            joinGroupContainer: '#joinGroupContainer'
         },
 
         control: {
@@ -57,7 +57,7 @@ Ext.define('fishpickle.controller.MyGroupsController', {
             //console.log("in activate create group view");
             var group = Ext.create('fishpickle.model.UserGroup', { id: '', name: '', description: '', isPrivate: true });
             this.getGroupDetailsView().setRecord(group);
-            this.getJoinGroupButton().setHidden(true);
+            this.getJoinGroupContainer().setHidden(true);
             this.getAlreadyMemberLabel().setHidden(true);
             this.getApplication().fireEvent('navigateToGroupDetailsView');
         }

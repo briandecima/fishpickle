@@ -1,0 +1,156 @@
+$base-color: #470f0d;
+$base-gradient: 'glossy'; 
+ 
+
+@import "compass/css3";
+
+@import 'sencha-touch/default/all';
+@include sencha-panel;
+@include sencha-buttons;
+@include sencha-sheet;
+@include sencha-picker;
+@include sencha-toolbar-forms;
+@include sencha-tabs;
+@include sencha-toolbar;
+@include sencha-carousel;
+@include sencha-indexbar;
+@include sencha-list;
+@include sencha-layout;
+@include sencha-form;
+@include sencha-loading-spinner;
+
+
+$button_size: 30px;
+$button_color: #ff0000;
+
+$radius: 25px;
+
+@mixin rounded($side, $radius: 25px) {
+  border-#{$side}-left-radius: $radius;
+  -moz-border-radius-#{$side}-left: $radius;
+  -webkit-border-#{$side}-left-radius: $radius;
+  
+  border-#{$side}-right-radius: $radius;
+  -moz-border-radius-#{$side}-right: $radius;
+  -webkit-border-#{$side}-right-radius: $radius;
+}
+
+@mixin baseButton() {
+	background: #88b82f;
+	color: #ffffff;
+}
+
+@mixin secondaryButton() {
+	background: #1240AB;
+	color: #ffffff;
+}
+
+
+
+body {
+  font-family: Helvetica;
+}
+
+.button {
+  background: #ff0000;
+  line-height: $button_size;
+  -webkit-box-sizing: border-box;
+  
+  height: $button_size;
+  @include border-radius($button_size/2);
+  border: 1px solid darken($button_color, 20%);
+}
+
+.fieldSetLabel {
+	font-family: Calibri;
+	font-size: 22px;
+	color: #7B0606;
+	font-weight: normal;
+}
+
+.fieldSetHeader {
+	font-size: 16px;
+	font-family: Verdana;
+	color: #063C4D;
+	font-weight: bold;
+}
+
+.fieldSetField {
+	font-family: Verdana;
+	font-size: 16px;
+	color: #545957;
+	font-weight: normal;
+}
+
+
+.messageContainer{
+	background: -webkit-linear-gradient(bottom, #C3DADB, #ffffff);
+	border: 3px solid rgba(0,0,0,0.4);
+	margin: 0px;
+	padding: 15px 10px;
+	text-align: center;
+	font-family: 'Arapey', Arial, sans-serif;
+	 @include rounded(bottom, $radius);
+}
+.messageContainer h2{
+	text-align: center;
+	position: relative;
+	display: inline-block;
+	font-size: 18px;
+	font-weight:bold;
+	font-family: Verdana;
+	color: #063C4D;
+}
+
+
+.titleContainer{
+	background: -webkit-linear-gradient(top, #C3DADB, #ffffff);
+	border: 3px solid rgba(0,0,0,0.4);
+	margin: 0px;
+	padding: 20px;
+	text-align: center;
+	font-family: 'Arapey', Arial, sans-serif;
+	 @include rounded(top, $radius);
+}
+.titleContainer h2{
+	text-align: center;
+	position: relative;
+	display: inline-block;
+	font-size: 26px;
+	font-weight:bold; 
+	font-family: Verdana;
+	color: #063C4D;
+}
+
+.formFieldSet{
+	border-right: 3px solid rgba(0,0,0,0.4);
+	border-left: 3px solid rgba(0,0,0,0.4);
+}
+
+.joinButtonContainer {
+	background: #ffffff;
+	border-right: 3px solid rgba(0,0,0,0.4);
+	border-left: 3px solid rgba(0,0,0,0.4);
+	padding: 20px;
+	
+}
+
+.joinButton {
+	margin: 20px;
+	@include baseButton();
+}
+
+.basicButton {
+	margin: 10px;
+	@include baseButton();
+}
+
+.basicSecondaryButton {
+	margin: 10px;
+	@include secondaryButton();
+}
+
+
+
+
+

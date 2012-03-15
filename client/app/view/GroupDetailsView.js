@@ -21,27 +21,49 @@ Ext.define('fishpickle.view.GroupDetailsView', {
         itemId: '',
         items: [
             {
+                xtype: 'container',
+                cls: [
+                    'titleContainer'
+                ],
+                items: [
+                    {
+                        xtype: 'label',
+                        html: '<h2>Group Information</h2>',
+                        id: 'groupInformationLabel'
+                    }
+                ]
+            },
+            {
                 xtype: 'fieldset',
-                title: 'Group Information',
+                baseCls: ' fieldSetHeader',
+                cls: [
+                    'formFieldSet'
+                ],
                 items: [
                     {
                         xtype: 'textfield',
                         id: 'groupNameField',
-                        label: 'Name',
+                        inputCls: 'fieldSetField',
+                        label: 'NAME',
+                        labelCls: 'fieldSetLabel',
                         labelWidth: '40%',
                         name: 'name'
                     },
                     {
                         xtype: 'textareafield',
                         id: 'groupDescriptionField',
-                        label: 'Description',
+                        inputCls: 'fieldSetField',
+                        label: 'INFO',
+                        labelCls: 'fieldSetLabel',
                         labelWidth: '40%',
                         name: 'description'
                     },
                     {
                         xtype: 'togglefield',
                         id: 'isPrivateToggle',
-                        label: 'Private',
+                        inputCls: 'fieldSetField',
+                        label: 'PRIVATE',
+                        labelCls: 'fieldSetLabel',
                         labelWidth: '40%',
                         name: 'isPrivate',
                         value: 1
@@ -64,18 +86,40 @@ Ext.define('fishpickle.view.GroupDetailsView', {
                         xtype: 'button',
                         id: 'saveGroupButton',
                         itemId: 'saveGroupButton',
-                        ui: 'action',
+                        ui: 'caction',
                         text: 'Save',
                         align: 'right'
                     }
                 ]
             },
             {
-                xtype: 'label',
-                hidden: true,
-                html: '<div>You are a member of this group</div>',
-                id: 'alreadyMemberLabel',
-                style: '{color:green}'
+                xtype: 'container',
+                cls: [
+                    'joinButtonContainer'
+                ],
+                id: 'joinGroupContainer',
+                items: [
+                    {
+                        xtype: 'button',
+                        cls: 'joinButton',
+                        id: 'joinGroupButton',
+                        text: 'Join Group'
+                    }
+                ]
+            },
+            {
+                xtype: 'container',
+                cls: [
+                    'messageContainer'
+                ],
+                items: [
+                    {
+                        xtype: 'label',
+                        html: '<h2>You are a member of this group.</h2>',
+                        id: 'alreadyMemberLabel',
+                        style: '{color:green}'
+                    }
+                ]
             },
             {
                 xtype: 'toolbar',
@@ -83,12 +127,6 @@ Ext.define('fishpickle.view.GroupDetailsView', {
                 items: [
                     {
                         xtype: 'spacer'
-                    },
-                    {
-                        xtype: 'button',
-                        id: 'joinGroupButton',
-                        ui: 'forward',
-                        text: 'Join Group'
                     }
                 ]
             }

@@ -17,7 +17,7 @@
     "customConfigs": [],
     "designerId": "03147ff8-c626-43df-8c18-a8259890efac",
     "$viewOrder": 1,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen9364",
@@ -163,24 +163,8 @@
                 "designer|params": [
                     "group"
                 ],
-                "implHandler": "        var store = Ext.getStore(\"UserGroupAssociationStore\");\n        store.clearFilter();\n        store.filter([\n        {filterFn: function(item) { \n            return (item.get(\"user\").id == fishpickle.currentUser.data.id) && (item.get(\"group\").id == group.data.id); \n        }}\n        ]);\n\n        var alreadyMember = store.getData().length > 0;\n        this.getJoinGroupButton().setHidden(alreadyMember);\n        this.getAlreadyMemberLabel().setHidden(!alreadyMember);",
+                "implHandler": "var store = Ext.getStore(\"UserGroupAssociationStore\");\nstore.clearFilter();\nstore.filter([\n{filterFn: function(item) { \n    return (item.get(\"user\").id == fishpickle.currentUser.data.id) && (item.get(\"group\").id == group.data.id); \n}}\n]);\n\nvar alreadyMember = store.getData().length > 0;\nthis.getJoinGroupContainer().setHidden(alreadyMember);\nthis.getAlreadyMemberLabel().setHidden(!alreadyMember);",
                 "designer|userClassName": "handleAssociationDisplay"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen22922",
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "ref": "joinGroupButton",
-                "selector": "#joinGroupButton",
-                "designer|userClassName": "joinGroupButton"
             },
             "customConfigs": [],
             "expanded": true
@@ -197,6 +181,22 @@
                 "ref": "alreadyMemberLabel",
                 "selector": "#alreadyMemberLabel",
                 "designer|userClassName": "alreadyMemberLabel"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen14342",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "joinGroupContainer",
+                "selector": "#joinGroupContainer",
+                "designer|userClassName": "joinGroupContainer"
             },
             "customConfigs": [],
             "expanded": true

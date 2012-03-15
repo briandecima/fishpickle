@@ -20,6 +20,19 @@ Ext.define('fishpickle.view.AuthenticationView', {
     config: {
         items: [
             {
+                xtype: 'container',
+                cls: [
+                    'titleContainer'
+                ],
+                items: [
+                    {
+                        xtype: 'label',
+                        html: '<h2>Welcome to Fishpickle</h2>',
+                        id: 'welcomeLabel'
+                    }
+                ]
+            },
+            {
                 xtype: 'titlebar',
                 docked: 'top',
                 title: 'fishpickle'
@@ -33,25 +46,45 @@ Ext.define('fishpickle.view.AuthenticationView', {
                 items: [
                     {
                         xtype: 'fieldset',
+                        baseCls: 'fieldSetHeader',
+                        cls: [
+                            'formFieldSet'
+                        ],
                         title: '',
                         items: [
                             {
                                 xtype: 'textfield',
-                                label: 'Login Id',
+                                inputCls: 'fieldSetField',
+                                label: 'LOGIN ID',
+                                labelCls: 'fieldSetLabel',
                                 name: 'login'
                             },
                             {
                                 xtype: 'passwordfield',
-                                label: 'Password',
+                                inputCls: 'fieldSetField',
+                                label: 'PASSWORD',
+                                labelCls: 'fieldSetLabel',
                                 name: 'password'
                             }
                         ]
-                    },
+                    }
+                ]
+            },
+            {
+                xtype: 'container',
+                cls: [
+                    'messageContainer'
+                ],
+                id: 'loginButtonContainer',
+                layout: {
+                    type: 'hbox'
+                },
+                items: [
                     {
                         xtype: 'button',
+                        cls: 'basicButton',
                         id: 'LoginButton',
                         itemId: 'LoginButton',
-                        ui: 'action',
                         width: 100,
                         text: 'Login'
                     },
@@ -61,9 +94,9 @@ Ext.define('fishpickle.view.AuthenticationView', {
                     },
                     {
                         xtype: 'button',
+                        cls: 'basicSecondaryButton',
                         id: 'RegisterButton',
                         itemId: 'RegisterButton',
-                        ui: 'action',
                         width: 100,
                         text: 'Register'
                     }
