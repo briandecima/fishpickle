@@ -83,15 +83,15 @@ body {
 
 
 .fieldSetLabel {
-	font-family: Calibri;
-	font-size: 22px;
+	font-family: Verdana;
+	font-size: 14px;
 	color: #7B0606;
 	font-weight: normal;
 }
 
 .fieldSetField {
 	font-family: Verdana;
-	font-size: 16px;
+	font-size: 12px;
 	color: #545957;
 	font-weight: normal;
 }
@@ -110,7 +110,7 @@ body {
 	text-align: center;
 	position: relative;
 	display: inline-block;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight:bold;
 	font-family: Verdana;
 	color: #063C4D;
@@ -121,7 +121,7 @@ body {
 	background: -webkit-linear-gradient(top, #C3DADB, #ffffff);
 	border: 3px solid rgba(0,0,0,0.4);
 	margin: 0px;
-	padding: 20px;
+	padding: 8px;
 	text-align: center;
 	font-family: 'Arapey', Arial, sans-serif;
 	 @include rounded(top, $radius);
@@ -130,7 +130,7 @@ body {
 	text-align: center;
 	position: relative;
 	display: inline-block;
-	font-size: 26px;
+	font-size: 18px;
 	font-weight:bold; 
 	font-family: Verdana;
 	color: #063C4D;
@@ -177,6 +177,7 @@ body {
 	border-left: 3px solid rgba(0,0,0,0.4);
 	border-top: 3px solid rgba(0,0,0,0.4);
 }
+
 
 
 
